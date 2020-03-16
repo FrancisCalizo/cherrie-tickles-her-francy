@@ -1,6 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
+
+const HeaderImage = styled(Img)`
+  width: 50%;
+`
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +21,7 @@ const Header = () => {
   `)
   return (
     <header>
-      <Img
+      <HeaderImage
         title="header-image"
         alt="beach-header-photo"
         fluid={data.headerImage.childImageSharp.fluid}
