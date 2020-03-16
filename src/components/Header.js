@@ -1,10 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
-const HeaderImage = styled(Img)`
-  width: 50%;
+const HeaderImage = styled(BackgroundImage)`
+  height: 100vh;
+  width: 80%;
 `
 
 const Header = () => {
