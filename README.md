@@ -1,3 +1,11 @@
+## Helpful Articles
+
+- Global Styles for Styled Components - https://stackoverflow.com/questions/46760861/styled-components-how-to-set-styles-on-html-or-body-tag
+
+- Fixed Navbar - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_menu
+
+- Flexbox Nabar - https://freshman.tech/flexbox-navbar/
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
