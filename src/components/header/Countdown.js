@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState } from "react"
 import moment from "moment"
 
 import useInterval from "../hooks/useInterval"
@@ -13,11 +13,45 @@ const Countdown = () => {
     setCountdown(timeLeft)
   }, 1000)
 
-  return (
-    <div>
-      <h2>Countdown</h2>
-    </div>
-  )
+  if (countdown === null) {
+    return null
+  } else {
+    return (
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>{parseInt(countdown.asDays())}</div>
+                <div>Days</div>
+              </div>
+              <div>
+                <div>:</div>
+              </div>
+              <div>
+                <div>{countdown._data.hours}</div>
+                <div>Hours</div>
+              </div>
+              <div>
+                <div>:</div>
+              </div>
+              <div>
+                <div>{countdown._data.minutes}</div>
+                <div>Minutes</div>
+              </div>
+              <div>
+                <div>:</div>
+              </div>
+              <div>
+                <div>{countdown._data.seconds}</div>
+                <div>Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Countdown
