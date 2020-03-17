@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar"
 const GlobalStyle = createGlobalStyle`
   html, body {
     margin: 0;
+    font-family: 'Raleway', sans-serif;
   }
 `
 

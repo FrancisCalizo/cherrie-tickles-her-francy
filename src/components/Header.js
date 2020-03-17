@@ -11,9 +11,20 @@ const HeaderImage = styled(BackgroundImage)`
 const BlackOverlay = styled.div`
   display: flex;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
   align-items: center;
   color: white;
+`
+const HeaderContent = styled.div`
+  margin: 0 auto;
+
+  h1 {
+    font-family: "Parisienne", cursive;
+    font-size: 5rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 4.5rem;
+  }
 `
 
 const Header = () => {
@@ -36,7 +47,9 @@ const Header = () => {
         fluid={data.headerImage.childImageSharp.fluid}
       >
         <BlackOverlay>
-          <h1>Hello World</h1>
+          <HeaderContent>
+            <h1>Francis & Cherrie</h1>
+          </HeaderContent>
         </BlackOverlay>
       </HeaderImage>
     </header>
