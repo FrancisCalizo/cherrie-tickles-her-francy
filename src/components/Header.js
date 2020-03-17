@@ -17,13 +17,20 @@ const BlackOverlay = styled.div`
 `
 const HeaderContent = styled.div`
   margin: 0 auto;
+  text-align: center;
 
   h1 {
-    font-family: "Parisienne", cursive;
-    font-size: 5rem;
-    letter-spacing: 0.05em;
-    text-align: center;
-    line-height: 4.5rem;
+    font-family: "Alex Brush", cursive;
+    font-size: 6rem;
+    margin: 0;
+    // letter-spacing: 0.07em;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0;
   }
 `
 
@@ -49,6 +56,7 @@ const Header = () => {
         <BlackOverlay>
           <HeaderContent>
             <h1>Francis & Cherrie</h1>
+            <h2>They're getting married!</h2>
           </HeaderContent>
         </BlackOverlay>
       </HeaderImage>
