@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
+import Countdown from "./Countdown"
+
 const HeaderImage = styled(BackgroundImage)`
   height: 100vh;
   width: 100%;
@@ -57,6 +59,7 @@ const Header = () => {
           <HeaderContent>
             <h1>Francis & Cherrie</h1>
             <h2>They're getting married!</h2>
+            <Countdown />
           </HeaderContent>
         </BlackOverlay>
       </HeaderImage>
