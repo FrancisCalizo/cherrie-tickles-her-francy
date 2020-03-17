@@ -1,36 +1,21 @@
 import React, { useState, useEffect, useRef } from "react"
 import moment from "moment"
 
-function useInterval(callback, delay) {
-  const savedCallback = useRef()
-
-  // Remember the latest callback.
-  useEffect(() => {
-    savedCallback.current = callback
-  }, [callback])
-
-  // Set up the interval.
-  useEffect(() => {
-    function tick() {
-      savedCallback.current()
-    }
-    if (delay !== null) {
-      let id = setInterval(tick, delay)
-      return () => clearInterval(id)
-    }
-  }, [delay])
-}
+import useInterval from "../hooks/useInterval"
 
 const Countdown = () => {
-  const [count, setCount] = useState(0)
+  const [weddingDate] = useState(moment("2021-02-20", "YYYY-MM-DD"))
+  const [countdown, setCountdown] = useState(null)
 
   useInterval(() => {
-    setCount(count + 1)
+    let now = moment()
+    let timeLeft = moment.duration(weddingDate.diff(now))
+    setCountdown(timeLeft)
   }, 1000)
 
   return (
     <div>
-      <h2>Countdown: {count}</h2>
+      <h2>Countdown</h2>
     </div>
   )
 }

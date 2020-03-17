@@ -10,6 +10,8 @@
 
 - Bottom Box Shadow - https://stackoverflow.com/questions/12798902/box-shadow-for-bottom-side-only
 
+- Set Interval Custom Hook - https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
