@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components"
 
 import Header from "../components/header/Header"
 import Navbar from "../components/layout/Navbar"
+import Story from "../components/our-story/Story"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -17,6 +18,7 @@ const index = () => {
       <Navbar />
       <GlobalStyle />
       <Header />
+      <Story />
     </div>
   )
 }
