@@ -12,6 +12,10 @@
 
 - Set Interval Custom Hook - https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 
+- Using props with Styled Components - https://styled-components.com/docs/basics#adapting-based-on-props and https://www.gatsbyjs.org/docs/styled-components/
+
+Add Event Listener Scroll Navbar - https://stackoverflow.com/questions/48458832/reactjs-change-color-of-element-on-scroll-and-when-certain-position-is-reached and https://stackoverflow.com/questions/44612364/toggle-class-based-on-scroll-react-js
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

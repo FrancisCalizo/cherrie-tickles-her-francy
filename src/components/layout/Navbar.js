@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -38,8 +38,19 @@ const Heart = styled.div`
   color: #ff7979;
 `
 
-const Navbar = ({ navBackground }) => {
-  console.log(navBackground)
+const Navbar = () => {
+  const [navBackground, setNavBackground] = useState("transparent")
+
+  useEffect(() => {
+    window.addEventListener("scroll", e => {
+      if (window.scrollY > 150) {
+        setNavBackground("notTransparent")
+      } else {
+        setNavBackground("transparent")
+      }
+    })
+  }, [])
+
   return (
     <Nav navBackground={navBackground} bg>
       <Container>
