@@ -14,18 +14,18 @@ const StoryCard = styled.div`
 const Story = () => {
   const data = useStaticQuery(graphql`
     query portraitImageQuery {
-      storyPortraitOne: file(relativePath: { eq: "beach-kiss.jpg" }) {
+      storyPortraitOne: file(relativePath: { eq: "beach-shoulder-rest.jpg" }) {
         childImageSharp {
-          fixed(fit: CONTAIN) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
-      storyPortraitTwo: file(relativePath: { eq: "beach-shoulder-rest.jpg" }) {
+      storyPortraitTwo: file(relativePath: { eq: "beach-kiss.jpg" }) {
         childImageSharp {
-          fixed(fit: CONTAIN) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -39,7 +39,7 @@ const Story = () => {
           <div>
             <Img
               alt="default-photo-francis"
-              fixed={data.storyPortraitOne.childImageSharp.fixed}
+              fluid={data.storyPortraitOne.childImageSharp.fluid}
             />
           </div>
         </StoryCard>
@@ -48,7 +48,7 @@ const Story = () => {
           <div>
             <Img
               alt="default-photo-francis"
-              fixed={data.storyPortraitTwo.childImageSharp.fixed}
+              fluid={data.storyPortraitTwo.childImageSharp.fluid}
             />
           </div>
         </StoryCard>
