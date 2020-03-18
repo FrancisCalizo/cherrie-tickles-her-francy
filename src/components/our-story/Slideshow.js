@@ -7,7 +7,7 @@ import useInterval from "../hooks/useInterval"
 
 const Slides = styled(Img)`
   width: 300px;
-  border-radius: 300px
+  // border-radius: 300px
 `
 
 const Slideshow = () => {
@@ -31,7 +31,9 @@ const Slideshow = () => {
         }
       }
 
-      slideshowThree: file(relativePath: { eq: "slideshow/beach-kiss-cheek.jpg" }) {
+      slideshowThree: file(
+        relativePath: { eq: "slideshow/beach-kiss-cheek.jpg" }
+      ) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -53,8 +55,6 @@ const Slideshow = () => {
     data.slideshowOne.childImageSharp.fluid
   )
 
-  console.log(data)
-
   useInterval(() => {
     switch (true) {
       case currentPhoto === data.slideshowOne.childImageSharp.fluid:
@@ -70,11 +70,11 @@ const Slideshow = () => {
         setCurrentPhoto(data.slideshowOne.childImageSharp.fluid)
         break
     }
-  }, 4000)
+  }, 3000)
 
   return (
     <div>
-      <Slides alt="default-photo-francis" fluid={currentPhoto}/>
+      <Slides alt="default-photo-francis" fluid={currentPhoto} />
     </div>
   )
 }

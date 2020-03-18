@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Nav = styled.nav`
-  // background-color: rgba(0, 0, 0, 0.09);
+  background-color: ${props =>
+    props.navBackground === "transparent" ? "transparent" : "white"};
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -37,9 +38,10 @@ const Heart = styled.div`
   color: #ff7979;
 `
 
-const Navbar = () => {
+const Navbar = ({ navBackground }) => {
+  console.log(navBackground)
   return (
-    <Nav>
+    <Nav navBackground={navBackground} bg>
       <Container>
         <div>
           Orlando, FL <br /> February 20, 2021
