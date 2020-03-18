@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 const Nav = styled.nav`
   background-color: ${props =>
-    props.navBackground === "transparent" ? "transparent" : "white"};
+    props.state === "entering" || props.state === "entered"
+      ? "white"
+      : "transparent"};
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -39,41 +42,46 @@ const Heart = styled.div`
 `
 
 const Navbar = () => {
-  const [navBackground, setNavBackground] = useState("transparent")
+  const [isNavColored, setisNavColored] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", e => {
       if (window.scrollY > 150) {
-        setNavBackground("notTransparent")
+        setisNavColored(true)
       } else {
-        setNavBackground("transparent")
+        setisNavColored(false)
       }
     })
   }, [])
 
   return (
-    <Nav navBackground={navBackground} bg>
-      <Container>
-        <div>
-          Orlando, FL <br /> February 20, 2021
-        </div>
-        <NavLinks>
-          <NavLink>Our Story</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>Where & Where</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>Wedding Party</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>Accomodations</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>Registry</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>FAQs</NavLink>
-          <Heart>❣</Heart>
-          <NavLink>RSVP</NavLink>
-        </NavLinks>
-      </Container>
-    </Nav>
+    <Transition in={isNavColored} timeout={500}>
+      {state => (
+        // <Nav isNavColored={isNavColored} >
+        <Nav state={state} isNavColored={isNavColored}>
+          <Container>
+            <div>
+              Orlando, FL <br /> February 20, 2021
+            </div>
+            <NavLinks>
+              <NavLink>Our Story</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>Where & Where</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>Wedding Party</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>Accomodations</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>Registry</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>FAQs</NavLink>
+              <Heart>❣</Heart>
+              <NavLink>RSVP</NavLink>
+            </NavLinks>
+          </Container>
+        </Nav>
+      )}
+    </Transition>
   )
 }
 
