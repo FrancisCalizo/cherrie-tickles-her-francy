@@ -6,21 +6,40 @@ import styled from "styled-components"
 import useInterval from "../hooks/useInterval"
 
 const Slides = styled(Img)`
-  width: 400px;
+  width: 300px;
+  border-radius: 300px
 `
 
 const Slideshow = () => {
   const data = useStaticQuery(graphql`
     query slideshowImageQuery {
-      slideshowOne: file(relativePath: { eq: "beach-shoulder-rest.jpg" }) {
+      slideshowOne: file(
+        relativePath: { eq: "slideshow/beach-shoulder-rest.jpg" }
+      ) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
 
-      slideshowTwo: file(relativePath: { eq: "beach-kiss.jpg" }) {
+      slideshowTwo: file(relativePath: { eq: "slideshow/beach-kiss.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      slideshowThree: file(relativePath: { eq: "slideshow/beach-kiss-cheek.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      slideshowFour: file(relativePath: { eq: "slideshow/beach-held.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -34,20 +53,28 @@ const Slideshow = () => {
     data.slideshowOne.childImageSharp.fluid
   )
 
+  console.log(data)
+
   useInterval(() => {
     switch (true) {
       case currentPhoto === data.slideshowOne.childImageSharp.fluid:
         setCurrentPhoto(data.slideshowTwo.childImageSharp.fluid)
         break
       case currentPhoto === data.slideshowTwo.childImageSharp.fluid:
+        setCurrentPhoto(data.slideshowThree.childImageSharp.fluid)
+        break
+      case currentPhoto === data.slideshowThree.childImageSharp.fluid:
+        setCurrentPhoto(data.slideshowFour.childImageSharp.fluid)
+        break
+      case currentPhoto === data.slideshowFour.childImageSharp.fluid:
         setCurrentPhoto(data.slideshowOne.childImageSharp.fluid)
         break
     }
-  }, 3000)
+  }, 4000)
 
   return (
     <div>
-      <Slides alt="default-photo-francis" fluid={currentPhoto} />
+      <Slides alt="default-photo-francis" fluid={currentPhoto}/>
     </div>
   )
 }
