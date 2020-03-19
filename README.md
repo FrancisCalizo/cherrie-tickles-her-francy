@@ -26,6 +26,8 @@
 
 - Global Styled Components with CSS Vairables - https://medium.com/@jidefr/using-css-variables-with-styled-components-3886f8ee35a0
 
+- Use of "Appear" prop when using React Transition Group with loading state - http://reactcommunity.org/react-transition-group/transition
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

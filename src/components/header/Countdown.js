@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import moment from "moment"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
 
 const InlineBlock = styled.div`
   display: inline-block;
+  transition: opacity 500ms ease-in;
+  opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
 `
 
 const CountdownContainer = styled.div`
@@ -32,6 +35,7 @@ const Countdown = () => {
   const [weddingDate] = useState(moment("2021-02-20", "YYYY-MM-DD"))
   const [countdown, setCountdown] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [trans, setTrans] = useState(false)
 
   useInterval(() => {
     let now = moment()
@@ -40,39 +44,47 @@ const Countdown = () => {
     setLoading(false)
   }, 1000)
 
+  useEffect(() => {
+    setTrans(true)
+  }, [trans])
+
   if (loading) {
     return <Placeholder />
   } else {
     return (
-      <InlineBlock>
-        <CountdownContainer>
-          <CountownSection>
-            <div>{parseInt(countdown.asDays())}</div>
-            <div>Days</div>
-          </CountownSection>
-          <CountownSection>
-            <div>:</div>
-          </CountownSection>
-          <CountownSection>
-            <div>{countdown._data.hours}</div>
-            <div>Hours</div>
-          </CountownSection>
-          <CountownSection>
-            <div>:</div>
-          </CountownSection>
-          <CountownSection>
-            <div>{countdown._data.minutes}</div>
-            <div>Minutes</div>
-          </CountownSection>
-          <CountownSection>
-            <div>:</div>
-          </CountownSection>
-          <CountownSection>
-            <div>{countdown._data.seconds}</div>
-            <div>Seconds</div>
-          </CountownSection>
-        </CountdownContainer>
-      </InlineBlock>
+      <Transition in={trans} timeout={500} appear={true}>
+        {state => (
+          <InlineBlock state={state}>
+            <CountdownContainer>
+              <CountownSection>
+                <div>{parseInt(countdown.asDays())}</div>
+                <div>{state}</div>
+              </CountownSection>
+              <CountownSection>
+                <div>:</div>
+              </CountownSection>
+              <CountownSection>
+                <div>{countdown._data.hours}</div>
+                <div>Hours</div>
+              </CountownSection>
+              <CountownSection>
+                <div>:</div>
+              </CountownSection>
+              <CountownSection>
+                <div>{countdown._data.minutes}</div>
+                <div>Minutes</div>
+              </CountownSection>
+              <CountownSection>
+                <div>:</div>
+              </CountownSection>
+              <CountownSection>
+                <div>{countdown._data.seconds}</div>
+                <div>Seconds</div>
+              </CountownSection>
+            </CountdownContainer>
+          </InlineBlock>
+        )}
+      </Transition>
     )
   }
 }
