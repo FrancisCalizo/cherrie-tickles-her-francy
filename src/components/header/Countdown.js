@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react"
 import moment from "moment"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
 
 const InlineBlock = styled.div`
   display: inline-block;
-  transition: all 500ms ease-in;
+  transition: all 700ms ease-in;
   opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
+  overflow: hidden;
+`
+const slideUp = keyframes`
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(0)
+  }
 `
 
 const CountdownContainer = styled.div`
   display: flex;
+  animation: ${slideUp} 1s linear;
 `
 
 const CountownSection = styled.div`
@@ -52,7 +63,7 @@ const Countdown = () => {
     return <Placeholder />
   } else {
     return (
-      <Transition in={trans} timeout={500} appear={true}>
+      <Transition in={trans} timeout={700} appear={true}>
         {state => (
           <InlineBlock state={state}>
             <CountdownContainer>
