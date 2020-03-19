@@ -8,19 +8,21 @@ const Nav = styled.nav`
     props.state === "entering" || props.state === "entered"
       ? "white"
       : "transparent"};
-  transition: opacity 500ms ease-in-out;
-  opacity: ${props => {
+  opacity: ${props => (props.state === "entering" ? 0.0 : 1.0)};
+  height: ${props => {
     switch (props.state) {
       case "entering":
         return 0
       case "entered":
-        return 1
+        return "85px"
       case "exiting":
-        return 1
+        return "85px"
       case "exited":
-        return 1
+        return "85px"
     }
   }};
+  transition: height 500ms ease-in, opacity 100ms ease-in,
+    background-color 100ms ease-in 300ms;
   overflow: hidden;
   position: fixed;
   top: 0;

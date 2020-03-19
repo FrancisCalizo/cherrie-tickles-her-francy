@@ -18,6 +18,12 @@
 
 - React Transition Group with Styled Components - https://reactcommunity.org/react-transition-group/transition and https://dev.to/terrierscript/styled-component--react-transition-group--very-simple-transition-jja
 
+- How to write Multiple Transitions - https://teamtreehouse.com/library/transitioning-multiple-properties
+
+- Css Transition Samples - https://thoughtbot.com/blog/transitions-and-transforms
+
+- Navbar Animations - https://www.newmediacampaigns.com/blog/nicer-navigation-with-css-transitions-part-2
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
