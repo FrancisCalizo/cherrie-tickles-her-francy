@@ -49,6 +49,14 @@ const Heart = styled.div`
   color: var(--heart);
 `
 
+const LogoContainer = styled.div`
+  transition: border 500ms ease-in;
+  border: 1px solid ${props => (props.isNavColored ? "#636e72" : "white")};
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
+`
+
 const Navbar = () => {
   const [isNavColored, setisNavColored] = useState(false)
 
@@ -67,9 +75,13 @@ const Navbar = () => {
       {state => (
         <Nav state={state} isNavColored={isNavColored}>
           <Container>
-            <div>
+            <LogoContainer isNavColored={isNavColored}>
+              <u>
+                <strong>Save the Date!</strong>
+              </u>
+              <br />
               Orlando, FL <br /> February 20, 2021
-            </div>
+            </LogoContainer>
             <NavLinks>
               <NavLink>Our Story</NavLink>
               <Heart>❣</Heart>

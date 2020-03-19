@@ -27,7 +27,7 @@ const appear = keyframes`
   }
 `
 const HeaderContent = styled.div`
-  margin: 0 auto;
+  margin: 3rem auto 0;
   text-align: center;
 
   h1 {
@@ -68,7 +68,7 @@ const Header = () => {
         <BlackOverlay>
           <HeaderContent>
             <h1>Francis & Cherrie</h1>
-            <h2>They're getting married!</h2>
+            <h2>We're getting married!</h2>
             <Countdown />
           </HeaderContent>
         </BlackOverlay>

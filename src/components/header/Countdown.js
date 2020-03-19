@@ -24,11 +24,18 @@ const slideUp = keyframes`
 const CountdownContainer = styled.div`
   display: flex;
   animation: ${slideUp} 1s linear;
+  margin-top: 1.5rem;
+
+  & > div:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    width: 110px;
+    padding: 0 0.5rem 0.7rem;
+    border-radius: 20px;
+  }
 `
 
 const CountownSection = styled.div`
-  padding: 1rem 0.5rem;
-
   div:nth-child(1) {
     font-size: 4rem;
   }
@@ -39,7 +46,7 @@ const CountownSection = styled.div`
 `
 const Placeholder = styled.div`
   visibility: hidden;
-  height: 140px;
+  height: 145px;
 `
 
 const Countdown = () => {
