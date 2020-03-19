@@ -8,6 +8,19 @@ const Nav = styled.nav`
     props.state === "entering" || props.state === "entered"
       ? "white"
       : "transparent"};
+  transition: opacity 500ms ease-in-out;
+  opacity: ${props => {
+    switch (props.state) {
+      case "entering":
+        return 0
+      case "entered":
+        return 1
+      case "exiting":
+        return 1
+      case "exited":
+        return 1
+    }
+  }};
   overflow: hidden;
   position: fixed;
   top: 0;

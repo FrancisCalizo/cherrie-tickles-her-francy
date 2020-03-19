@@ -14,7 +14,9 @@
 
 - Using props with Styled Components - https://styled-components.com/docs/basics#adapting-based-on-props and https://www.gatsbyjs.org/docs/styled-components/
 
-Add Event Listener Scroll Navbar - https://stackoverflow.com/questions/48458832/reactjs-change-color-of-element-on-scroll-and-when-certain-position-is-reached and https://stackoverflow.com/questions/44612364/toggle-class-based-on-scroll-react-js
+- Add Event Listener Scroll Navbar - https://stackoverflow.com/questions/48458832/reactjs-change-color-of-element-on-scroll-and-when-certain-position-is-reached and https://stackoverflow.com/questions/44612364/toggle-class-based-on-scroll-react-js
+
+- React Transition Group with Styled Components - https://reactcommunity.org/react-transition-group/transition and https://dev.to/terrierscript/styled-component--react-transition-group--very-simple-transition-jja
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
