@@ -23,6 +23,10 @@ const CountownSection = styled.div`
     font-size: 1.5rem;
   }
 `
+const Placeholder = styled.div`
+  visibility: hidden;
+  height: 136px;
+`
 
 const Countdown = () => {
   const [weddingDate] = useState(moment("2021-02-20", "YYYY-MM-DD"))
@@ -37,7 +41,7 @@ const Countdown = () => {
   }, 1000)
 
   if (loading) {
-    return null
+    return <Placeholder />
   } else {
     return (
       <InlineBlock>

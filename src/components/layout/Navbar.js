@@ -11,14 +11,18 @@ const Nav = styled.nav`
   opacity: ${props => (props.state === "entering" ? 0.0 : 1.0)};
   height: ${props => (props.state === "entering" ? 0 : "85px")};
   color: ${props => (props.isNavColored ? "#636e72" : "white")};
-  transition: height 700ms ease-in, opacity 100ms ease-in,
-    background-color 100ms ease-in 300ms, color 100ms ease-in;
+  box-shadow: ${props =>
+    props.isNavColored
+      ? "0 3px 1px -1px var(--heart);"
+      : "0 4px 7px -7px #dff9fb;"}
+  transition: height 500ms ease-in, opacity 100ms ease-in,
+    background-color 100ms ease-in 300ms, color 100ms ease-in 300ms,
+    box-shadow 100ms ease-in 300ms;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  box-shadow: 0 4px 7px -7px #dff9fb;
 `
 const Container = styled.div`
   display: flex;
@@ -42,7 +46,7 @@ const NavLink = styled.div`
 const Heart = styled.div`
   font-size: 1.2rem;
   padding: 1.85rem 0;
-  color: #ff7979;
+  color: var(--heart);
 `
 
 const Navbar = () => {
@@ -59,7 +63,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <Transition in={isNavColored} timeout={700}>
+    <Transition in={isNavColored} timeout={500}>
       {state => (
         <Nav state={state} isNavColored={isNavColored}>
           <Container>

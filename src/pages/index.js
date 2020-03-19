@@ -12,7 +12,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway', sans-serif;
   }
 `
-const CSSVariables = styled.div``
+const CSSVariables = styled.div`
+  --heart: #ff7979;
+`
 
 const index = () => {
   return (
