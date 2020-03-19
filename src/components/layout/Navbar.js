@@ -9,26 +9,15 @@ const Nav = styled.nav`
       ? "white"
       : "transparent"};
   opacity: ${props => (props.state === "entering" ? 0.0 : 1.0)};
-  height: ${props => {
-    switch (props.state) {
-      case "entering":
-        return 0
-      case "entered":
-        return "85px"
-      case "exiting":
-        return "85px"
-      case "exited":
-        return "85px"
-    }
-  }};
-  transition: height 500ms ease-in, opacity 100ms ease-in,
-    background-color 100ms ease-in 300ms;
+  height: ${props => (props.state === "entering" ? 0 : "85px")};
+  color: ${props => (props.isNavColored ? "#636e72" : "white")};
+  transition: height 700ms ease-in, opacity 100ms ease-in,
+    background-color 100ms ease-in 300ms, color 100ms ease-in;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  color: white;
   box-shadow: 0 4px 7px -7px #dff9fb;
 `
 const Container = styled.div`
@@ -70,9 +59,8 @@ const Navbar = () => {
   }, [])
 
   return (
-    <Transition in={isNavColored} timeout={500}>
+    <Transition in={isNavColored} timeout={700}>
       {state => (
-        // <Nav isNavColored={isNavColored} >
         <Nav state={state} isNavColored={isNavColored}>
           <Container>
             <div>

@@ -1,5 +1,5 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Navbar from "../components/layout/Navbar"
 import Header from "../components/header/Header"
@@ -12,15 +12,18 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway', sans-serif;
   }
 `
+const CSSVariables = styled.div``
 
 const index = () => {
   return (
     <div>
-      <Navbar />
-      <GlobalStyle />
-      <Header />
-      {/* <Story /> */}
-      <Slideshow />
+      <CSSVariables>
+        <Navbar />
+        <GlobalStyle />
+        <Header />
+        {/* <Story /> */}
+        <Slideshow />
+      </CSSVariables>
     </div>
   )
 }

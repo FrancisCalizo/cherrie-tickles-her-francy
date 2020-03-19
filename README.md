@@ -24,6 +24,8 @@
 
 - Navbar Animations - https://www.newmediacampaigns.com/blog/nicer-navigation-with-css-transitions-part-2
 
+- Global Styled Components with CSS Vairables - https://medium.com/@jidefr/using-css-variables-with-styled-components-3886f8ee35a0
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
