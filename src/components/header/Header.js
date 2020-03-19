@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import Countdown from "./Countdown"
 
@@ -17,6 +17,15 @@ const BlackOverlay = styled.div`
   align-items: center;
   color: white;
 `
+const appear = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`
 const HeaderContent = styled.div`
   margin: 0 auto;
   text-align: center;
@@ -25,7 +34,7 @@ const HeaderContent = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 6rem;
     margin: 0;
-    // letter-spacing: 0.07em;
+    animation ${appear} 1.5s ease-in-out;
   }
 
   h2 {
@@ -33,6 +42,7 @@ const HeaderContent = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin: 0;
+    animation ${appear} 2.5s ease-in-out;
   }
 `
 

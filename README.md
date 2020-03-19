@@ -28,6 +28,8 @@
 
 - Use of "Appear" prop when using React Transition Group with loading state - http://reactcommunity.org/react-transition-group/transition
 
+- Animations - https://www.html.am/html-codes/marquees/css-slide-in-text.cfm and https://styled-components.com/docs/basics#animations
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

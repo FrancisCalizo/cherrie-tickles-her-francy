@@ -39,7 +39,7 @@ const CountownSection = styled.div`
 `
 const Placeholder = styled.div`
   visibility: hidden;
-  height: 136px;
+  height: 140px;
 `
 
 const Countdown = () => {
