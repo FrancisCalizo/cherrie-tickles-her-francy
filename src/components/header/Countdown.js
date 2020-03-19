@@ -7,7 +7,7 @@ import useInterval from "../hooks/useInterval"
 
 const InlineBlock = styled.div`
   display: inline-block;
-  transition: opacity 500ms ease-in;
+  transition: all 500ms ease-in;
   opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
 `
 
@@ -58,7 +58,7 @@ const Countdown = () => {
             <CountdownContainer>
               <CountownSection>
                 <div>{parseInt(countdown.asDays())}</div>
-                <div>{state}</div>
+                <div>Days</div>
               </CountownSection>
               <CountownSection>
                 <div>:</div>
