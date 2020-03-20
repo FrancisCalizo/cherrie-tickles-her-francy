@@ -82,7 +82,7 @@ const Header = () => {
   `)
 
   return (
-    <header>
+    <header id="header">
       <HeaderImage
         alt="beach-header-photo"
         fluid={data.headerImage.childImageSharp.fluid}

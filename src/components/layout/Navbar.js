@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Transition } from "react-transition-group"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
-import { device, size } from "../breakpoints"
+import { device } from "../breakpoints"
 
 const Nav = styled.nav`
   background-color: ${props =>
@@ -71,15 +72,25 @@ const BurgerLine = styled.div`
 `
 
 const NavLink = styled.div`
-  padding: 2.2rem 0.85rem;
+  margin: 2.1rem 0.85rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
+
+  & > div {
+    padding: 1rem 0;
+  }
+
+  & > div:hover {
+    border-bottom: 3px solid var(--heart);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 `
 
 const Heart = styled.div`
   font-size: 1.2rem;
-  padding: 1.85rem 0;
+  padding: 2.85rem 0;
   color: var(--heart);
 `
 
@@ -89,6 +100,7 @@ const LogoContainer = styled.div`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   padding: 0.3rem 0.7rem;
   border-radius: 10px;
+  cursor: pointer;
 
   @media ${device.maxLg} {
     font-size: 0.9rem;
@@ -113,7 +125,10 @@ const Navbar = () => {
       {state => (
         <Nav state={state} isNavColored={isNavColored}>
           <Container>
-            <LogoContainer isNavColored={isNavColored}>
+            <LogoContainer
+              isNavColored={isNavColored}
+              onClick={() => scrollTo("#header")}
+            >
               <u>
                 <strong>Save the Date!</strong>
               </u>
@@ -126,19 +141,33 @@ const Navbar = () => {
               <BurgerLine isNavColored={isNavColored}></BurgerLine>
             </Hamburger>
             <NavLinks>
-              <NavLink>Our Story</NavLink>
+              <NavLink onClick={() => scrollTo("#story")}>
+                <div>Our Story</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>Where & Where</NavLink>
+              <NavLink onClick={() => scrollTo("#when")}>
+                <div>Where & Where</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>Wedding Party</NavLink>
+              <NavLink onClick={() => scrollTo("#party")}>
+                <div>Wedding Party</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>Accomodations</NavLink>
+              <NavLink onClick={() => scrollTo("#accomodations")}>
+                <div>Accomodations</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>Registry</NavLink>
+              <NavLink onClick={() => scrollTo("#registry")}>
+                <div>Registry</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>FAQs</NavLink>
+              <NavLink onClick={() => scrollTo("#faq")}>
+                <div>FAQs</div>
+              </NavLink>
               <Heart>❣</Heart>
-              <NavLink>RSVP</NavLink>
+              <NavLink onClick={() => scrollTo("#rsvp")}>
+                <div>RSVP</div>
+              </NavLink>
             </NavLinks>
           </Container>
         </Nav>

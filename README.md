@@ -32,6 +32,8 @@
 
 - Media Queries with Styled Components - https://jsramblings.com/how-to-use-media-queries-with-styled-components/
 
+- Smoothscroll Navbar Linking - https://github.com/freddydumont/gatsby-plugin-smoothscroll
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

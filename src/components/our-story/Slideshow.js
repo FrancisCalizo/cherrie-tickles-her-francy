@@ -73,7 +73,7 @@ const Slideshow = () => {
   }, 3000)
 
   return (
-    <div>
+    <div id="story">
       <Slides alt="default-photo-francis" fluid={currentPhoto} />
     </div>
   )
