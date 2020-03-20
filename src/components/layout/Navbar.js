@@ -13,7 +13,7 @@ const Nav = styled.nav`
       : "transparent"};
   opacity: ${props => (props.state === "entering" ? 0.0 : 1.0)};
   height: ${props => (props.state === "entering" ? 0 : "85px")};
-  color: ${props => (props.isNavColored ? "#636e72" : "white")};
+  color: ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
   box-shadow: ${props =>
     props.isNavColored
       ? "0 3px 1px -1px var(--heart);"
@@ -54,7 +54,8 @@ const NavLinks = styled.div`
 `
 
 const Hamburger = styled.div`
-  border: 1px solid ${props => (props.isNavColored ? "#636e72" : "white")};;
+  border: 1px solid ${props =>
+    props.isNavColored ? "var(--header-gray)" : "white"};;
   border-radius: 10px;
   padding 0.40rem 0.7rem;
 
@@ -66,7 +67,8 @@ const Hamburger = styled.div`
 const BurgerLine = styled.div`
   width: 40px;
   height: 3px;
-  background-color: ${props => (props.isNavColored ? "#636e72" : "white")};
+  background-color: ${props =>
+    props.isNavColored ? "var(--header-gray)" : "white"};
   margin: 8px 0;
   border-radius: 5px;
 `
@@ -96,7 +98,8 @@ const Heart = styled.div`
 
 const LogoContainer = styled.div`
   transition: border 500ms ease-in;
-  border: 1px solid ${props => (props.isNavColored ? "#636e72" : "white")};
+  border: 1px solid
+    ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   padding: 0.3rem 0.7rem;
   border-radius: 10px;

@@ -29,6 +29,7 @@ const CountdownContainer = styled.div`
 
   & > div:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--header-gray);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
     width: 110px;
     padding: 0 0.5rem 0.7rem;
@@ -65,7 +66,8 @@ const CountownSection = styled.div`
   justify-content: center;
 
   div:nth-child(1) {
-    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5rem;
   }
 
   div:nth-child(2) {

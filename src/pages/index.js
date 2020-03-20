@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 const CSSVariables = styled.div`
   // Colors
   --heart: #ff7979;
+  --header-gray: #636e72;
 
   // Widths
   --container: 1280px;

@@ -21,7 +21,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Raleway:400,700", "Poppins", "Great Vibes", "Alex Brush"],
+          families: ["Raleway:400,700", "Poppins", "Lato", "Alex Brush"],
         },
       },
     },
