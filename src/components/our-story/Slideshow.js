@@ -1,13 +1,25 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
 
 const Slides = styled(Img)`
   width: 300px;
-  // border-radius: 300px
+  transition: opacity 1000ms ease-in-out;
+  opacity: ${props => {
+    switch (props.state) {
+      case "entering":
+        return 0.25
+      case "entered":
+        return 1.0
+      default:
+        return 0
+    }
+  }};
+  // border-radius: 300px;
 `
 
 const Slideshow = () => {
@@ -51,11 +63,13 @@ const Slideshow = () => {
     }
   `)
 
+  const [trans, setTrans] = useState(true)
   const [currentPhoto, setCurrentPhoto] = useState(
     data.slideshowOne.childImageSharp.fluid
   )
 
   useInterval(() => {
+    setTrans(false)
     switch (true) {
       case currentPhoto === data.slideshowOne.childImageSharp.fluid:
         setCurrentPhoto(data.slideshowTwo.childImageSharp.fluid)
@@ -70,11 +84,18 @@ const Slideshow = () => {
         setCurrentPhoto(data.slideshowOne.childImageSharp.fluid)
         break
     }
-  }, 3000)
+    setTrans(true)
+  }, 5000)
 
   return (
     <div id="story">
-      <Slides alt="default-photo-francis" fluid={currentPhoto} />
+      <Transition in={trans} timeout={200}>
+        {state => (
+          <div>
+            <Slides alt="slideshow-pics" fluid={currentPhoto} state={state} />
+          </div>
+        )}
+      </Transition>
     </div>
   )
 }

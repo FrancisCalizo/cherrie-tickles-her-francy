@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components"
 import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
-import { size, device } from "../breakpoints"
+import { device } from "../breakpoints"
 
 const InlineBlock = styled.div`
   display: inline-block;
@@ -28,7 +28,7 @@ const CountdownContainer = styled.div`
   margin-top: 1.5rem;
 
   & > div:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(85, 85, 85, 0.7);
     border: 1px solid var(--header-gray);
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
     width: 110px;
