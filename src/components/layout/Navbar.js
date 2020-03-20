@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { Transition } from "react-transition-group"
 
+import { device, size } from "../breakpoints"
+
 const Nav = styled.nav`
   background-color: ${props =>
     props.state === "entering" || props.state === "entered"
@@ -23,21 +25,53 @@ const Nav = styled.nav`
   top: 0;
   width: 100%;
   z-index: 10;
+  }
 `
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: var(--container);
   margin: 0 auto;
+  height: 100%;
+
+  @media ${device.maxLg} {
+    margin: auto 3rem;
+  }
+
+  @media ${device.minLg} {
+    justify-content: space-around;
+  }
 `
 
 const NavLinks = styled.div`
-  display: flex;
+  display: none;
+
+  @media ${device.minLg} {
+    display: flex;
+  }
+`
+
+const Hamburger = styled.div`
+  border: 1px solid ${props => (props.isNavColored ? "#636e72" : "white")};;
+  border-radius: 10px;
+  padding 0.40rem 0.7rem;
+
+  @media ${device.minLg}{
+    display: none;
+  }
+`
+
+const BurgerLine = styled.div`
+  width: 40px;
+  height: 3px;
+  background-color: ${props => (props.isNavColored ? "#636e72" : "white")};
+  margin: 8px 0;
+  border-radius: 5px;
 `
 
 const NavLink = styled.div`
-  padding: 2.2rem 1rem;
+  padding: 2.2rem 0.85rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
@@ -55,6 +89,10 @@ const LogoContainer = styled.div`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   padding: 0.3rem 0.7rem;
   border-radius: 10px;
+
+  @media ${device.maxLg} {
+    font-size: 0.9rem;
+  }
 `
 
 const Navbar = () => {
@@ -82,6 +120,11 @@ const Navbar = () => {
               <br />
               Orlando, FL <br /> February 20, 2021
             </LogoContainer>
+            <Hamburger isNavColored={isNavColored}>
+              <BurgerLine isNavColored={isNavColored}></BurgerLine>
+              <BurgerLine isNavColored={isNavColored}></BurgerLine>
+              <BurgerLine isNavColored={isNavColored}></BurgerLine>
+            </Hamburger>
             <NavLinks>
               <NavLink>Our Story</NavLink>
               <Heart>❣</Heart>

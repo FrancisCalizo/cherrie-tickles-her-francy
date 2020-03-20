@@ -13,7 +13,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const CSSVariables = styled.div`
+  // Colors
   --heart: #ff7979;
+
+  // Widths
+  --container: 1280px;
 `
 
 const index = () => {

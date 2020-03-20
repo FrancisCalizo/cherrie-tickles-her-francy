@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components"
 import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
+import { size, device } from "../breakpoints"
 
 const InlineBlock = styled.div`
   display: inline-block;
@@ -28,20 +29,66 @@ const CountdownContainer = styled.div`
 
   & > div:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
     width: 110px;
     padding: 0 0.5rem 0.7rem;
-    border-radius: 20px;
+    border-radius: 5px;
+  }
+
+  & > div:nth-child(even) {
+    margin: 0 0.4rem;
+  }
+
+  @media ${device.maxLg} {
+    & > div:nth-child(odd) {
+      width: 100px;
+      height: 85px;
+      padding: 0 0.4rem 0.6rem;
+    }
+
+    & > div:nth-child(even) {
+      margin: 0 0.1rem;
+    }
+
+    @media ${device.maxMd} {
+      & > div:nth-child(odd) {
+        width: 80px;
+        height: 75px;
+        padding: 0 0.3rem 0.3rem;
+      }
   }
 `
 
 const CountownSection = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
   div:nth-child(1) {
     font-size: 4rem;
   }
 
   div:nth-child(2) {
     font-size: 1.5rem;
+  }
+
+  @media ${device.maxLg} {
+    div:nth-child(1) {
+      font-size: 5vw;
+    }
+
+    div:nth-child(2) {
+      font-size: 2.2vw;
+    }
+
+  @media ${device.maxLg} {
+    div:nth-child(1) {
+      font-size: 3rem;
+    }
+
+    div:nth-child(2) {
+      font-size: 1rem;
+    }
   }
 `
 const Placeholder = styled.div`

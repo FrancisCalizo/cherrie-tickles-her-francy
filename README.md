@@ -30,6 +30,8 @@
 
 - Animations - https://www.html.am/html-codes/marquees/css-slide-in-text.cfm and https://styled-components.com/docs/basics#animations
 
+- Media Queries with Styled Components - https://jsramblings.com/how-to-use-media-queries-with-styled-components/
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

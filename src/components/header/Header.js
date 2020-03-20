@@ -4,6 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 import styled, { keyframes } from "styled-components"
 
 import Countdown from "./Countdown"
+import { size, device } from "../breakpoints"
 
 const HeaderImage = styled(BackgroundImage)`
   height: 100vh;
@@ -44,6 +45,27 @@ const HeaderContent = styled.div`
     margin: 0;
     animation ${appear} 2.5s ease-in-out;
   }
+
+  @media ${device.maxMd}{
+    h1{
+      font-size: 4rem;
+    }
+
+    h2{
+      font-size: 0.9rem;
+    }
+  }
+
+  @media ${device.minMd} and ${device.maxLg}{
+    h1{
+      font-size: 9vw;
+    }
+
+    h2{
+      font-size: 2vw;
+    }
+  }
+
 `
 
 const Header = () => {
