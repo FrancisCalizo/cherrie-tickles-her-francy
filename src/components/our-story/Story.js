@@ -53,7 +53,7 @@ const SlideshowDiv = styled.div`
 const Story = () => {
   return (
     <StoryContainer id="story">
-      <StoryTop>
+      <StoryTop data-sal="fade" data-sal-duration="1500" data-sal-easing="ease">
         <h2>Our Story</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
@@ -74,7 +74,12 @@ const Story = () => {
         </p>
       </StoryTop>
       <StoryBottom>
-        <div>
+        <div
+          data-sal="slide-right"
+          data-sal-duration="1500"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <h3>Francis Calizo</h3>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -88,10 +93,20 @@ const Story = () => {
             error consequuntur vero maiores doloremque reprehenderit sapiente.
           </p>
         </div>
-        <SlideshowDiv>
+        <SlideshowDiv
+          data-sal="fade"
+          data-sal-duration="1000"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+        >
           <SlideShow />
         </SlideshowDiv>
-        <div>
+        <div
+          data-sal="slide-left"
+          data-sal-duration="1500"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <h3>Cherrie Sarmiento</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magni
