@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 import styled, { keyframes } from "styled-components"
 
 import Countdown from "./Countdown"
-import { size, device } from "../breakpoints"
+import { device } from "../breakpoints"
 
 const HeaderImage = styled(BackgroundImage)`
   height: 100vh;
