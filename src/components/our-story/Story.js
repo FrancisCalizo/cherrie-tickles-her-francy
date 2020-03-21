@@ -52,7 +52,7 @@ const SlideshowDiv = styled.div`
 
 const Story = () => {
   return (
-    <StoryContainer>
+    <StoryContainer id="story">
       <StoryTop>
         <h2>Our Story</h2>
         <p>

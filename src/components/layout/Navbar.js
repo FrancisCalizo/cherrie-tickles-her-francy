@@ -74,7 +74,7 @@ const BurgerLine = styled.div`
 `
 
 const NavLink = styled.div`
-  margin: 2.1rem 0.85rem;
+  margin: 2rem 0.85rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
@@ -149,7 +149,7 @@ const Navbar = () => {
               </NavLink>
               <Heart>❣</Heart>
               <NavLink onClick={() => scrollTo("#when")}>
-                <div>Where & Where</div>
+                <div>When & Where</div>
               </NavLink>
               <Heart>❣</Heart>
               <NavLink onClick={() => scrollTo("#party")}>

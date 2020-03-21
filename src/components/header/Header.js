@@ -35,7 +35,7 @@ const HeaderContent = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 6rem;
     margin: 0;
-    animation ${appear} 1.5s ease-in-out;
+    animation ${appear} 2s ease-in-out;
   }
 
   h2 {
@@ -43,7 +43,7 @@ const HeaderContent = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin: 0;
-    animation ${appear} 2.5s ease-in-out;
+    animation ${appear} 3s ease-in-out;
   }
 
   @media ${device.maxMd}{

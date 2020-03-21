@@ -8,6 +8,8 @@ import useInterval from "../hooks/useInterval"
 
 const Slides = styled(Img)`
   width: 300px;
+  border-radius: 1000px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   transition: opacity 1000ms ease-in-out;
   opacity: ${props => {
     switch (props.state) {
@@ -88,7 +90,7 @@ const Slideshow = () => {
   }, 5000)
 
   return (
-    <div id="story">
+    <div>
       <Transition in={trans} timeout={200}>
         {state => (
           <div>
