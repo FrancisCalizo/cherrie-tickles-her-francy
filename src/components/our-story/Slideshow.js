@@ -8,7 +8,7 @@ import useInterval from "../hooks/useInterval"
 
 const Slides = styled(Img)`
   width: 300px;
-  border-radius: 1000px;
+  border-radius: 500px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   transition: opacity 1000ms ease-in-out;
   opacity: ${props => {
@@ -21,7 +21,6 @@ const Slides = styled(Img)`
         return 0
     }
   }};
-  // border-radius: 300px;
 `
 
 const Slideshow = () => {

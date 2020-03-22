@@ -148,7 +148,7 @@ const Navbar = () => {
                 <div>Our Story</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#when")}>
+              <NavLink onClick={() => scrollTo("#when-and-where")}>
                 <div>When & Where</div>
               </NavLink>
               <Heart>❣</Heart>
