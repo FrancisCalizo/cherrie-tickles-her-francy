@@ -4,27 +4,35 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const GalleryContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  max-width: var(--container);
 `
 
-const Image = styled(Img)`
-  height: 380px;
-  width: 33%;
+const ImagesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
+const ImageContainer = styled.div`
+  width: 21%;
+  max-width: 320px;
+  text-align: center;
 `
 
 const g = [
   "beach-kiss-cheek.jpg",
   "beach-donut.jpg",
+  "beach-shoulder-rest.jpg",
   "beach-legs-up-kiss.jpg",
   "tree-prom.jpg",
   "tree-hands.jpg",
+  "tree-hair.jpg",
   "tree-kiss.jpg",
 ]
 
 const sortFunction = (a, b) => {
-  const imageA = a.node.childImageSharp.fluid.originalName
-  const imageB = b.node.childImageSharp.fluid.originalName
+  const imageA = a.node.childImageSharp.fixed.originalName
+  const imageB = b.node.childImageSharp.fixed.originalName
 
   let comparison = 0
 }
@@ -36,9 +44,9 @@ const Gallery = () => {
         edges {
           node {
             childImageSharp {
-              fluid(quality: 100, maxWidth: 380) {
+              fixed(quality: 100, height: 350, width: 230) {
                 originalName
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -49,22 +57,24 @@ const Gallery = () => {
 
   console.log(
     data.allFile.edges.map((img, idx) => {
-      return img.node.childImageSharp.fluid
+      return img.node.childImageSharp.fixed
     })
   )
 
   return (
-    <div id="gallery">
+    <GalleryContainer id="gallery">
       <h1>Photo Gallery</h1>
-      <GalleryContainer>
+      <ImagesContainer>
         {data.allFile.edges.map((img, idx) => (
-          <Image
-            fluid={img.node.childImageSharp.fluid}
-            alt="img.node.childImageSharp.fluid.originalName"
-          />
+          <ImageContainer key={idx}>
+            <Img
+              fixed={img.node.childImageSharp.fixed}
+              alt="img.node.childImageSharp.fixed.originalName"
+            />
+          </ImageContainer>
         ))}
-      </GalleryContainer>
-    </div>
+      </ImagesContainer>
+    </GalleryContainer>
   )
 }
 
