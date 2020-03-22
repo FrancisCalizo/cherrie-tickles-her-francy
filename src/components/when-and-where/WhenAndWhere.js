@@ -19,6 +19,10 @@ const Container = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 3rem;
   }
+
+  @media ${device.maxMd} {
+    flex-wrap: wrap;
+  }
 `
 
 const WhenAndWhereImage = styled(BackgroundImage)`
@@ -38,10 +42,23 @@ const Box = styled.div`
   width: 330px;
   border: 2px solid white;
   padding: 3rem 1rem;
+
+  @media ${device.minMd} and ${device.maxLg}{
+    width: 34vw;
+    padding: 1.75rem 0;
+  }
 `
 
 const And = styled.div`
   width: 200px;
+
+  @media ${device.maxMd} {
+    width: 100%;
+  }
+
+  @media ${device.minMd} and ${device.maxLg}{
+    width: 155px;
+  }
 `
 
 const WhenAndWhere = () => {
