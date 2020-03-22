@@ -8,6 +8,11 @@ const GalleryContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const Image = styled(Img)`
+  height: 380px;
+  width: 33%;
+`
+
 const g = [
   "beach-kiss-cheek.jpg",
   "beach-donut.jpg",
@@ -42,18 +47,23 @@ const Gallery = () => {
     }
   `)
 
-  console.log(data.allFile.edges.sort(sortFunction))
-
-  // console.log(
-  //   data.allFile.edges.node.childImageSharp.fluid.originalName.sort((a, b) => {
-  //     return galleryorder.indexOf(a) - galleryorder.indexOf(b)
-  //   })
-  // )
+  console.log(
+    data.allFile.edges.map((img, idx) => {
+      return img.node.childImageSharp.fluid
+    })
+  )
 
   return (
     <div id="gallery">
       <h1>Photo Gallery</h1>
-      <GalleryContainer></GalleryContainer>
+      <GalleryContainer>
+        {data.allFile.edges.map((img, idx) => (
+          <Image
+            fluid={img.node.childImageSharp.fluid}
+            alt="img.node.childImageSharp.fluid.originalName"
+          />
+        ))}
+      </GalleryContainer>
     </div>
   )
 }
