@@ -37,6 +37,8 @@
 - React Particles overlay - https://stackoverflow.com/questions/53604102/how-can-i-set-react-particles-js-as-the-background-while-using-react
 
 - React Particles Params - https://rpj.bembi.org/#bubbles
+
+- All file and Edges in Graphql to get an array instead an object of pictures - https://github.com/gatsbyjs/gatsby/issues/11449
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
