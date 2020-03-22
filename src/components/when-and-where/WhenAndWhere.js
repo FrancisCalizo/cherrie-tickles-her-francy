@@ -2,6 +2,7 @@ import React from "react"
 import { grapql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
+import Particles from "react-particles-js"
 
 import { device } from "../breakpoints"
 
@@ -61,6 +62,56 @@ const And = styled.div`
   }
 `
 
+const ParticlesContainer = styled(Particles)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const particleParams = {
+  particles: {
+    number: {
+      value: 210,
+      density: {
+        enable: false,
+      },
+    },
+    size: {
+      value: 2,
+      random: true,
+      anim: {
+        speed: 2,
+        size_min: 0.3,
+      },
+    },
+    line_linked: {
+      enable: false,
+    },
+    move: {
+      random: true,
+      speed: 1,
+      direction: "top",
+      out_mode: "out",
+    },
+  },
+  interactivity: {
+    modes: {
+      bubble: {
+        distance: 250,
+        duration: 2,
+        size: 0,
+        opacity: 0,
+      },
+      repulse: {
+        distance: 400,
+        duration: 4,
+      },
+    },
+  },
+}
+
 const WhenAndWhere = () => {
   const data = useStaticQuery(graphql`
     query whenAndWhereBackground {
@@ -80,6 +131,7 @@ const WhenAndWhere = () => {
         alt="when-and-where"
         fluid={data.whenAndWhereImage.childImageSharp.fluid}
       >
+        <ParticlesContainer params={particleParams} />
         <BlackOverlay>
           <Container>
             <Box>
