@@ -11,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 12rem 0;
+  padding: 8rem 0;
   text-align: center;
   max-width: var(--container);
   color: white;
@@ -73,7 +73,7 @@ const ParticlesContainer = styled(Particles)`
 const particleParams = {
   particles: {
     number: {
-      value: 210,
+      value: 260,
       density: {
         enable: false,
       },
@@ -134,7 +134,12 @@ const WhenAndWhere = () => {
         <ParticlesContainer params={particleParams} />
         <BlackOverlay>
           <Container>
-            <Box>
+            <Box
+              data-sal="fade"
+              data-sal-duration="600"
+              data-sal-delay="100"
+              data-sal-easing="ease-in-out"
+            >
               <h3>Ceremony</h3>
               <p>
                 St. Thomas Shelby Church
@@ -145,10 +150,20 @@ const WhenAndWhere = () => {
                 123 Redwood Ct, Auburn, WA
               </p>
             </Box>
-            <And>
+            <And
+              data-sal="fade"
+              data-sal-duration="600"
+              data-sal-delay="100"
+              data-sal-easing="ease-in-out"
+            >
               <h3>And</h3>
             </And>
-            <Box>
+            <Box
+              data-sal="fade"
+              data-sal-duration="600"
+              data-sal-delay="100"
+              data-sal-easing="ease-in-out"
+            >
               <h3>Reception</h3>
               <p>
                 Orlando Museum of Art
