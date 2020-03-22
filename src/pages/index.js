@@ -5,6 +5,7 @@ import Navbar from "../components/layout/Navbar"
 import Header from "../components/header/Header"
 import Story from "../components/our-story/Story"
 import WhenAndWhere from "../components/when-and-where/WhenAndWhere"
+import Gallery from "../components/gallery/Gallery"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -30,6 +31,7 @@ const index = () => {
         <Header />
         <Story />
         <WhenAndWhere />
+        <Gallery />
       </CSSVariables>
     </div>
   )

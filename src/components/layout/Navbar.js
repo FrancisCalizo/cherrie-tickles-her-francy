@@ -156,20 +156,20 @@ const Navbar = () => {
                 <div>Wedding Party</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#accomodations")}>
-                <div>Accomodations</div>
-              </NavLink>
-              <Heart>❣</Heart>
               <NavLink onClick={() => scrollTo("#registry")}>
                 <div>Registry</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#faq")}>
+              <NavLink onClick={() => scrollTo("#gallery")}>
+                <div>Gallery</div>
+              </NavLink>
+              <Heart>❣</Heart>
+              <NavLink onClick={() => scrollTo("#faqs")}>
                 <div>FAQs</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#rsvp")}>
-                <div>RSVP</div>
+              <NavLink onClick={() => scrollTo("#contact")}>
+                <div>Contact Us</div>
               </NavLink>
             </NavLinks>
           </Container>
