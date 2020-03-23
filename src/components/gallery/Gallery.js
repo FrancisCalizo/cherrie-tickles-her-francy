@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import ReactModal from "react-modal"
 
 const GalleryContainer = styled.div`
   max-width: 1024px;
@@ -39,6 +40,7 @@ const ImagesContainer = styled.div`
 const Image = styled(Img)`
   margin: 0.5rem;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 `
 
 const Gallery = () => {
@@ -68,6 +70,16 @@ const Gallery = () => {
     }
   `)
 
+  const [showModal, setShowModal] = useState(false)
+
+  const handleOpenModal = () => {
+    setShowModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false)
+  }
+
   const compare = (a, b) => {
     const order = [
       "beach-donut.jpg",
@@ -89,6 +101,29 @@ const Gallery = () => {
 
   return (
     <GalleryContainer id="gallery">
+      <ReactModal
+        isOpen={showModal}
+        contentLabel="Minimal Modal Example"
+        style={{
+          overlay: {
+            zIndex: 20,
+            backgroundColor: "transparent",
+          },
+          content: {
+            backgroundColor: "rgba(0,0,0,0.75)",
+            height: "100%",
+            width: "100%",
+            top: 0,
+            left: 0,
+          },
+        }}
+      >
+        <button onClick={handleCloseModal}>Close Modal</button>
+        <Image
+          fixed={data.galleryImages.edges[0].node.childImageSharp.fixed}
+          alt="img.galleryImages.childImageSharp.fixed.originalName"
+        />
+      </ReactModal>
       <div
         data-sal="fade"
         data-sal-duration="600"
@@ -112,6 +147,7 @@ const Gallery = () => {
             data-sal-duration="600"
             data-sal-delay={100 * idx}
             data-sal-easing="ease-in-out"
+            onClick={handleOpenModal}
           >
             <Image
               fixed={img.node.childImageSharp.fixed}
