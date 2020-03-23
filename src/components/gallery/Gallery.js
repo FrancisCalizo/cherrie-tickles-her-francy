@@ -4,14 +4,18 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const GalleryContainer = styled.div`
-  max-width: var(--container);
+  // max-width: var(--container);
+  max-width: 1024px;
+  margin: 0 auto;
 `
 
 const ImagesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1140px;
+`
+const Image = styled(Img)`
+  margin: 0.5rem;
 `
 
 const g = [
@@ -25,13 +29,6 @@ const g = [
   "tree-kiss.jpg",
 ]
 
-const sortFunction = (a, b) => {
-  const imageA = a.node.childImageSharp.fixed.originalName
-  const imageB = b.node.childImageSharp.fixed.originalName
-
-  let comparison = 0
-}
-
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query galleryImageQuery {
@@ -39,7 +36,7 @@ const Gallery = () => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 350, width: 230) {
+              fixed(quality: 100, height: 380, width: 240) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
@@ -50,18 +47,12 @@ const Gallery = () => {
     }
   `)
 
-  console.log(
-    data.allFile.edges.map((img, idx) => {
-      return img.node.childImageSharp.fixed
-    })
-  )
-
   return (
     <GalleryContainer id="gallery">
       <h1>Photo Gallery</h1>
       <ImagesContainer>
         {data.allFile.edges.map((img, idx) => (
-          <Img
+          <Image
             key={idx}
             fixed={img.node.childImageSharp.fixed}
             alt="img.node.childImageSharp.fixed.originalName"
