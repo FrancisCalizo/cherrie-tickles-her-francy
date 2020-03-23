@@ -104,18 +104,20 @@ const Gallery = () => {
           <h4>: Sam Hampshire</h4>
         </div>
       </div>
-      <ImagesContainer
-        data-sal="fade"
-        data-sal-duration="600"
-        data-sal-delay="100"
-        data-sal-easing="ease-in-out"
-      >
+      <ImagesContainer>
         {data.galleryImages.edges.sort(compare).map((img, idx) => (
-          <Image
+          <div
             key={idx}
-            fixed={img.node.childImageSharp.fixed}
-            alt="img.galleryImages.childImageSharp.fixed.originalName"
-          />
+            data-sal="fade"
+            data-sal-duration="600"
+            data-sal-delay={100 * idx}
+            data-sal-easing="ease-in-out"
+          >
+            <Image
+              fixed={img.node.childImageSharp.fixed}
+              alt="img.galleryImages.childImageSharp.fixed.originalName"
+            />
+          </div>
         ))}
       </ImagesContainer>
     </GalleryContainer>
