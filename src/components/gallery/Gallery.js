@@ -8,19 +8,25 @@ const GalleryContainer = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  & > h2 {
-    font-size: 3.5rem;
-    font-family: "Alex Brush", cursive;
-  }
-
   & > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 4rem auto;
 
-    & > h4 {
-      margin-left: 0.25rem;
-      padding-top: 0.25rem;
+    & > h2 {
+      font-size: 3.5rem;
+      font-family: "Alex Brush", cursive;
+      margin-bottom: 0;
+      line-height: 1rem;
+    }
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > h4 {
+        margin-left: 0.25rem;
+        padding-top: 0.25rem;
+      }
     }
   }
 `
@@ -32,23 +38,13 @@ const ImagesContainer = styled.div`
 `
 const Image = styled(Img)`
   margin: 0.5rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 `
-
-const g = [
-  "beach-kiss-cheek.jpg",
-  "beach-donut.jpg",
-  "beach-shoulder-rest.jpg",
-  "beach-legs-up-kiss.jpg",
-  "tree-prom.jpg",
-  "tree-hands.jpg",
-  "tree-hair.jpg",
-  "tree-kiss.jpg",
-]
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query galleryQuery {
-      allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
+      galleryImages: allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
         edges {
           node {
             childImageSharp {
@@ -72,22 +68,53 @@ const Gallery = () => {
     }
   `)
 
+  const compare = (a, b) => {
+    const order = [
+      "beach-donut.jpg",
+      "beach-kiss-cheek.jpg",
+      "beach-shoulder-rest.jpg",
+      "beach-legs-up-kiss.jpg",
+      "tree-hands.jpg",
+      "tree-prom.jpg",
+      "tree-hair.jpg",
+      "tree-kiss.jpg",
+    ]
+
+    const pictureA = a.node.childImageSharp.fixed.originalName
+    const pictureB = b.node.childImageSharp.fixed.originalName
+    let comparison = 0
+
+    return order.indexOf(pictureA) - order.indexOf(pictureB)
+  }
+
   return (
     <GalleryContainer id="gallery">
-      <h2>Gallery</h2>
-      <div>
-        <Img
-          fixed={data.cameraImage.childImageSharp.fixed}
-          alt={data.cameraImage.childImageSharp.originalName}
-        />
-        <h4>: Sam Hampshire</h4>
+      <div
+        data-sal="fade"
+        data-sal-duration="600"
+        data-sal-delay="100"
+        data-sal-easing="ease-in-out"
+      >
+        <h2>Gallery</h2>
+        <div>
+          <Img
+            fixed={data.cameraImage.childImageSharp.fixed}
+            alt={data.cameraImage.childImageSharp.originalName}
+          />
+          <h4>: Sam Hampshire</h4>
+        </div>
       </div>
-      <ImagesContainer>
-        {data.allFile.edges.map((img, idx) => (
+      <ImagesContainer
+        data-sal="fade"
+        data-sal-duration="600"
+        data-sal-delay="100"
+        data-sal-easing="ease-in-out"
+      >
+        {data.galleryImages.edges.sort(compare).map((img, idx) => (
           <Image
             key={idx}
             fixed={img.node.childImageSharp.fixed}
-            alt="img.node.childImageSharp.fixed.originalName"
+            alt="img.galleryImages.childImageSharp.fixed.originalName"
           />
         ))}
       </ImagesContainer>
