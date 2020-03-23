@@ -11,12 +11,7 @@ const ImagesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-`
-
-const ImageContainer = styled.div`
-  width: 21%;
-  max-width: 320px;
-  text-align: center;
+  max-width: 1140px;
 `
 
 const g = [
@@ -66,12 +61,11 @@ const Gallery = () => {
       <h1>Photo Gallery</h1>
       <ImagesContainer>
         {data.allFile.edges.map((img, idx) => (
-          <ImageContainer key={idx}>
-            <Img
-              fixed={img.node.childImageSharp.fixed}
-              alt="img.node.childImageSharp.fixed.originalName"
-            />
-          </ImageContainer>
+          <Img
+            key={idx}
+            fixed={img.node.childImageSharp.fixed}
+            alt="img.node.childImageSharp.fixed.originalName"
+          />
         ))}
       </ImagesContainer>
     </GalleryContainer>
