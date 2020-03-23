@@ -92,7 +92,7 @@ const NavLink = styled.div`
 
 const Heart = styled.div`
   font-size: 1.2rem;
-  padding: 2.85rem 0;
+  padding: 2.72rem 0;
   color: var(--heart);
 `
 

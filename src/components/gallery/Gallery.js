@@ -4,9 +4,25 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const GalleryContainer = styled.div`
-  // max-width: var(--container);
   max-width: 1024px;
   margin: 0 auto;
+  text-align: center;
+
+  & > h2 {
+    font-size: 3.5rem;
+    font-family: "Alex Brush", cursive;
+  }
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > h4 {
+      margin-left: 0.25rem;
+      padding-top: 0.25rem;
+    }
+  }
 `
 
 const ImagesContainer = styled.div`
@@ -31,7 +47,7 @@ const g = [
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
-    query galleryImageQuery {
+    query galleryQuery {
       allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
         edges {
           node {
@@ -44,12 +60,28 @@ const Gallery = () => {
           }
         }
       }
+
+      cameraImage: file(relativePath: { eq: "camera-brown.png" }) {
+        childImageSharp {
+          fixed(width: 40, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
   return (
     <GalleryContainer id="gallery">
-      <h1>Photo Gallery</h1>
+      <h2>Gallery</h2>
+      <div>
+        <Img
+          fixed={data.cameraImage.childImageSharp.fixed}
+          alt={data.cameraImage.childImageSharp.originalName}
+        />
+        <h4>: Sam Hampshire</h4>
+      </div>
       <ImagesContainer>
         {data.allFile.edges.map((img, idx) => (
           <Image
