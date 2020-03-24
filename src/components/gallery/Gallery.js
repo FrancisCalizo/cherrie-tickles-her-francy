@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 
+import Modal from "./Modal"
+
 const GalleryContainer = styled.div`
   max-width: 1024px;
   margin: 0 auto;
@@ -71,8 +73,11 @@ const Gallery = () => {
   `)
 
   const [showModal, setShowModal] = useState(false)
+  const [modalImage, setModalImage] = useState(null)
 
-  const handleOpenModal = () => {
+  const handleOpenModal = e => {
+    console.log(e.target.alt)
+    setModalImage(e.target.alt)
     setShowModal(true)
   }
 
@@ -101,29 +106,11 @@ const Gallery = () => {
 
   return (
     <GalleryContainer id="gallery">
-      <ReactModal
-        isOpen={showModal}
-        contentLabel="Minimal Modal Example"
-        style={{
-          overlay: {
-            zIndex: 20,
-            backgroundColor: "transparent",
-          },
-          content: {
-            backgroundColor: "rgba(0,0,0,0.75)",
-            height: "100%",
-            width: "100%",
-            top: 0,
-            left: 0,
-          },
-        }}
-      >
-        <button onClick={handleCloseModal}>Close Modal</button>
-        <Image
-          fixed={data.galleryImages.edges[0].node.childImageSharp.fixed}
-          alt="img.galleryImages.childImageSharp.fixed.originalName"
-        />
-      </ReactModal>
+      <Modal
+        handleCloseModal={handleCloseModal}
+        showModal={showModal}
+        setShowModal={setShowModal}
+      />
       <div
         data-sal="fade"
         data-sal-duration="600"
@@ -151,7 +138,7 @@ const Gallery = () => {
           >
             <Image
               fixed={img.node.childImageSharp.fixed}
-              alt="img.galleryImages.childImageSharp.fixed.originalName"
+              alt={img.node.childImageSharp.fixed.originalName}
             />
           </div>
         ))}
