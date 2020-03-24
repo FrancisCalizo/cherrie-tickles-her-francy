@@ -26,9 +26,17 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+const Image = styled(Img)`
+  height: 100%;
+  width: 100%;
+  max-height: 700px;
+  max-width: 460px;
+`
+
 const Close = styled.div`
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 5rem;
   padding: 1rem 2rem;
   font-size: 2.5rem;
@@ -44,9 +52,9 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 800, width: 505) {
+              fluid(quality: 100, maxHeight: 700, maxWidth: 460) {
                 originalName
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -58,7 +66,7 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
   // useRef to Filter Which Picture to Use for Modal
   const imageNode = useRef(null)
   imageNode.current = modalData.modalImages.edges.filter(img => {
-    return img.node.childImageSharp.fixed.originalName === modalImageName
+    return img.node.childImageSharp.fluid.originalName === modalImageName
   })
 
   return (
@@ -67,10 +75,10 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
         <ImageContainer>
           <Close onClick={handleCloseModal}>X</Close>
           {imageNode.current.length > 0 && (
-            <Img
-              fixed={imageNode.current[0].node.childImageSharp.fixed}
+            <Image
+              fluid={imageNode.current[0].node.childImageSharp.fluid}
               alt={
-                modalData.modalImages.edges[0].node.childImageSharp.fixed
+                modalData.modalImages.edges[0].node.childImageSharp.fluid
                   .originalName
               }
             />
