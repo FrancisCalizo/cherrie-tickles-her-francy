@@ -73,15 +73,15 @@ const Gallery = () => {
   `)
 
   const [showModal, setShowModal] = useState(false)
-  const [modalImage, setModalImage] = useState(null)
+  const [modalImageName, setmodalImageName] = useState(null)
 
   const handleOpenModal = e => {
-    setModalImage(e.target.alt)
+    setmodalImageName(e.target.alt)
     setShowModal(true)
   }
 
   const handleCloseModal = () => {
-    setModalImage(null)
+    setmodalImageName(null)
     setShowModal(false)
   }
 
@@ -106,18 +106,6 @@ const Gallery = () => {
 
   return (
     <GalleryContainer id="gallery">
-      <Modal
-<<<<<<< HEAD
-        handleCloseModal={handleCloseModal}
-        showModal={showModal}
-        setShowModal={setShowModal}
-=======
-        showModal={showModal}
-        setShowModal={setShowModal}
-        handleCloseModal={handleCloseModal}
-        modalImage={modalImage}
->>>>>>> gallery-modal
-      />
       <div
         data-sal="fade"
         data-sal-duration="600"
