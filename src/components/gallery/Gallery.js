@@ -106,6 +106,11 @@ const Gallery = () => {
 
   return (
     <GalleryContainer id="gallery">
+      <Modal
+        showModal={showModal}
+        handleCloseModal={handleCloseModal}
+        modalImageName={modalImageName}
+      />
       <div
         data-sal="fade"
         data-sal-duration="600"

@@ -43,6 +43,9 @@
 - JavaScript Sorting based on another array - https://stackoverflow.com/questions/16959774/javascript-sorting-array-based-on-another-array
 
 - JavaScript sort on an array of objects - https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
+
+- useRef to handle which picture for modal - https://reactjs.org/docs/hooks-reference.html#useimperativehandle
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
