@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -76,12 +76,12 @@ const Gallery = () => {
   const [modalImage, setModalImage] = useState(null)
 
   const handleOpenModal = e => {
-    console.log(e.target.alt)
     setModalImage(e.target.alt)
     setShowModal(true)
   }
 
   const handleCloseModal = () => {
+    setModalImage(null)
     setShowModal(false)
   }
 
@@ -107,9 +107,16 @@ const Gallery = () => {
   return (
     <GalleryContainer id="gallery">
       <Modal
+<<<<<<< HEAD
         handleCloseModal={handleCloseModal}
         showModal={showModal}
         setShowModal={setShowModal}
+=======
+        showModal={showModal}
+        setShowModal={setShowModal}
+        handleCloseModal={handleCloseModal}
+        modalImage={modalImage}
+>>>>>>> gallery-modal
       />
       <div
         data-sal="fade"

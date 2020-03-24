@@ -4,14 +4,18 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 
-const Modal = ({ showModal, setShowModal, handleCloseModal, modalImage }) => {
+const Modal = ({ showModal, handleCloseModal, modalImage }) => {
   const modalData = useStaticQuery(graphql`
     query ModalQuery {
-      modalImage: file(relativePath: { eq: "gallery/beach-donut.jpg" }) {
-        childImageSharp {
-          fixed(quality: 100, height: 200) {
-            originalName
-            ...GatsbyImageSharpFixed
+      modalImages: allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fixed(quality: 100, height: 600, width: 400) {
+                originalName
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }
@@ -39,8 +43,16 @@ const Modal = ({ showModal, setShowModal, handleCloseModal, modalImage }) => {
         }}
       >
         <Img
+<<<<<<< HEAD
           fixed={modalData.modalImage.childImageSharp.fixed}
           alt={modalData.modalImage.childImageSharp.fixed.originalName}
+=======
+          fixed={modalData.modalImages.edges[0].node.childImageSharp.fixed}
+          alt={
+            modalData.modalImages.edges[0].node.childImageSharp.fixed
+              .originalName
+          }
+>>>>>>> gallery-modal
         />
         <button onClick={handleCloseModal}>Close Modal</button>
       </ReactModal>
