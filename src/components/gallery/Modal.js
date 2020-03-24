@@ -1,10 +1,10 @@
-import React, { Fragment } from "react"
+import React, { useState, Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 
-const Modal = ({ showModal, handleCloseModal, modalImage }) => {
+const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
   const modalData = useStaticQuery(graphql`
     query ModalQuery {
       modalImages: allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
@@ -21,6 +21,12 @@ const Modal = ({ showModal, handleCloseModal, modalImage }) => {
       }
     }
   `)
+
+  console.log(
+    modalData.modalImages.edges.filter(img => {
+      return img.node.childImageSharp.fixed.originalName === modalImageName
+    })
+  )
 
   return (
     <Fragment>
@@ -44,10 +50,7 @@ const Modal = ({ showModal, handleCloseModal, modalImage }) => {
       >
         <Img
           fixed={modalData.modalImages.edges[0].node.childImageSharp.fixed}
-          alt={
-            modalData.modalImages.edges[0].node.childImageSharp.fixed
-              .originalName
-          }
+          alt="wow"
         />
         <button onClick={handleCloseModal}>Close Modal</button>
       </ReactModal>
