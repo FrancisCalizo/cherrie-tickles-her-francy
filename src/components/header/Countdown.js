@@ -99,7 +99,7 @@ const Placeholder = styled.div`
 `
 
 const Countdown = () => {
-  const [weddingDate] = useState(moment("2021-02-20", "YYYY-MM-DD"))
+  const [weddingDate] = useState(moment("2021-02-06", "YYYY-MM-DD"))
   const [countdown, setCountdown] = useState(null)
   const [loading, setLoading] = useState(true)
   const [trans, setTrans] = useState(false)

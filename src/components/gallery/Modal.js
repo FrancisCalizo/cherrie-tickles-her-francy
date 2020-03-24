@@ -19,11 +19,22 @@ const ModalStyles = {
 }
 
 const ImageContainer = styled.div`
-  display: block;
+  width: 95vw;
+  height: 95vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
-
-const Image = styled(Img)`
-  display: block;
+const Close = styled.div`
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  padding: 1rem 2rem;
+  font-size: 2.5rem;
+  color: #d2d2d2;
+  cursor: pointer;
+  font-weight: bold;
 `
 
 const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
@@ -54,8 +65,9 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
     <Fragment>
       <ReactModal isOpen={showModal} ariaHideApp={false} style={ModalStyles}>
         <ImageContainer>
+          <Close onClick={handleCloseModal}>X</Close>
           {imageNode.current.length > 0 && (
-            <Image
+            <Img
               fixed={imageNode.current[0].node.childImageSharp.fixed}
               alt={
                 modalData.modalImages.edges[0].node.childImageSharp.fixed
@@ -64,7 +76,6 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
             />
           )}
         </ImageContainer>
-        <button onClick={handleCloseModal}>Close Modal</button>
       </ReactModal>
     </Fragment>
   )
