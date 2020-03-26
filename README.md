@@ -46,6 +46,7 @@
 
 - useRef to handle which picture for modal - https://reactjs.org/docs/hooks-reference.html#useimperativehandle
 
+- useRef to handle click outside of Modal - https://stackoverflow.com/questions/54391682/detect-click-outside-component-react-hooks
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

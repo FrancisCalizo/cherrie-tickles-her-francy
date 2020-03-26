@@ -87,12 +87,9 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
   }, [])
 
   const handleClickOutside = event => {
-    // if (wrapper.current && !event.target) {
-    // handleCloseModal()
-    console.log(wrapper.current)
-    console.log(event.target)
-    console.log(wrapper.current.contains(event.target))
-    // }
+    if (wrapper.current === event.target) {
+      handleCloseModal()
+    }
   }
 
   return (
