@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from "react"
+import React, { Fragment, useRef, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -76,10 +76,29 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
     return img.node.childImageSharp.fixed.originalName === modalImageName
   })
 
+  // useRef to Capture Outside Modal Click
+  const wrapper = useRef()
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false)
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false)
+    }
+  }, [])
+
+  const handleClickOutside = event => {
+    // if (wrapper.current && !event.target) {
+    // handleCloseModal()
+    console.log(wrapper.current)
+    console.log(event.target)
+    console.log(wrapper.current.contains(event.target))
+    // }
+  }
+
   return (
     <Fragment>
       <ReactModal isOpen={showModal} ariaHideApp={false} style={ModalStyles}>
-        <ImageContainer>
+        <ImageContainer ref={wrapper}>
           <Close onClick={handleCloseModal}>X</Close>
           {imageNode.current.length > 0 && (
             <Image
