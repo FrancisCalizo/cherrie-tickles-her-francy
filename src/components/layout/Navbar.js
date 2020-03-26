@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { Transition } from "react-transition-group"
 import scrollTo from "gatsby-plugin-smoothscroll"
@@ -74,17 +73,18 @@ const BurgerLine = styled.div`
 `
 
 const NavLink = styled.div`
-  margin: 2rem 0.85rem;
+  margin: 1.9rem 0.85rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
+  transform: translateY(2px);
 
   & > div {
     padding: 1rem 0;
   }
 
   & > div:hover {
-    border-bottom: 3px solid var(--heart);
+    border-bottom: 2px solid var(--heart);
     transform: scale(1.05);
     cursor: pointer;
   }
