@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import ReactModal from "react-modal"
 
+import { device } from "../breakpoints"
+
 const ModalStyles = {
   overlay: {
     zIndex: 20,
@@ -32,6 +34,11 @@ const Image = styled(Img)`
   width: 100%;
   max-height: 700px;
   max-width: 460px;
+
+  @media ${device.maxMd} {
+    max-height: 560px;
+    max-width: 340px;
+  }
 `
 
 const Close = styled.div`
@@ -52,9 +59,9 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
         edges {
           node {
             childImageSharp {
-              fluid(quality: 100, maxHeight: 700, maxWidth: 460) {
+              fixed(quality: 100, height: 700, width: 460) {
                 originalName
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -66,7 +73,7 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
   // useRef to Filter Which Picture to Use for Modal
   const imageNode = useRef(null)
   imageNode.current = modalData.modalImages.edges.filter(img => {
-    return img.node.childImageSharp.fluid.originalName === modalImageName
+    return img.node.childImageSharp.fixed.originalName === modalImageName
   })
 
   return (
@@ -76,9 +83,9 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
           <Close onClick={handleCloseModal}>X</Close>
           {imageNode.current.length > 0 && (
             <Image
-              fluid={imageNode.current[0].node.childImageSharp.fluid}
+              fixed={imageNode.current[0].node.childImageSharp.fixed}
               alt={
-                modalData.modalImages.edges[0].node.childImageSharp.fluid
+                modalData.modalImages.edges[0].node.childImageSharp.fixed
                   .originalName
               }
             />
