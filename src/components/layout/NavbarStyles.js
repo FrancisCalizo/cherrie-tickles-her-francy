@@ -73,7 +73,7 @@ export const NavLink = styled.div`
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
-  transform: translateY(2px);
+  transform: translateY(3px);
 
   & > div {
     padding: 1rem 0;
