@@ -50,6 +50,8 @@
 
 - React FAQ Component - https://github.com/binodswain/react-faq-component
 
+- Wavy Footer - https://codepen.io/hougasian/pen/MzgzpG
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

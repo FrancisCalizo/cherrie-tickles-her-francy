@@ -1,0 +1,10 @@
+#curved-border {
+  bottom: 0;
+  position: absolute;
+  height: 300px;
+  width: 100vw;
+}
+
+#curved-border > path {
+  fill: red;
+}
