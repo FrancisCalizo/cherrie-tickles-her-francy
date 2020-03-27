@@ -7,6 +7,7 @@ import Story from "../components/our-story/Story"
 import WhenAndWhere from "../components/when-and-where/WhenAndWhere"
 import Gallery from "../components/gallery/Gallery"
 import Faqs from "../components/faqs/Faqs"
+import Footer from "../components/layout/Footer"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -34,6 +35,7 @@ const index = () => {
         <WhenAndWhere />
         <Gallery />
         <Faqs />
+        <Footer />
       </CSSVariables>
     </div>
   )

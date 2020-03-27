@@ -6,9 +6,11 @@ import { FaqContainer, styles, config } from "./FaqsStyles"
 
 const Faqs = () => {
   return (
-    <FaqContainer>
-      <Faq data={data} styles={styles} config={config} />
-    </FaqContainer>
+    <div id="faqs">
+      <FaqContainer>
+        <Faq data={data} styles={styles} config={config} />
+      </FaqContainer>
+    </div>
   )
 }
 
