@@ -1,30 +1,16 @@
-a {
-  color: #fff;
-  text-decoration: none;
-}
-footer {
-  width: 100vw;
-  bottom: 0px;
-}
-footer div {
-  margin: -5px 0px 0px 0px;
-  padding: 0px;
-  color: #fff;
-  text-align: center;
-}
 svg {
   width: 100%;
   overflow: visible;
 }
 
 .wave {
-  animation: wave 3s linear;
+  animation: wave 2s linear;
   animation-iteration-count: infinite;
   fill: var(--heart);
 }
 .drop {
   fill: var;
-  animation: drop 3.2s linear infinite normal;
+  animation: drop 2.2s linear infinite normal;
   stroke: var;
   stroke-width: 0.5;
   transform: translateY(25px);
@@ -33,23 +19,23 @@ svg {
 }
 
 .drop2 {
-  animation-delay: 3s;
-  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-duration: 2s;
 }
 .drop3 {
   animation-delay: -2s;
-  animation-duration: 3.4s;
+  animation-duration: 2.4s;
 }
 .drop4 {
   animation-delay: 1.7s;
 }
 .drop5 {
   animation-delay: 2.7s;
-  animation-duration: 3.1s;
+  animation-duration: 2.1s;
 }
 .drop6 {
   animation-delay: -2.1s;
-  animation-duration: 3.2s;
+  animation-duration: 2.2s;
 }
 .gooeff {
   filter: url(#goo);
@@ -60,7 +46,7 @@ svg {
   opacity: 0.6;
 }
 #wave3 {
-  animation-duration: 75s;
+  animation-duration: 30s;
   opacity: 0.3;
 }
 @keyframes drop {
@@ -84,8 +70,4 @@ svg {
   to {
     transform: translateX(-100%);
   }
-}
-
-span {
-  font-size: 3rem;
 }
