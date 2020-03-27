@@ -1,56 +1,8 @@
 import React, { Fragment, useRef, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
 import ReactModal from "react-modal"
 
-import { device } from "../breakpoints"
-
-const ModalStyles = {
-  overlay: {
-    zIndex: 20,
-    backgroundColor: "transparent",
-  },
-  content: {
-    backgroundColor: "rgba(0,0,0,0.75)",
-    height: "100%",
-    width: "100%",
-    top: 0,
-    left: 0,
-  },
-}
-
-const ImageContainer = styled.div`
-  width: 95vw;
-  height: 95vh;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const Image = styled(Img)`
-  height: 100%;
-  width: 100%;
-  max-height: 700px;
-  max-width: 460px;
-
-  @media ${device.maxMd} {
-    max-height: 560px;
-    max-width: 340px;
-  }
-`
-
-const Close = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 5rem;
-  padding: 1rem 2rem;
-  font-size: 2.5rem;
-  color: #d2d2d2;
-  cursor: pointer;
-  font-weight: bold;
-`
+import { ModalStyles, ImageContainer, Image, Close } from "./ModalStyles"
 
 const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
   const modalData = useStaticQuery(graphql`

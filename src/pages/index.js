@@ -6,6 +6,7 @@ import Header from "../components/header/Header"
 import Story from "../components/our-story/Story"
 import WhenAndWhere from "../components/when-and-where/WhenAndWhere"
 import Gallery from "../components/gallery/Gallery"
+import Faqs from "../components/faqs/Faqs"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -32,6 +33,7 @@ const index = () => {
         <Story />
         <WhenAndWhere />
         <Gallery />
+        <Faqs />
       </CSSVariables>
     </div>
   )
