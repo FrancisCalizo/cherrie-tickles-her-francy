@@ -1,34 +1,40 @@
 import React from "react"
-import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import "./Footer.css"
-
-const FooterContainer = styled.div`
-  width: 100%;
-  bottom: 0px;
-  padding: 3rem 0;
-`
-
-const FooterText = styled.div`
-  text-align: center;
-
-  & > h3 {
-    color: #f5f6fa;
-    margin: 0 auto;
-  }
-
-  & a {
-    color: white;
-    text-decoration: none;
-  }
-
-  & a:hover {
-    text-decoration: underline;
-    color: #ff6666;
-  }
-`
+import { FooterContainer, FooterText, IconContainer } from "./FooterStyles"
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query ringImageQuery {
+      ringImage: file(relativePath: { eq: "footer-icons/rings.png" }) {
+        childImageSharp {
+          fixed(quality: 100, width: 70) {
+            ...GatsbyImageSharpFixed
+            originalName
+          }
+        }
+      }
+      coupleImage: file(relativePath: { eq: "footer-icons/couple.png" }) {
+        childImageSharp {
+          fixed(quality: 100, width: 70) {
+            ...GatsbyImageSharpFixed
+            originalName
+          }
+        }
+      }
+      toastImage: file(relativePath: { eq: "footer-icons/toast.png" }) {
+        childImageSharp {
+          fixed(quality: 100, width: 70) {
+            ...GatsbyImageSharpFixed
+            originalName
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <FooterContainer>
       <svg viewBox="0 0 120 20">
@@ -43,8 +49,22 @@ const Footer = () => {
         <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
       </svg>
       <FooterText>
+        <IconContainer>
+          <Img
+            fixed={data.ringImage.childImageSharp.fixed}
+            alt={data.ringImage.childImageSharp.fixed.originalName}
+          />
+          <Img
+            fixed={data.coupleImage.childImageSharp.fixed}
+            alt={data.coupleImage.childImageSharp.fixed.originalName}
+          />
+          <Img
+            fixed={data.toastImage.childImageSharp.fixed}
+            alt={data.toastImage.childImageSharp.fixed.originalName}
+          />
+        </IconContainer>
         <h3>
-          👨‍💻 Designed & Built by:{" "}
+          👨🏽‍💻 Designed & Built by:{" "}
           <a
             href="https://www.franciscalizo.com"
             target="_blank"
@@ -54,7 +74,37 @@ const Footer = () => {
             Francis Calizo
           </a>
         </h3>
-        <h3>📷 Photography: Sam Hampshire</h3>
+        <h3>
+          📷 Photography:{" "}
+          <a
+            href="https://www.flickr.com/people/samhamp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-gold-500"
+          >
+            Sam Hampshire
+          </a>
+        </h3>
+        <h3>
+          💻 Made with{" "}
+          <a
+            href="https://www.gatsbyjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-gold-500"
+          >
+            Gatsby.js
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://styled-components.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline text-gold-500"
+          >
+            Styled Components
+          </a>
+        </h3>
       </FooterText>
     </FooterContainer>
   )
