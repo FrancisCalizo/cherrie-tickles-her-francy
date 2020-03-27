@@ -50,7 +50,7 @@
 
 - React FAQ Component - https://github.com/binodswain/react-faq-component
 
-- Wavy Footer - https://codepen.io/hougasian/pen/MzgzpG
+- Wavy Footer - https://codepen.io/wizumz/pen/REqrEo
 
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
