@@ -9,11 +9,11 @@ svg {
   fill: var(--heart);
 }
 .drop {
-  fill: var;
+  fill: var(--heart);
   animation: drop 2.2s linear infinite normal;
-  stroke: var;
+  stroke: var(--heart);
   stroke-width: 0.5;
-  transform: translateY(25px);
+  transform: translateY(50px);
   transform-box: fill-box;
   transform-origin: 50% 100%;
 }
@@ -40,14 +40,17 @@ svg {
 .gooeff {
   filter: url(#goo);
 }
+
+#wave {
+}
+
 #wave2 {
-  animation-duration: 100s;
+  animation-duration: 10s;
   animation-direction: reverse;
   opacity: 0.6;
 }
 #wave3 {
-  animation-duration: 30s;
-  opacity: 0.3;
+  animation-duration: 20s;
 }
 @keyframes drop {
   0% {
@@ -57,7 +60,7 @@ svg {
     transform: translateY(-10px) scale(0.1);
   }
   30.001% {
-    transform: translateY(25px) scale(1);
+    transform: translateY(25px) scale(3);
   }
   70% {
     transform: translateY(25px);

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../breakpoints"
 
 export const FooterContainer = styled.div`
   width: 100%;
@@ -9,11 +10,18 @@ export const FooterContainer = styled.div`
 export const FooterText = styled.div`
   text-align: center;
   padding-bottom: 3rem;
+  background-color: var(--heart);
 
   & > h3 {
     color: #f5f6fa;
     margin: 0 auto;
     font-weight: normal;
+  }
+
+  @media ${device.maxMd} {
+    & > h3 {
+      font-size: 0.85rem;
+    }
   }
 
   & a {
