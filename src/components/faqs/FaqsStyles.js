@@ -1,9 +1,25 @@
 import styled from "styled-components"
+import { device } from "../breakpoints"
 
 export const FaqContainer = styled.div`
   max-width: var(--container);
   width: 85%;
   margin: 0 auto;
+`
+
+export const Subtitle = styled.h2`
+  text-align: center;
+  margin: 4.5rem 0 2rem;
+  font-family: "Alex Brush", cursive;
+  font-size: 3.5rem;
+
+  @media ${device.maxMd} {
+    font-size: 2.5rem;
+  }
+
+  @media ${device.maxSm} {
+    font-size: 2rem;
+  }
 `
 
 export const styles = {

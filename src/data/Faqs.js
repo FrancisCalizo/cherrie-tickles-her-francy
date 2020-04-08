@@ -32,7 +32,7 @@ export const data = {
       content: `v1.0.0`,
     },
     {
-      title: `How can I RSVP?`,
+      title: `How can I RSVP? And when is the last day to do so?`,
       content: `v1.0.0`,
     },
     {
