@@ -5,6 +5,8 @@ import Navbar from "../components/layout/Navbar"
 import Header from "../components/header/Header"
 import Story from "../components/our-story/Story"
 import WhenAndWhere from "../components/when-and-where/WhenAndWhere"
+import WeddingParty from "../components/wedding-party/WeddingParty"
+import Registry from "../components/registry/Registry"
 import Gallery from "../components/gallery/Gallery"
 import Faqs from "../components/faqs/Faqs"
 import Footer from "../components/layout/Footer"
@@ -34,6 +36,8 @@ const index = () => {
         <Header />
         <Story />
         <WhenAndWhere />
+        <WeddingParty />
+        <Registry />
         <Gallery />
         <Faqs />
         <Contact />
