@@ -32,7 +32,7 @@ export const FooterText = styled.div`
 
   & a:hover {
     text-decoration: underline;
-    color: #ff6666;
+    color: #ffb3b3;
   }
 `
 

@@ -83,7 +83,16 @@ const Gallery = () => {
             fixed={data.cameraImage.childImageSharp.fixed}
             alt={data.cameraImage.childImageSharp.originalName}
           />
-          <h4>: Sam Hampshire</h4>
+          <h4>
+            :{" "}
+            <a
+              href="https://www.instagram.com/samkohai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sam Hampshire
+            </a>
+          </h4>
         </div>
       </div>
       <ImagesContainer>

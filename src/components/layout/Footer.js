@@ -69,7 +69,6 @@ const Footer = () => {
             href="https://www.franciscalizo.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-gold-500"
           >
             Francis Calizo
           </a>
@@ -77,10 +76,9 @@ const Footer = () => {
         <h3>
           📷 Photography:{" "}
           <a
-            href="https://www.flickr.com/people/samhamp/"
+            href="https://www.instagram.com/samkohai/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-gold-500"
           >
             Sam Hampshire
           </a>
@@ -91,7 +89,6 @@ const Footer = () => {
             href="https://www.gatsbyjs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-gold-500"
           >
             Gatsby.js
           </a>{" "}
@@ -100,7 +97,6 @@ const Footer = () => {
             href="https://styled-components.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline text-gold-500"
           >
             Styled Components
           </a>

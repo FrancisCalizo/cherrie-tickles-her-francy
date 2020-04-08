@@ -25,6 +25,16 @@ export const GalleryContainer = styled.div`
         margin-left: 0.25rem;
         padding-top: 0.25rem;
       }
+
+      & a {
+        color: black;
+        text-decoration: none;
+      }
+
+      & a:hover {
+        color: var(--heart);
+        text-decoration: underline;
+      }
     }
   }
 `
