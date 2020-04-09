@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-export const WeddingPartyContainer = styled.div`
+import Groomsmen from "./Groomsmen"
+import Bridesmaids from "./Bridesmaids"
+import Card from "./Card"
+
+const WeddingPartyContainer = styled.div`
   text-align: center;
 
   & h2 {
@@ -10,11 +14,21 @@ export const WeddingPartyContainer = styled.div`
   }
 `
 
+const CardsContainers = styled.div`
+  display: flex;
+  justify-content: center;
+  max-width: var(--container);
+`
+
 const WeddingParty = () => {
   return (
     <WeddingPartyContainer>
       <h2>Wedding Party</h2>
-      <p>Coming soon...</p>
+      <CardsContainers>
+        <Bridesmaids />
+        <Groomsmen />
+      </CardsContainers>
+      <Card />
     </WeddingPartyContainer>
   )
 }
