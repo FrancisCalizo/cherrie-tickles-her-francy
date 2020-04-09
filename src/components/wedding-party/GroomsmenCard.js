@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Card = () => {
+const GroomsmenCard = () => {
   const data = useStaticQuery(graphql`
     query weddingPartyQuery {
       groomsmenImages: allFile(
@@ -68,9 +68,9 @@ const Card = () => {
   console.log(data.bridesmaidsImages.edges[0])
   return (
     <div>
-      <h3>Card</h3>
+      <h3>Groomsmen Card</h3>
     </div>
   )
 }
 
-export default Card
+export default GroomsmenCard

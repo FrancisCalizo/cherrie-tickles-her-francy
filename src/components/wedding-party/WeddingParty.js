@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Groomsmen from "./Groomsmen"
 import Bridesmaids from "./Bridesmaids"
-import Card from "./Card"
+import GroomsmenCard from "./GroomsmenCard"
 
 const WeddingPartyContainer = styled.div`
   text-align: center;
@@ -28,7 +28,7 @@ const WeddingParty = () => {
         <Bridesmaids />
         <Groomsmen />
       </CardsContainers>
-      <Card />
+      <GroomsmenCard />
     </WeddingPartyContainer>
   )
 }
