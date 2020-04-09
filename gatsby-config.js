@@ -19,6 +19,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/components/wedding-party/data`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
