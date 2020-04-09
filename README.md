@@ -52,6 +52,10 @@
 
 - Wavy Footer - https://codepen.io/wizumz/pen/REqrEo
 
+- Multiple Options for gatsby-source-filesystem - https://github.com/gatsbyjs/gatsby/issues/13674
+
+- Reading JSON from a file using GraphQL - https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

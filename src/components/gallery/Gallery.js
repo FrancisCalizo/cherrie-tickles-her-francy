@@ -8,12 +8,7 @@ import { GalleryContainer, ImagesContainer, Image } from "./GalleryStyles"
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query galleryQuery {
-      galleryImages: allFile(
-        filter: {
-          absolutePath: { regex: "/gallery/" }
-          sourceInstanceName: { eq: "images" }
-        }
-      ) {
+      galleryImages: allFile(filter: { absolutePath: { regex: "/gallery/" } }) {
         edges {
           node {
             childImageSharp {

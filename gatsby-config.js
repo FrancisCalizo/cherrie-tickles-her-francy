@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,7 +22,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
+        name: `gallery`,
+        path: `${__dirname}/src/images/gallery`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `party`,
         path: `${__dirname}/src/components/wedding-party/data`,
       },
     },

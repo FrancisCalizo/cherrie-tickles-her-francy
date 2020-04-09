@@ -1,0 +1,18 @@
+[
+  {
+    "order": 1,
+    "type": "bridesmaid",
+    "title": "Maid of Honor",
+    "name": "Harriet Tubman",
+    "image": "portrait.jpg",
+    "bio": "This is my bio."
+  },
+  {
+    "order": 2,
+    "type": "bridesmaid",
+    "title": "Matron of Honor",
+    "name": "Jessica Day",
+    "image": "portrait.jpg",
+    "bio": "Hey girl, whatcha doin?"
+  }
+]

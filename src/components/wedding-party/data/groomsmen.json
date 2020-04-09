@@ -1,0 +1,18 @@
+[
+  {
+    "order": 1,
+    "type": "groomsman",
+    "title": "Best Man",
+    "name": "Thomas Shelby",
+    "image": "portrait.jpg",
+    "bio": "I am the head honcho of the Peaky Blinders."
+  },
+  {
+    "order": 2,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "Alfie Solomans",
+    "image": "portrait.jpg",
+    "bio": "I make bread for a living..oh, and rum."
+  }
+]
