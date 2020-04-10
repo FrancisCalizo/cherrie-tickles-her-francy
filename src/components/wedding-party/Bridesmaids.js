@@ -6,27 +6,13 @@ import BridesmaidsCard from "./BridesmaidsCard"
 const Bridesmaids = () => {
   const data = useStaticQuery(graphql`
     query bridesmaidsQuery {
-      bridesmaidsImages: allFile(
-        filter: { absolutePath: { regex: "/bridesmaids/" } }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fixed(quality: 100, height: 380, width: 240) {
-                originalName
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-
       bridesmaidsInfo: allBridesmaidsJson {
         edges {
           node {
             id
             name
             order
+            title
             image
             bio
           }
@@ -40,8 +26,18 @@ const Bridesmaids = () => {
   // console.log(data.bridesmaidsImages.edges[0])
   return (
     <div>
-      <h3>Bridesmaids</h3>
-      <BridesmaidsCard />
+      <h3>Team Bride</h3>
+      {data.bridesmaidsInfo.edges.map(
+        ({ node: { order, name, title, image, bio } }) => (
+          <BridesmaidsCard
+            key={order}
+            image={image}
+            name={name}
+            title={title}
+            bio={bio}
+          />
+        )
+      )}
     </div>
   )
 }

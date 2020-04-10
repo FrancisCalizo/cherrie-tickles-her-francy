@@ -26,12 +26,11 @@ const Groomsmen = () => {
 
   return (
     <div>
-      <h3>Groomsmen</h3>
+      <h3>Team Groom</h3>
       {data.groomsmenInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
           <GroomsmenCard
             key={order}
-            // img={data.groomsmenImages.edges[1].node.childImageSharp.fixed}
             image={image}
             name={name}
             title={title}

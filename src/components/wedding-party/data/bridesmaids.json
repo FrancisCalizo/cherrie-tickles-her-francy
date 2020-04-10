@@ -3,16 +3,16 @@
     "order": 1,
     "type": "bridesmaid",
     "title": "Maid of Honor",
-    "name": "Harriet Tubman",
-    "image": "portrait.jpg",
-    "bio": "This is my bio."
+    "name": "Christine Sigua",
+    "image": "christine.jpg",
+    "bio": "Best friends since 4. Florida State alum (Boo!); matchmaker of the these two future newlyweds."
   },
   {
     "order": 2,
     "type": "bridesmaid",
     "title": "Matron of Honor",
-    "name": "Jessica Day",
-    "image": "portrait.jpg",
-    "bio": "Hey girl, whatcha doin?"
+    "name": "Christine Layog",
+    "image": "ate.jpg",
+    "bio": "Oldest of the Sarmientos & mother of the most beautiful baby, Miles; busy saving lives while you are at home."
   }
 ]

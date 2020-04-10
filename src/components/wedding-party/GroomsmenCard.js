@@ -4,11 +4,12 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const CardContainer = styled.div`
-  border: 1px solid var(--header-gray);
+  border: 1px solid lightgray;
   border-radius: 4px;
-  width: 400px;
-  margin: 1rem;
+  width: 410px;
+  margin: 2rem 2rem;
   display: flex;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
 `
 
 const InfoContainer = styled.div`
@@ -58,7 +59,7 @@ const Info = styled.div`
   }
 `
 
-const GroomsmenCard = ({ name, image, title, img, bio }) => {
+const GroomsmenCard = ({ name, image, title, bio }) => {
   const data = useStaticQuery(graphql`
     query groomsmanImageQuery {
       groomsmenImages: allFile(
@@ -92,7 +93,7 @@ const GroomsmenCard = ({ name, image, title, img, bio }) => {
   return (
     <div>
       <CardContainer>
-        <Img fixed={getImage(image)} alt="yahyeet" />
+        <Img fixed={getImage(image)} alt={image} />
         <InfoContainer>
           <Info>
             <h3>{name}</h3>
