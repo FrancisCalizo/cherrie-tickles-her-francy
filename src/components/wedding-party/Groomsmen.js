@@ -5,21 +5,6 @@ import GroomsmenCard from "./GroomsmenCard"
 const Groomsmen = () => {
   const data = useStaticQuery(graphql`
     query groomsmanQuery {
-      groomsmenImages: allFile(
-        filter: { absolutePath: { regex: "/groomsmen/" } }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fixed(quality: 100, height: 200, width: 180) {
-                originalName
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-
       groomsmenInfo: allGroomsmenJson {
         edges {
           node {
@@ -36,7 +21,7 @@ const Groomsmen = () => {
   `)
 
   // console.log(data.groomsmenInfo.edges)
-  console.log(data.groomsmenImages.edges)
+  // console.log(data.groomsmenImages.edges)
   // console.log(data.groomsmenImages.edges[0].node.childImageSharp.fixed)
 
   return (
@@ -46,7 +31,7 @@ const Groomsmen = () => {
         ({ node: { order, name, title, image, bio } }) => (
           <GroomsmenCard
             key={order}
-            img={data.groomsmenImages.edges[1].node.childImageSharp.fixed}
+            // img={data.groomsmenImages.edges[1].node.childImageSharp.fixed}
             image={image}
             name={name}
             title={title}

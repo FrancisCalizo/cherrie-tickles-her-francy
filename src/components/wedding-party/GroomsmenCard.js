@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
@@ -37,8 +38,8 @@ const Info = styled.div`
   width: 200px;
 
   & h3 {
-    font-size: 1.2rem;
-    margin: 0.5rem auto 0;
+    font-size: 1.25rem;
+    margin: 1.3rem auto 0;
   }
 
   & > div {
@@ -57,12 +58,41 @@ const Info = styled.div`
   }
 `
 
-const GroomsmenCard = ({ order, name, image, title, img, bio }) => {
-  console.log(name)
+const GroomsmenCard = ({ name, image, title, img, bio }) => {
+  const data = useStaticQuery(graphql`
+    query groomsmanImageQuery {
+      groomsmenImages: allFile(
+        filter: { absolutePath: { regex: "/groomsmen/" } }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fixed(quality: 100, height: 200, width: 180) {
+                originalName
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const getImage = name => {
+    let res = data.groomsmenImages.edges.filter(el => {
+      if (el.node.childImageSharp) {
+        return el.node.childImageSharp.fixed.originalName === name
+      }
+    })
+
+    return res[0].node.childImageSharp.fixed
+  }
+
+  // console.log(data.groomsmenImages.edges[1].node.childImageSharp.fixed)
   return (
     <div>
       <CardContainer>
-        <Img fixed={img} alt={img.originalName} />
+        <Img fixed={getImage(image)} alt="yahyeet" />
         <InfoContainer>
           <Info>
             <h3>{name}</h3>
