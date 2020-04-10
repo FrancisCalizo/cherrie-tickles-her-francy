@@ -67,7 +67,7 @@ const GroomsmenCard = ({ name, image, title, img, bio }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 200, width: 180) {
+              fixed(quality: 100, height: 210, width: 180) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
@@ -80,12 +80,12 @@ const GroomsmenCard = ({ name, image, title, img, bio }) => {
 
   const getImage = name => {
     let res = data.groomsmenImages.edges.filter(el => {
-      if (el.node.childImageSharp) {
-        return el.node.childImageSharp.fixed.originalName === name
-      }
+      return el.node.childImageSharp
+        ? el.node.childImageSharp.fixed.originalName === name
+        : null
     })
 
-    return res[0].node.childImageSharp.fixed
+    return res.length > 0 ? res[0].node.childImageSharp.fixed : null
   }
 
   // console.log(data.groomsmenImages.edges[1].node.childImageSharp.fixed)

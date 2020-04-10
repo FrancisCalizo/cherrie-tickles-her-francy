@@ -5,7 +5,7 @@
     "title": "Best Man #1",
     "name": "Paolo Calizo",
     "image": "paolo.jpg",
-    "bio": "Older brother, PLUR specialist, and everyone's favorite presidential candidate."
+    "bio": "Big brother, PLUR specialist, & everyone's favorite presidential candidate. Helps patients in the wait room & lifts heavy in the weight room."
   },
   {
     "order": 2,
@@ -13,6 +13,46 @@
     "title": "Best Man #2",
     "name": "Marc Gabas",
     "image": "marc.jpg",
-    "bio": "Best friend, chicken/ranch enthusiast; will possibly fall asleep in your parking garage after a night out & some video games."
+    "bio": "Best friend. Chicken, ranch, and Krispy Kreme enthusiast; will possibly fall asleep in your parking garage after a night out & super smash."
+  },
+  {
+    "order": 3,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "CJ Mauricio",
+    "image": "cj.jpg",
+    "bio": "The high school best friend. Proud cop & newest member of the hot dads community. Lover of fishing, grilling, & having a darker complexion."
+  },
+  {
+    "order": 4,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "Evan Agillon",
+    "image": "evan.jpg",
+    "bio": "The college hype-man you never knew you needed. Boxer & facial hair advocate; will only settle for the highest ABV % beer in the room."
+  },
+  {
+    "order": 5,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "Sam Hampshire",
+    "image": "sam.jpg",
+    "bio": "Cousin? Uncle? Who knows. The childhood best friend & your next photographer. You can find him cooking lobbies at Rogue's Den."
+  },
+  {
+    "order": 6,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "Martin Sarmiento",
+    "image": "martin.jpg",
+    "bio": "Reads tons of books, yet can't read. Your rave buddy for life; will ask you (and himself) unecessary philosophical questions."
+  },
+  {
+    "order": 7,
+    "type": "groomsman",
+    "title": "Groomsman",
+    "name": "Jake Yap",
+    "image": "jake.jpg",
+    "bio": "Best friend to Cherrie since forever (their dads have a bromance). The worst person to reply to a text, but never to a meme."
   }
 ]
