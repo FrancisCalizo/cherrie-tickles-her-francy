@@ -42,6 +42,11 @@ export const Box = styled.div`
   border: 2px solid white;
   padding: 3rem 1rem;
 
+  & span {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
   @media ${device.minMd} and ${device.maxLg}{
     width: 34vw;
     padding: 1.75rem 0;

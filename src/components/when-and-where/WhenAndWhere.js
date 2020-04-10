@@ -41,12 +41,13 @@ const WhenAndWhere = () => {
             >
               <h3>Ceremony</h3>
               <p>
-                St. Thomas Shelby Church
+                <span>St. Thomas Shelby Church</span>
                 <br />
                 <br />
-                Sunday, 14 February 2016 <br />
-                10:00 AM – 14:00 PM <br />
-                123 Redwood Ct, Auburn, WA
+                Saturday | February 6, 2021 <br />
+                TBD
+                <br />
+                TBD
               </p>
             </Box>
             <And
@@ -65,12 +66,12 @@ const WhenAndWhere = () => {
             >
               <h3>Reception</h3>
               <p>
-                Orlando Museum of Art
+                <span>Orlando Museum of Art</span>
                 <br />
                 <br />
-                Sunday, 14 February 2016 <br />
-                10:00 AM – 14:00 PM <br />
-                123 Redwood Ct, Auburn, WA
+                Saturday | February 6, 2021 <br />
+                05:00 PM – 10:00 PM <br />
+                2416 N Mills Ave, Orlando, FL 32803
               </p>
             </Box>
           </Container>

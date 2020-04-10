@@ -14,7 +14,9 @@ const Registry = () => {
   return (
     <RegistryContainer>
       <h2>Registry</h2>
-      <p>Coming soon...</p>
+      <a href="https://www.zola.com/registry/francisandcherrie" target="_blank">
+        Our wedding registry via Zola
+      </a>
     </RegistryContainer>
   )
 }

@@ -36,8 +36,8 @@ const index = () => {
         <Header />
         <Story />
         <WhenAndWhere />
-        <WeddingParty />
         <Registry />
+        <WeddingParty />
         <Gallery />
         <Faqs />
         <Contact />

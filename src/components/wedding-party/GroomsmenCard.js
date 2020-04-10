@@ -10,6 +10,7 @@ const CardContainer = styled.div`
   margin: 2rem 2rem;
   display: flex;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+  background: white;
 `
 
 const InfoContainer = styled.div`
