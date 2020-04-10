@@ -1,74 +1,76 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 import Img from "gatsby-image"
 
-const GroomsmenCard = () => {
-  const data = useStaticQuery(graphql`
-    query weddingPartyQuery {
-      groomsmenImages: allFile(
-        filter: { absolutePath: { regex: "/groomsmen/" } }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fixed(quality: 100, height: 380, width: 240) {
-                originalName
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
+const CardContainer = styled.div`
+  border: 1px solid var(--header-gray);
+  border-radius: 4px;
+  width: 400px;
+  margin: 1rem;
+  display: flex;
+`
 
-      groomsmenInfo: allGroomsmenJson {
-        edges {
-          node {
-            id
-            name
-            order
-            image
-            bio
-          }
-        }
-      }
+const InfoContainer = styled.div`
+  position: relative;
+  background: #fff;
 
-      bridesmaidsImages: allFile(
-        filter: { absolutePath: { regex: "/bridesmaids/" } }
-      ) {
-        edges {
-          node {
-            childImageSharp {
-              fixed(quality: 100, height: 380, width: 240) {
-                originalName
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: white;
+    transform-origin: top right;
+    -ms-transform: skew(-10deg, 0deg);
+    -webkit-transform: skew(-10deg, 0deg);
+    transform: skew(-10deg, 0deg);
+  }
+`
 
-      bridesmaidsInfo: allBridesmaidsJson {
-        edges {
-          node {
-            id
-            name
-            order
-            image
-            bio
-          }
-        }
-      }
-    }
-  `)
+const Info = styled.div`
+  position: absolute;
+  z-index: 10;
+  width: 200px;
 
-  console.log(data.groomsmenInfo.edges[0].node)
-  console.log(data.groomsmenImages.edges[0])
-  // console.log(data.groomsmenImages.edges[0].node.childImageSharp.fixed)
-  console.log(data.bridesmaidsInfo.edges[0].node)
-  console.log(data.bridesmaidsImages.edges[0])
+  & h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem auto 0;
+  }
+
+  & > div {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    margin: 0.4rem auto;
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  & p {
+    font-size: 0.9rem;
+    color: var(--header-gray);
+  }
+`
+
+const GroomsmenCard = ({ order, name, image, title, img, bio }) => {
+  console.log(name)
   return (
     <div>
-      <h3>Groomsmen Card</h3>
+      <CardContainer>
+        <Img fixed={img} alt={img.originalName} />
+        <InfoContainer>
+          <Info>
+            <h3>{name}</h3>
+            <div>{title}</div>
+            <p>{bio}</p>
+          </Info>
+        </InfoContainer>
+      </CardContainer>
     </div>
   )
 }

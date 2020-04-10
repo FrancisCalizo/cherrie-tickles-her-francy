@@ -54,7 +54,13 @@
 
 - Multiple Options for gatsby-source-filesystem - https://github.com/gatsbyjs/gatsby/issues/13674
 
-- Reading JSON from a file using GraphQL - https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a
+- Reading JSON from a file using GraphQL - https://itnext.io/reading-data-from-a-json-file-with-gatsby-graphql-572b18ab98a and https://stackoverflow.com/questions/49252456/how-can-i-get-data-from-a-json-file-via-graphql
+
+- Destructure within a function argument - https://davidwalsh.name/destructuring-function-arguments
+
+- Nested destructuring - https://medium.com/@pyrolistical/destructuring-nested-objects-9dabdd01a3b8
+
+- Skew Only on one side of the element - https://codepen.io/iDiver76/pen/YWzKZz and https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e
 
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">

@@ -2,17 +2,17 @@
   {
     "order": 1,
     "type": "groomsman",
-    "title": "Best Man",
-    "name": "Thomas Shelby",
-    "image": "portrait.jpg",
-    "bio": "I am the head honcho of the Peaky Blinders."
+    "title": "Best Man #1",
+    "name": "Paolo Calizo",
+    "image": "paolo.jpg",
+    "bio": "Older brother, PLUR specialist, and everyone's favorite presidential candidate."
   },
   {
     "order": 2,
     "type": "groomsman",
-    "title": "Groomsman",
-    "name": "Alfie Solomans",
-    "image": "portrait.jpg",
-    "bio": "I make bread for a living..oh, and rum."
+    "title": "Best Man #2",
+    "name": "Marc Gabas",
+    "image": "marc.jpg",
+    "bio": "Best friend, chicken/ranch enthusiast, and will probably fall asleep in your parking garage after a night out."
   }
 ]
