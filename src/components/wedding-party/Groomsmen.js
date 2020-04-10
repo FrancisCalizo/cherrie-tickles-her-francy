@@ -1,5 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+
 import GroomsmenCard from "./GroomsmenCard"
 
 const Groomsmen = () => {
@@ -20,12 +22,15 @@ const Groomsmen = () => {
     }
   `)
 
-  // console.log(data.groomsmenInfo.edges)
-  // console.log(data.groomsmenImages.edges)
-  // console.log(data.groomsmenImages.edges[0].node.childImageSharp.fixed)
+  const GroomsmenContainer = styled.div`
+    & > h3 {
+      font-size: 3rem;
+      margin: 0.5rem;
+    }
+  `
 
   return (
-    <div>
+    <GroomsmenContainer>
       <h3>Team Groom</h3>
       {data.groomsmenInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
@@ -38,7 +43,7 @@ const Groomsmen = () => {
           />
         )
       )}
-    </div>
+    </GroomsmenContainer>
   )
 }
 

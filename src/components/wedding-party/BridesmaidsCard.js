@@ -9,7 +9,12 @@ const CardContainer = styled.div`
   width: 410px;
   margin: 2rem 2rem;
   display: flex;
+  justify-content: flex-end;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+`
+
+const Image = styled(Img)`
+  text-align: right;
 `
 
 const InfoContainer = styled.div`
@@ -23,34 +28,36 @@ const InfoContainer = styled.div`
     width: 45px;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 5;
     background: white;
     transform-origin: top right;
-    -ms-transform: skew(-10deg, 0deg);
-    -webkit-transform: skew(-10deg, 0deg);
-    transform: skew(-10deg, 0deg);
+    -ms-transform: skew(10deg, 0deg);
+    -webkit-transform: skew(10deg, 0deg);
+    transform: skew(10deg, 0deg);
+    border-right: 0.1rem solid #b2bec3;
   }
 `
 
 const Info = styled.div`
-  position: absolute;
+  position: relative;
+  left: 0;
   z-index: 10;
   width: 200px;
 
   & h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin: 1.3rem auto 0;
   }
 
   & > div {
     display: inline-block;
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 0.7rem;
     margin: 0.4rem auto;
-    background-color: black;
+    background-color: var(--heart);
     color: white;
     font-size: 0.9rem;
-    border-radius: 10px;
+    border-radius: 6px;
   }
 
   & p {
@@ -67,7 +74,7 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 210, width: 180) {
+              fixed(quality: 100, height: 230, width: 190) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
@@ -91,7 +98,6 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
   return (
     <div>
       <CardContainer>
-        <Img fixed={getImage(image)} alt={image} />
         <InfoContainer>
           <Info>
             <h3>{name}</h3>
@@ -99,6 +105,7 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
             <p>{bio}</p>
           </Info>
         </InfoContainer>
+        <Image fixed={getImage(image)} alt={image} />
       </CardContainer>
     </div>
   )

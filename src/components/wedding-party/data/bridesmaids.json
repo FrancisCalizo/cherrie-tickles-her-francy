@@ -14,5 +14,45 @@
     "name": "Christine Layog",
     "image": "ate.jpg",
     "bio": "Oldest of the Sarmientos & mother of the most beautiful baby, Miles; busy saving lives while you are at home."
+  },
+  {
+    "order": 3,
+    "type": "bridesmaid",
+    "title": "Bridesmaid",
+    "name": "Caroline Sarmiento",
+    "image": "caroline.jpg",
+    "bio": "The little sister. Sassiness level to the Nth degree. Queen of arts & crafts and is responsible for most of the wedding decor."
+  },
+  {
+    "order": 4,
+    "type": "bridesmaid",
+    "title": "Bridesmaid",
+    "name": "Cindy Nguyen",
+    "image": "cindy.jpg",
+    "bio": "The high school best friend..excuse me, that's Dr. Nguyen to you. The most unique, yet sweetest person you will ever meet."
+  },
+  {
+    "order": 5,
+    "type": "bridesmaid",
+    "title": "Bridesmaid",
+    "name": "Mia Real",
+    "image": "mia.jpg",
+    "bio": "The college bestie. Your favorite yelp elitist. Fellow lover of chocolate and everything sweet. "
+  },
+  {
+    "order": 6,
+    "type": "bridesmaid",
+    "title": "Bridesmaid",
+    "name": "Sabrina Chan-Pong",
+    "image": "sabrina.jpg",
+    "bio": "The best friend to my best friend. Lover & baker of anything bread; encourages alcoholic consumtion despite her own allergic restrictions."
+  },
+  {
+    "order": 7,
+    "type": "bridesmaid",
+    "title": "Bridesmaid",
+    "name": "Veronica Nunez",
+    "image": "veronica.jpg",
+    "bio": "Future doctor & proud nerd; would travel to the Shire if possible, but settles for Disney World instead; thinks Glinda is an actual Animal Crossing character."
   }
 ]

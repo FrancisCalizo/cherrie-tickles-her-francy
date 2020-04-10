@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import BridesmaidsCard from "./BridesmaidsCard"
 
@@ -21,11 +22,15 @@ const Bridesmaids = () => {
     }
   `)
 
-  // console.log(data.groomsmenImages.edges[0].node.childImageSharp.fixed)
-  // console.log(data.bridesmaidsInfo.edges[0].node)
-  // console.log(data.bridesmaidsImages.edges[0])
+  const BridesmaidsContainer = styled.div`
+    & > h3 {
+      font-size: 3rem;
+      margin: 0.5rem;
+    }
+  `
+
   return (
-    <div>
+    <BridesmaidsContainer>
       <h3>Team Bride</h3>
       {data.bridesmaidsInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
@@ -38,7 +43,7 @@ const Bridesmaids = () => {
           />
         )
       )}
-    </div>
+    </BridesmaidsContainer>
   )
 }
 

@@ -30,6 +30,7 @@ const InfoContainer = styled.div`
     -ms-transform: skew(-10deg, 0deg);
     -webkit-transform: skew(-10deg, 0deg);
     transform: skew(-10deg, 0deg);
+    border-left: 0.1rem solid #b2bec3;
   }
 `
 
@@ -39,18 +40,19 @@ const Info = styled.div`
   width: 200px;
 
   & h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin: 1.3rem auto 0;
   }
 
   & > div {
     display: inline-block;
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 0.7rem;
     margin: 0.4rem auto;
-    background-color: black;
+    // background-color: var(--header-gray);
+    background-color: #1e3799;
     color: white;
     font-size: 0.9rem;
-    border-radius: 10px;
+    border-radius: 6px;
   }
 
   & p {
@@ -68,7 +70,7 @@ const GroomsmenCard = ({ name, image, title, bio }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 210, width: 180) {
+              fixed(quality: 100, height: 230, width: 190) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
@@ -89,7 +91,6 @@ const GroomsmenCard = ({ name, image, title, bio }) => {
     return res.length > 0 ? res[0].node.childImageSharp.fixed : null
   }
 
-  // console.log(data.groomsmenImages.edges[1].node.childImageSharp.fixed)
   return (
     <div>
       <CardContainer>
