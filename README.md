@@ -62,6 +62,8 @@
 
 - Skew Only on one side of the element - https://codepen.io/iDiver76/pen/YWzKZz and https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e
 
+- Add Zola Registry as iframe - https://github.com/svenanders/react-iframe and https://github.com/iammatthias/Cali-Meets-Delhi/blob/master/src/components/Registry.js (Inspect element)
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
