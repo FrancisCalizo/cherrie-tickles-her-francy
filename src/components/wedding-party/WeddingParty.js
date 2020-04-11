@@ -24,7 +24,9 @@ const CardsContainers = styled.div`
 const WeddingParty = () => {
   return (
     <WeddingPartyContainer>
-      <h2>Wedding Party</h2>
+      <h2 data-sal="fade" data-sal-duration="700" data-sal-easing="ease-in-out">
+        Wedding Party
+      </h2>
       <CardsContainers>
         <Bridesmaids />
         <Groomsmen />

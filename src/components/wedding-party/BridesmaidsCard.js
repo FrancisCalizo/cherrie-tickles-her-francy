@@ -96,18 +96,20 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
   }
 
   return (
-    <div>
-      <CardContainer>
-        <InfoContainer>
-          <Info>
-            <h3>{name}</h3>
-            <div>{title}</div>
-            <p>{bio}</p>
-          </Info>
-        </InfoContainer>
-        <Image fixed={getImage(image)} alt={image} />
-      </CardContainer>
-    </div>
+    <CardContainer
+      data-sal="slide-right"
+      data-sal-duration="700"
+      data-sal-easing="ease-in-out"
+    >
+      <InfoContainer>
+        <Info>
+          <h3>{name}</h3>
+          <div>{title}</div>
+          <p>{bio}</p>
+        </Info>
+      </InfoContainer>
+      <Image fixed={getImage(image)} alt={image} />
+    </CardContainer>
   )
 }
 
