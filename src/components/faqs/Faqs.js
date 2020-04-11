@@ -1,7 +1,7 @@
 import React from "react"
 import Faq from "react-faq-component"
 
-import { data } from "../../data/Faqs"
+import { data } from "./data/Faqs"
 import { FaqContainer, Subtitle, styles, config } from "./FaqsStyles"
 
 const Faqs = () => {
