@@ -59,12 +59,12 @@ const Navbar = () => {
                 <div>Wedding Party</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#registry")}>
-                <div>Registry</div>
-              </NavLink>
-              <Heart>❣</Heart>
               <NavLink onClick={() => scrollTo("#gallery")}>
                 <div>Gallery</div>
+              </NavLink>
+              <Heart>❣</Heart>
+              <NavLink onClick={() => scrollTo("#registry")}>
+                <div>Registry</div>
               </NavLink>
               <Heart>❣</Heart>
               <NavLink onClick={() => scrollTo("#faqs")}>

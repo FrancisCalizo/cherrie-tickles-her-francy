@@ -6,7 +6,7 @@ import Bridesmaids from "./Bridesmaids"
 
 const WeddingParty = () => {
   return (
-    <WeddingPartyContainer>
+    <WeddingPartyContainer id="party">
       <h2 data-sal="fade" data-sal-duration="700" data-sal-easing="ease-in-out">
         Wedding Party
       </h2>

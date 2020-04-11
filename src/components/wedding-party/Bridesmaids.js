@@ -31,7 +31,7 @@ const Bridesmaids = () => {
 
   return (
     <BridesmaidsContainer>
-      <h3>Team Bride</h3>
+      <h3>👰 Team Bride</h3>
       {data.bridesmaidsInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
           <BridesmaidsCard

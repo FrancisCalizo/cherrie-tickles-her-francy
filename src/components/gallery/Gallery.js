@@ -3,7 +3,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Modal from "./Modal"
-import { GalleryContainer, ImagesContainer, Image } from "./GalleryStyles"
+import {
+  Container,
+  GalleryContainer,
+  ImagesContainer,
+  Image,
+} from "./GalleryStyles"
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`
@@ -65,54 +70,56 @@ const Gallery = () => {
   }
 
   return (
-    <GalleryContainer id="gallery">
-      <Modal
-        showModal={showModal}
-        handleCloseModal={handleCloseModal}
-        modalImageName={modalImageName}
-      />
-      <div
-        data-sal="fade"
-        data-sal-duration="600"
-        data-sal-delay="100"
-        data-sal-easing="ease-in-out"
-      >
-        <h2>Gallery</h2>
-        <div>
-          <Img
-            fixed={data.cameraImage.childImageSharp.fixed}
-            alt={data.cameraImage.childImageSharp.originalName}
-          />
-          <h4>
-            :{" "}
-            <a
-              href="https://www.instagram.com/samkohai/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sam Hampshire
-            </a>
-          </h4>
-        </div>
-      </div>
-      <ImagesContainer>
-        {data.galleryImages.edges.sort(compare).map((img, idx) => (
-          <div
-            key={idx}
-            data-sal="fade"
-            data-sal-duration="600"
-            data-sal-delay={100 * idx}
-            data-sal-easing="ease-in-out"
-            onClick={handleOpenModal}
-          >
-            <Image
-              fixed={img.node.childImageSharp.fixed}
-              alt={img.node.childImageSharp.fixed.originalName}
+    <Container>
+      <GalleryContainer id="gallery">
+        <Modal
+          showModal={showModal}
+          handleCloseModal={handleCloseModal}
+          modalImageName={modalImageName}
+        />
+        <div
+          data-sal="fade"
+          data-sal-duration="600"
+          data-sal-delay="100"
+          data-sal-easing="ease-in-out"
+        >
+          <h2>Gallery</h2>
+          <div>
+            <Img
+              fixed={data.cameraImage.childImageSharp.fixed}
+              alt={data.cameraImage.childImageSharp.originalName}
             />
+            <h4>
+              :{" "}
+              <a
+                href="https://www.instagram.com/samkohai/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sam Hampshire
+              </a>
+            </h4>
           </div>
-        ))}
-      </ImagesContainer>
-    </GalleryContainer>
+        </div>
+        <ImagesContainer>
+          {data.galleryImages.edges.sort(compare).map((img, idx) => (
+            <div
+              key={idx}
+              data-sal="fade"
+              data-sal-duration="600"
+              data-sal-delay={100 * idx}
+              data-sal-easing="ease-in-out"
+              onClick={handleOpenModal}
+            >
+              <Image
+                fixed={img.node.childImageSharp.fixed}
+                alt={img.node.childImageSharp.fixed.originalName}
+              />
+            </div>
+          ))}
+        </ImagesContainer>
+      </GalleryContainer>
+    </Container>
   )
 }
 

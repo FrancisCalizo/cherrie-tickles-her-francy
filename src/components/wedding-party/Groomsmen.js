@@ -31,7 +31,7 @@ const Groomsmen = () => {
 
   return (
     <GroomsmenContainer>
-      <h3>Team Groom</h3>
+      <h3>Team Groom 🤵</h3>
       {data.groomsmenInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
           <GroomsmenCard

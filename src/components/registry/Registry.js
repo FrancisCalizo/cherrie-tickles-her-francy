@@ -19,7 +19,7 @@ export const Frame = styled(Iframe)`
 
 const Registry = () => {
   return (
-    <RegistryContainer>
+    <RegistryContainer id="registry">
       <h2>Registry</h2>
       <Frame
         url="https://widget.zola.com/v1/widget/registry/francisandcherrie/html"

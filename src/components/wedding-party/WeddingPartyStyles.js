@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const WeddingPartyContainer = styled.div`
   text-align: center;
-  background: #f0f2f4;
   padding-top 4rem;
   padding-bottom: 7rem;
 

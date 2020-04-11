@@ -1,10 +1,15 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 
+export const Container = styled.div`
+  background: #f0f2f4;
+`
+
 export const GalleryContainer = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   text-align: center;
+  padding: 1rem 0 1rem;
 
   & > div {
     margin: 4rem auto;
@@ -12,6 +17,7 @@ export const GalleryContainer = styled.div`
     & > h2 {
       font-size: 3.5rem;
       font-family: "Alex Brush", cursive;
+      margin-top: 0;
       margin-bottom: 0;
       line-height: 1rem;
     }
