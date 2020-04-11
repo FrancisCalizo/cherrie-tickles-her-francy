@@ -34,6 +34,8 @@
 
 - Smoothscroll Navbar Linking - https://github.com/freddydumont/gatsby-plugin-smoothscroll
 
+- Gatsby Scroll Reveal Plugin - https://www.gatsbyjs.org/packages/gatsby-plugin-scroll-reveal/
+
 - React Particles overlay - https://stackoverflow.com/questions/53604102/how-can-i-set-react-particles-js-as-the-background-while-using-react
 
 - React Particles Params - https://rpj.bembi.org/#bubbles

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -93,18 +93,20 @@ const GroomsmenCard = ({ name, image, title, bio }) => {
   }
 
   return (
-    <div>
-      <CardContainer>
-        <Img fixed={getImage(image)} alt={image} />
-        <InfoContainer>
-          <Info>
-            <h3>{name}</h3>
-            <div>{title}</div>
-            <p>{bio}</p>
-          </Info>
-        </InfoContainer>
-      </CardContainer>
-    </div>
+    <CardContainer
+      data-sal="slide-left"
+      data-sal-duration="700"
+      data-sal-easing="ease-in-out"
+    >
+      <Img fixed={getImage(image)} alt={image} />
+      <InfoContainer>
+        <Info>
+          <h3>{name}</h3>
+          <div>{title}</div>
+          <p>{bio}</p>
+        </Info>
+      </InfoContainer>
+    </CardContainer>
   )
 }
 
