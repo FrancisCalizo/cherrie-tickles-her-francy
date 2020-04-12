@@ -41,13 +41,13 @@ const WhenAndWhere = () => {
             >
               <h3>Ceremony</h3>
               <p>
-                <span>St. Thomas Shelby Church</span>
+                <span>Cathedral Church of St. Luke</span>
                 <br />
                 <br />
                 Saturday | February 6, 2021 <br />
-                TBD
+                Time TBD
                 <br />
-                TBD
+                130 N Magnolia Ave, Orlando, FL 32801
               </p>
             </Box>
             <And

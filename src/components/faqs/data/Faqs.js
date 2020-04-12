@@ -3,7 +3,7 @@ export const data = {
   rows: [
     {
       title: `What should I wear?`,
-      content: `We recommend dressing in anything from "Cocktail" to "Black Tie Optional" attire. More information on those descriptions can be found <a href="https://www.theknot.com/content/wedding-guest-attire-cheat-sheet" target="_blank">here</a>.`,
+      content: `We recommend dressing in anything from "Cocktail" to "Black Tie Optional" attire. More information on those descriptions can be found <a href="https://www.theknot.com/content/wedding-guest-attire-cheat-sheet" target="_blank" style="color:#ff7979;">here</a>.`,
     },
     {
       title: `What time and where is the reception and ceremony?`,
@@ -15,7 +15,7 @@ export const data = {
     },
     {
       title: `Will there be an open bar?`,
-      content: `YES! You woudn't be invited if there wasn't.`,
+      content: `YES! The wedding would be called off if there wasn't.`,
     },
     {
       title: `Where can I park?`,
@@ -27,7 +27,24 @@ export const data = {
     },
     {
       title: `Are you registered anywhere?`,
-      content: `More details to follow.`,
+      content: `
+      We have a small
+      <a
+        href="https://www.zola.com/registry/francisandcherrie"
+        target="_blank"
+        style="color:#ff7979;"
+      >
+        registry through Zola
+      </a>
+      (see below) should you be compelled by extreme generosity. We are
+      immensely grateful for both your presence and any contributions as we
+      start our lives together!
+    <p>
+      Our registry may seem to be on the smaller side as we both feel we
+      have everything we need. On the contrary, any monetary gifts to
+      support our dream honeymoon & travel fund would be extraordinarily
+      delightful.
+    </p>`,
     },
     {
       title: `How can I RSVP? And when is the last day to do so?`,
