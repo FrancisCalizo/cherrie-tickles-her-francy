@@ -4,7 +4,12 @@ import { ContactContainer } from "./ContactStyles"
 
 const Contact = () => {
   return (
-    <ContactContainer id="contact">
+    <ContactContainer
+      id="contact"
+      data-sal="fade"
+      data-sal-duration="500"
+      data-sal-easing="ease-in-out"
+    >
       <h2>Contact Us</h2>
       <div>
         <p>
