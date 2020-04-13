@@ -66,6 +66,10 @@
 
 - Add Zola Registry as iframe - https://github.com/svenanders/react-iframe and https://github.com/iammatthias/Cali-Meets-Delhi/blob/master/src/components/Registry.js (Inspect element)
 
+- Font Awesome Icons for React - https://github.com/FortAwesome/react-fontawesome and https://fontawesome.com/icons?d=gallery&m=free
+
+- Bounce Animation - https://codepen.io/bisaillonyannick/pen/pvZeGg
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

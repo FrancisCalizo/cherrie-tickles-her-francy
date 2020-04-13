@@ -1,9 +1,15 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons"
 
 import "./Footer.css"
-import { FooterContainer, FooterText, IconContainer } from "./FooterStyles"
+import {
+  FooterContainer,
+  FooterText,
+  ArrowUp,
+  IconContainer,
+} from "./FooterStyles"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -49,6 +55,9 @@ const Footer = () => {
         <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
       </svg>
       <FooterText>
+        <div>
+          <ArrowUp icon={faAngleDoubleUp} size="2x" color="white" />
+        </div>
         <IconContainer>
           <Img
             fixed={data.ringImage.childImageSharp.fixed}

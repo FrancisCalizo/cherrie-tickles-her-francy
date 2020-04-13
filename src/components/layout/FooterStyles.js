@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { device } from "../breakpoints"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const FooterContainer = styled.div`
   width: 100%;
@@ -33,6 +34,26 @@ export const FooterText = styled.div`
   & a:hover {
     text-decoration: underline;
     color: #ffb3b3;
+  }
+`
+
+export const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+`
+
+export const ArrowUp = styled(FontAwesomeIcon)`
+  animation: ${bounce} 1.5s infinite;
+
+  &:hover {
+    cursor: pointer;
   }
 `
 
