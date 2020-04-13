@@ -16,14 +16,17 @@ import {
 const Navbar = () => {
   const [isNavColored, setisNavColored] = useState(false)
 
+  const handleScroll = e => {
+    if (window.scrollY > 150) {
+      setisNavColored(true)
+    } else {
+      setisNavColored(false)
+    }
+  }
   useEffect(() => {
-    window.addEventListener("scroll", e => {
-      if (window.scrollY > 150) {
-        setisNavColored(true)
-      } else {
-        setisNavColored(false)
-      }
-    })
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (

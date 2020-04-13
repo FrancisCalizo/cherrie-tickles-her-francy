@@ -72,6 +72,12 @@
 
 - Center for absolute position item - https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
 
+404 - https://www.gatsbyjs.org/docs/add-404-page/
+
+Link between pages - https://www.gatsbyjs.org/docs/linking-between-pages/
+
+- Favicon Plugin - https://github.com/Creatiwity/gatsby-plugin-favicon
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

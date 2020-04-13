@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
