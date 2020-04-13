@@ -35,6 +35,10 @@ export const Container = styled.div`
     margin: auto 3rem;
   }
 
+  @media ${device.maxMd} {
+    margin: auto 1.2rem;
+  }
+
   @media ${device.minLg} {
     justify-content: space-around;
   }
@@ -49,10 +53,11 @@ export const NavLinks = styled.div`
 `
 
 export const Hamburger = styled.div`
-  border: 1px solid ${props =>
-    props.isNavColored ? "var(--header-gray)" : "white"};;
+  /*border: 1px solid ${props =>
+    props.isNavColored ? "var(--header-gray)" : "white"};*/
   border-radius: 10px;
   padding 0.40rem 0.7rem;
+  cursor: pointer;
 
   @media ${device.minLg}{
     display: none;
@@ -66,6 +71,7 @@ export const BurgerLine = styled.div`
     props.isNavColored ? "var(--header-gray)" : "white"};
   margin: 8px 0;
   border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.13), 0 2px 3px 0 rgba(0, 0, 0, 0.15);
 `
 
 export const NavLink = styled.div`
