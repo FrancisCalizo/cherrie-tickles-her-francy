@@ -70,6 +70,8 @@
 
 - Bounce Animation - https://codepen.io/bisaillonyannick/pen/pvZeGg
 
+- Center for absolute position item - https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

@@ -1,8 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import Countdown from "./Countdown"
-import { HeaderImage, BlackOverlay, HeaderContent } from "./HeaderStyles"
+import {
+  HeaderImage,
+  BlackOverlay,
+  HeaderContent,
+  ArrowDown,
+  ArrowContainer,
+} from "./HeaderStyles"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -28,6 +36,9 @@ const Header = () => {
             <h1>Francis & Cherrie</h1>
             <h2>We're getting married!</h2>
             <Countdown />
+            <ArrowContainer onClick={() => scrollTo("#story")}>
+              <ArrowDown icon={faAngleDoubleDown} size="3x" color="white" />
+            </ArrowContainer>
           </HeaderContent>
         </BlackOverlay>
       </HeaderImage>

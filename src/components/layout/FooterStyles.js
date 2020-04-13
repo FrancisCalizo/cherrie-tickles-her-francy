@@ -25,6 +25,12 @@ export const FooterText = styled.div`
     }
   }
 
+  & > div {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   & a {
     color: white;
     text-decoration: none;
@@ -37,7 +43,7 @@ export const FooterText = styled.div`
   }
 `
 
-export const bounce = keyframes`
+const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
@@ -51,10 +57,6 @@ export const bounce = keyframes`
 
 export const ArrowUp = styled(FontAwesomeIcon)`
   animation: ${bounce} 1.5s infinite;
-
-  &:hover {
-    cursor: pointer;
-  }
 `
 
 export const IconContainer = styled.div`

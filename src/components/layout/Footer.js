@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import "./Footer.css"
 import {
@@ -55,7 +56,7 @@ const Footer = () => {
         <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
       </svg>
       <FooterText>
-        <div>
+        <div onClick={() => scrollTo("#header")}>
           <ArrowUp icon={faAngleDoubleUp} size="2x" color="white" />
         </div>
         <IconContainer>

@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import { device } from "../breakpoints"
 import BackgroundImage from "gatsby-background-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const HeaderImage = styled(BackgroundImage)`
   height: 100vh;
@@ -61,5 +62,32 @@ export const HeaderContent = styled.div`
       font-size: 2vw;
     }
   }
+`
 
+export const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+`
+
+export const ArrowContainer = styled.div`
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const ArrowDown = styled(FontAwesomeIcon)`
+  animation: ${bounce} 1.5s infinite;
 `
