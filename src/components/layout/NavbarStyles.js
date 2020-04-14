@@ -64,6 +64,27 @@ export const Hamburger = styled.div`
   }
 `
 
+export const HamburgerLinks = styled.div`
+  position: fixed;
+  top: 85px;
+  z-index: 10;
+  width: 100%;
+  display: ${props => (props.isHamburgerOpen ? "flex" : "none")};
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: ${props => (props.isNavColored ? "white" : "transparent")};
+  color: ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
+`
+
+export const HamburgerLink = styled.div`
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+`
+
 export const BurgerLine = styled.div`
   width: 40px;
   height: 3px;
