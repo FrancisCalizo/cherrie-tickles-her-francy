@@ -91,3 +91,7 @@ export const ArrowContainer = styled.div`
 export const ArrowDown = styled(FontAwesomeIcon)`
   animation: ${bounce} 1.5s infinite;
 `
+export const ScrollStory = styled.div`
+  position: absolute;
+  bottom: 4rem;
+`

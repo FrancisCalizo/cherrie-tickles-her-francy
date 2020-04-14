@@ -1,5 +1,9 @@
 import React from "react"
-import { WeddingPartyContainer, CardsContainers } from "./WeddingPartyStyles"
+import {
+  WeddingPartyContainer,
+  CardsContainers,
+  ScrollGallery,
+} from "./WeddingPartyStyles"
 
 import Groomsmen from "./Groomsmen"
 import Bridesmaids from "./Bridesmaids"
@@ -14,6 +18,7 @@ const WeddingParty = () => {
         <Bridesmaids />
         <Groomsmen />
       </CardsContainers>
+      <ScrollGallery id="scroll-gallery" />
     </WeddingPartyContainer>
   )
 }

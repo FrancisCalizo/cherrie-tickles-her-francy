@@ -9,6 +9,7 @@ import {
   And,
   ParticlesContainer,
   particleParams,
+  ScrollParty,
 } from "./WhenAndWhereStyles"
 
 const WhenAndWhere = () => {
@@ -77,6 +78,7 @@ const WhenAndWhere = () => {
           </Container>
         </BlackOverlay>
       </WhenAndWhereImage>
+      <ScrollParty id="scroll-party" />
     </div>
   )
 }

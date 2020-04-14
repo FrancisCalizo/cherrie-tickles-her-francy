@@ -50,31 +50,31 @@ const Navbar = () => {
               <BurgerLine isNavColored={isNavColored}></BurgerLine>
             </Hamburger>
             <NavLinks>
-              <NavLink onClick={() => scrollTo("#story")}>
+              <NavLink onClick={() => scrollTo("#scroll-story")}>
                 <div>Our Story</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#when-and-where")}>
+              <NavLink onClick={() => scrollTo("#scroll-when-and-where")}>
                 <div>When & Where</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#party")}>
+              <NavLink onClick={() => scrollTo("#scroll-party")}>
                 <div>Wedding Party</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#gallery")}>
+              <NavLink onClick={() => scrollTo("#scroll-gallery")}>
                 <div>Gallery</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#registry")}>
+              <NavLink onClick={() => scrollTo("#scroll-registry")}>
                 <div>Registry</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#faqs")}>
+              <NavLink onClick={() => scrollTo("#scroll-faqs")}>
                 <div>FAQs</div>
               </NavLink>
               <Heart>❣</Heart>
-              <NavLink onClick={() => scrollTo("#contact")}>
+              <NavLink onClick={() => scrollTo("#scroll-contact")}>
                 <div>Contact Us</div>
               </NavLink>
             </NavLinks>

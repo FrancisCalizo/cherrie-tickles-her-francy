@@ -114,3 +114,8 @@ export const particleParams = {
     },
   },
 }
+
+export const ScrollParty = styled.div`
+  position: relative;
+  bottom: 4rem;
+`

@@ -2,7 +2,13 @@ import React from "react"
 import Faq from "react-faq-component"
 
 import { data } from "./data/Faqs"
-import { FaqContainer, Subtitle, styles, config } from "./FaqsStyles"
+import {
+  FaqContainer,
+  Subtitle,
+  styles,
+  config,
+  ScrollContact,
+} from "./FaqsStyles"
 
 const Faqs = () => {
   return (
@@ -16,6 +22,7 @@ const Faqs = () => {
       <FaqContainer>
         <Faq data={data} styles={styles} config={config} />
       </FaqContainer>
+      <ScrollContact id="scroll-contact" />
     </div>
   )
 }

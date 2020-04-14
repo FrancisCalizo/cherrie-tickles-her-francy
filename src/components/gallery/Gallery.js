@@ -8,6 +8,7 @@ import {
   GalleryContainer,
   ImagesContainer,
   Image,
+  ScrollRegistry,
 } from "./GalleryStyles"
 
 const Gallery = () => {
@@ -119,6 +120,7 @@ const Gallery = () => {
           ))}
         </ImagesContainer>
       </GalleryContainer>
+      <ScrollRegistry id="scroll-registry" />
     </Container>
   )
 }

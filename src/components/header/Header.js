@@ -10,6 +10,7 @@ import {
   HeaderContent,
   ArrowDown,
   ArrowContainer,
+  ScrollStory,
 } from "./HeaderStyles"
 
 const Header = () => {
@@ -36,12 +37,13 @@ const Header = () => {
             <h1>Francis & Cherrie</h1>
             <h2>We're getting married!</h2>
             <Countdown />
-            <ArrowContainer onClick={() => scrollTo("#story")}>
+            <ArrowContainer onClick={() => scrollTo("#scroll-story")}>
               <ArrowDown icon={faAngleDoubleDown} size="3x" color="white" />
             </ArrowContainer>
           </HeaderContent>
         </BlackOverlay>
       </HeaderImage>
+      <ScrollStory id="scroll-story" />
     </header>
   )
 }

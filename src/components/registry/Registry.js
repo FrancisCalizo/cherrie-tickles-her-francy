@@ -1,6 +1,11 @@
 import React from "react"
 
-import { RegistryContainer, InfoContainer, Frame } from "./RegistryStyles"
+import {
+  RegistryContainer,
+  InfoContainer,
+  Frame,
+  ScrollFaqs,
+} from "./RegistryStyles"
 
 const Registry = () => {
   return (
@@ -36,6 +41,7 @@ const Registry = () => {
         width="100%"
         height="600px"
       />
+      <ScrollFaqs id="scroll-faqs" />
     </RegistryContainer>
   )
 }

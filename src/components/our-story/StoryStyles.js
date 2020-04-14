@@ -107,3 +107,5 @@ export const SlideshowDiv = styled.div`
     justify-content: center;
   }
 `
+
+export const ScrollWhenAndWhere = styled.div``

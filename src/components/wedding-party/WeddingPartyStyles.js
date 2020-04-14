@@ -20,3 +20,4 @@ export const CardsContainers = styled.div`
   max-width: var(--container);
   margin: 0 auto;
 `
+export const ScrollGallery = styled.div``

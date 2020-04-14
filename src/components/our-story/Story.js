@@ -6,6 +6,7 @@ import {
   StoryTop,
   StoryBottom,
   SlideshowDiv,
+  ScrollWhenAndWhere,
 } from "./StoryStyles"
 
 const Story = () => {
@@ -74,6 +75,7 @@ const Story = () => {
           </p>
         </div>
       </StoryBottom>
+      <ScrollWhenAndWhere id="scroll-when-and-where" />
     </StoryContainer>
   )
 }

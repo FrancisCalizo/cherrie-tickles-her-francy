@@ -41,3 +41,8 @@ export const Frame = styled(Iframe)`
   border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15), 0 3px 7px 0 rgba(0, 0, 0, 0.19);
 `
+
+export const ScrollFaqs = styled.div`
+  position: relative;
+  bottom: 3rem;
+`

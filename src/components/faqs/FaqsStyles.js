@@ -33,3 +33,8 @@ export const styles = {
 export const config = {
   animate: true,
 }
+
+export const ScrollContact = styled.div`
+  // position: relative;
+  bottom: 4rem;
+`
