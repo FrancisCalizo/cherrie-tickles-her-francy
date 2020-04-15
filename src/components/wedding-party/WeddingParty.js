@@ -15,8 +15,8 @@ const WeddingParty = () => {
         Wedding Party
       </h2>
       <CardsContainers>
-        <Bridesmaids />
-        <Groomsmen />
+        {/* <Bridesmaids /> */}
+        {/* <Groomsmen /> */}
       </CardsContainers>
       <ScrollGallery id="scroll-gallery" />
     </WeddingPartyContainer>

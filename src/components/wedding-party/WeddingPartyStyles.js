@@ -9,7 +9,6 @@ export const WeddingPartyContainer = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 3.5rem;
     margin: 0rem auto 1rem;
-    // color: white;
   }
 `
 

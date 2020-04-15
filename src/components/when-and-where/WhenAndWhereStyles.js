@@ -51,6 +51,19 @@ export const Box = styled.div`
     width: 34vw;
     padding: 1.75rem 0;
   }
+
+  @media ${device.maxSm}{
+    width: 100%;
+    margin: 0 1rem;
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    & span {
+      font-size: 1rem;
+    }
+  }
 `
 
 export const And = styled.div`

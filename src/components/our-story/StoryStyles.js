@@ -4,6 +4,7 @@ import { device } from "../breakpoints"
 export const StoryContainer = styled.div`
   max-width: var(--container);
   margin: 2rem auto 8rem;
+  padding: 0 2.5rem;
 `
 
 export const StoryTop = styled.div`

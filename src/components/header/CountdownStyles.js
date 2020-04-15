@@ -52,41 +52,55 @@ margin-top: 1.5rem;
       height: 75px;
       padding: 0 0.3rem 0.3rem;
     }
+
+    @media ${device.maxSm} {
+      & > div:nth-child(odd) {
+        width:60px;
+        height: 70px;
+        padding: 0 0.2rem 0.3rem;
+      }
+
+      & > div:nth-child(even) {
+        margin: 0;
+      }
 }
 `
 
 export const CountownSection = styled.div`
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 
-div:nth-child(1) {
-  font-family: 'Lato', sans-serif;
-  font-size: 3.5rem;
-}
-
-div:nth-child(2) {
-  font-size: 1.5rem;
-}
-
-@media ${device.maxLg} {
   div:nth-child(1) {
-    font-size: 5vw;
+    font-family: "Lato", sans-serif;
+    font-size: 3.5rem;
   }
 
   div:nth-child(2) {
-    font-size: 2.2vw;
+    font-size: 1.5rem;
   }
 
-@media ${device.maxLg} {
-  div:nth-child(1) {
-    font-size: 3rem;
+  @media ${device.maxLg} {
+    div:nth-child(1) {
+      font-size: 3rem;
+    }
+
+    div:nth-child(2) {
+      font-size: 1rem;
+    }
   }
 
-  div:nth-child(2) {
-    font-size: 1rem;
+  @media ${device.maxMd} {
+    div:nth-child(1) {
+      font-size: 2.5rem;
+    }
   }
-}
+
+  @media ${device.maxSm} {
+    div:nth-child(1) {
+      font-size: 1.9rem;
+    }
+  }
 `
 export const Placeholder = styled.div`
   visibility: hidden;

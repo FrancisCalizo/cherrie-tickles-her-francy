@@ -1,11 +1,6 @@
 import styled from "styled-components"
 import { device } from "../breakpoints"
 
-// background-color: ${props =>
-//   props.state === "entering" || props.state === "entered"
-//     ? "white"
-//     : "transparent"};
-
 export const Nav = styled.nav`
   background-color: ${props => {
     switch (true) {
@@ -184,5 +179,9 @@ export const LogoContainer = styled.div`
 
   @media ${device.maxLg} {
     font-size: 0.9rem;
+  }
+
+  @media ${device.maxSm} {
+    font-size: 0.8rem;
   }
 `

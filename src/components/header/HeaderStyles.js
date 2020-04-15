@@ -43,9 +43,19 @@ export const HeaderContent = styled.div`
     animation ${appear} 3s ease-in-out;
   }
 
+  @media ${device.maxLg}{
+    h1{
+      font-size: 9vw;
+    }
+
+    h2{
+      font-size: 2vw;
+    }
+  }
+
   @media ${device.maxMd}{
     h1{
-      font-size: 4rem;
+      font-size: 3.9rem;
     }
 
     h2{
@@ -53,13 +63,9 @@ export const HeaderContent = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg}{
+  @media ${device.maxSm}{
     h1{
-      font-size: 9vw;
-    }
-
-    h2{
-      font-size: 2vw;
+      font-size: 13vw;
     }
   }
 `
