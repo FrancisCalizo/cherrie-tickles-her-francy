@@ -37,10 +37,14 @@ const Navbar = () => {
   }, [])
 
   return (
-    <Transition in={isNavColored} timeout={500}>
-      {state => (
-        <Fragment>
-          <Nav state={state} isNavColored={isNavColored}>
+    <Fragment>
+      <Transition in={isNavColored} timeout={500}>
+        {state => (
+          <Nav
+            state={state}
+            isNavColored={isNavColored}
+            isHamburgerOpen={isHamburgerOpen}
+          >
             <Container>
               <LogoContainer
                 isNavColored={isNavColored}
@@ -88,38 +92,91 @@ const Navbar = () => {
               </NavLinks>
             </Container>
           </Nav>
+        )}
+      </Transition>
+      <Transition in={isHamburgerOpen} timeout={0}>
+        {state => (
           <HamburgerLinks
+            state={state}
             isHamburgerOpen={isHamburgerOpen}
             isNavColored={isNavColored}
           >
-            <HamburgerLink onClick={() => scrollTo("#header")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#header")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Home
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-story")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-story")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Our Story
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-when-and-where")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-when-and-where")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               When And Where
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-party")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-party")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Wedding Party
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-gallery")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-gallery")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Gallery
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-registry")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-registry")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Registry
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-faqs")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-faqs")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               FAQs
             </HamburgerLink>
-            <HamburgerLink onClick={() => scrollTo("#scroll-contact")}>
+            <HamburgerLink
+              onClick={() => {
+                scrollTo("#scroll-contact")
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
               Contact Us
             </HamburgerLink>
           </HamburgerLinks>
-        </Fragment>
-      )}
-    </Transition>
+        )}
+      </Transition>
+    </Fragment>
   )
 }
 

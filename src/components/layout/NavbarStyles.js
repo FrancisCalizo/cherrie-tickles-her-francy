@@ -1,11 +1,25 @@
 import styled from "styled-components"
 import { device } from "../breakpoints"
 
+// background-color: ${props =>
+//   props.state === "entering" || props.state === "entered"
+//     ? "white"
+//     : "transparent"};
+
 export const Nav = styled.nav`
-  background-color: ${props =>
-    props.state === "entering" || props.state === "entered"
-      ? "white"
-      : "transparent"};
+  background-color: ${props => {
+    switch (true) {
+      case props.state === "entering":
+      case props.state === "entered":
+        return "white"
+      case props.state !== "entered" &&
+        props.state !== "entering" &&
+        props.isHamburgerOpen:
+        return "rgba(70, 70, 70, 0.75)"
+      default:
+        return "transparent"
+    }
+  }};
   opacity: ${props => (props.state === "entering" ? 0.0 : 1.0)};
   height: ${props => (props.state === "entering" ? 0 : "85px")};
   color: ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
@@ -14,7 +28,7 @@ export const Nav = styled.nav`
       ? "0 3px 1px -1px var(--heart);"
       : "0 4px 7px -7px #dff9fb;"}
   transition: height 500ms ease-in, opacity 100ms ease-in,
-    background-color 100ms ease-in 300ms, color 100ms ease-in 300ms,
+    background-color 100ms ease-in-out 100ms, color 100ms ease-in 300ms,
     box-shadow 100ms ease-in 300ms;
   overflow: hidden;
   position: fixed;
@@ -75,14 +89,36 @@ export const HamburgerLinks = styled.div`
   flex-wrap: wrap;
   text-transform: uppercase;
   font-weight: 700;
-  background: ${props => (props.isNavColored ? "white" : "transparent")};
+  background: ${props =>
+    props.isNavColored ? "white" : "rgba(70,70,70, 0.75)"};
   color: ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
+  z-index: 20;
+  opacity: ${props => (props.state === "entered" ? 1 : 0)};
+
+  transition: opacity 0.2s ease-in-out, background-color 1.4s;
+
+  & div:nth-child(8) {
+    border-bottom: none;
+  }
+
+  @media ${device.minLg} {
+    display: none;
+  }
 `
 
 export const HamburgerLink = styled.div`
   width: 100%;
   padding: 1rem 0;
   cursor: pointer;
+  border-bottom: ${props =>
+    props.isNavColored
+      ? "2px solid var(--heart)"
+      : "2px solid var(--header-gray)"};
+
+  &:hover {
+    background: ${props =>
+      props.isNavColored ? "rgba(235,235,235)" : "rgba(100,100,100, 0.75)"};
+  }
 `
 
 export const BurgerLine = styled.div`
