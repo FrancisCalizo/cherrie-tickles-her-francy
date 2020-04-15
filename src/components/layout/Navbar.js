@@ -57,9 +57,18 @@ const Navbar = () => {
                 Orlando, FL <br /> February 6, 2021
               </LogoContainer>
               <Hamburger isNavColored={isNavColored} onClick={handleClick}>
-                <BurgerLine isNavColored={isNavColored}></BurgerLine>
-                <BurgerLine isNavColored={isNavColored}></BurgerLine>
-                <BurgerLine isNavColored={isNavColored}></BurgerLine>
+                <BurgerLine
+                  isNavColored={isNavColored}
+                  isHamburgerOpen={isHamburgerOpen}
+                ></BurgerLine>
+                <BurgerLine
+                  isNavColored={isNavColored}
+                  isHamburgerOpen={isHamburgerOpen}
+                ></BurgerLine>
+                <BurgerLine
+                  isNavColored={isNavColored}
+                  isHamburgerOpen={isHamburgerOpen}
+                ></BurgerLine>
               </Hamburger>
               <NavLinks>
                 <NavLink onClick={() => scrollTo("#scroll-story")}>

@@ -129,6 +129,24 @@ export const BurgerLine = styled.div`
   margin: 8px 0;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.13), 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+
+  &:nth-child(1) {
+    opacity: ${props => (props.isHamburgerOpen ? 0 : 1)};
+  }
+
+  &:nth-child(2) {
+    transform: ${props =>
+      props.isHamburgerOpen ? "rotate(45deg)" : "rotate(0)"};
+  }
+
+  &:nth-child(3) {
+    transform: ${props =>
+      props.isHamburgerOpen
+        ? "rotate(-45deg) translate(7px, -8px);"
+        : "rotate(0)"};
+  }
+
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 `
 
 export const NavLink = styled.div`
