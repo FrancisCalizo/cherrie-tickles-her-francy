@@ -89,8 +89,7 @@ export const ArrowContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 2rem;
-  width: 100px;
-  height: 50px;
+  width: 50px;
   &:hover {
     cursor: pointer;
   }
