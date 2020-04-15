@@ -16,7 +16,7 @@ const WeddingParty = () => {
       </h2>
       <CardsContainers>
         <Bridesmaids />
-        {/* <Groomsmen /> */}
+        <Groomsmen />
       </CardsContainers>
       <ScrollGallery id="scroll-gallery" />
     </WeddingPartyContainer>

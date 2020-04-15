@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { device } from "../breakpoints"
+import Img from "gatsby-image"
 
 export const CardContainer = styled.div`
   border: 1px solid lightgray;
@@ -8,6 +10,15 @@ export const CardContainer = styled.div`
   display: flex;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
   background: white;
+
+  @media ${device.maxMd} {
+    width: 390px;
+    margin: 2rem 0;
+  }
+
+  @media ${device.maxSm} {
+    width: 330px;
+  }
 `
 
 export const InfoContainer = styled.div`
@@ -32,6 +43,12 @@ export const InfoContainer = styled.div`
   }
 `
 
+export const Image = styled(Img)`
+  @media ${device.maxSm} {
+    width: 130px !important;
+  }
+`
+
 export const Info = styled.div`
   position: absolute;
   z-index: 10;
@@ -46,7 +63,6 @@ export const Info = styled.div`
     display: inline-block;
     padding: 0.4rem 0.7rem;
     margin: 0.4rem auto;
-    // background-color: var(--header-gray);
     background-color: #1e3799;
     color: white;
     font-size: 0.9rem;
@@ -56,5 +72,23 @@ export const Info = styled.div`
   & p {
     font-size: 0.9rem;
     color: var(--header-gray);
+  }
+
+  @media ${device.maxMd} {
+    & h3 {
+      font-size: 1.15rem;
+    }
+
+    & div {
+      margin: 0.8rem auto 0.5rem;
+    }
+
+    & p {
+      font-size: 0.85rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  @media ${device.MaxSm} {
   }
 `

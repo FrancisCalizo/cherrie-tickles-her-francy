@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
 
 import GroomsmenCard from "./GroomsmenCard"
 
@@ -22,15 +21,8 @@ const Groomsmen = () => {
     }
   `)
 
-  const GroomsmenContainer = styled.div`
-    & > h3 {
-      font-size: 3rem;
-      margin: 0.5rem;
-    }
-  `
-
   return (
-    <GroomsmenContainer>
+    <div>
       <h3>Team Groom</h3>
       {data.groomsmenInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
@@ -43,7 +35,7 @@ const Groomsmen = () => {
           />
         )
       )}
-    </GroomsmenContainer>
+    </div>
   )
 }
 

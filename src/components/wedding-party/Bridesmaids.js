@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
 
 import BridesmaidsCard from "./BridesmaidsCard"
 

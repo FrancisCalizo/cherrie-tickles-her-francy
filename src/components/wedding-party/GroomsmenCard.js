@@ -1,8 +1,12 @@
 import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import { CardContainer, InfoContainer, Info } from "./GroomsmenCardStyles"
+import {
+  CardContainer,
+  Image,
+  InfoContainer,
+  Info,
+} from "./GroomsmenCardStyles"
 
 const GroomsmenCard = ({ name, image, title, bio }) => {
   const data = useStaticQuery(graphql`
@@ -40,7 +44,7 @@ const GroomsmenCard = ({ name, image, title, bio }) => {
       data-sal-duration="700"
       data-sal-easing="ease-in-out"
     >
-      <Img fixed={getImage(image)} alt={image} />
+      <Image fixed={getImage(image)} alt={image} />
       <InfoContainer>
         <Info>
           <h3>{name}</h3>
