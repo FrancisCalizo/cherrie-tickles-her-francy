@@ -56,7 +56,7 @@ export const Info = styled.div`
   width: 200px;
 
   & h3 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     margin: 1.3rem auto 0;
   }
 
@@ -73,6 +73,7 @@ export const Info = styled.div`
   & p {
     font-size: 0.9rem;
     color: var(--header-gray);
+    margin-top 0.5rem;
   }
 
   @media ${device.maxMd} {

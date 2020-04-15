@@ -17,7 +17,7 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 230, width: 190) {
+              fixed(quality: 100, height: 240, width: 190) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
