@@ -37,9 +37,9 @@ const Header = () => {
             <h1>Francis & Cherrie</h1>
             <h2>We're getting married!</h2>
             <Countdown />
-            {/* <ArrowContainer onClick={() => scrollTo("#scroll-story")}>
+            <ArrowContainer onClick={() => scrollTo("#scroll-story")}>
               <ArrowDown icon={faAngleDoubleDown} size="3x" color="white" />
-            </ArrowContainer> */}
+            </ArrowContainer>
           </HeaderContent>
         </BlackOverlay>
       </HeaderImage>
