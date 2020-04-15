@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-favicon`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-nprogress`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
