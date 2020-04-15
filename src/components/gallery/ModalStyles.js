@@ -35,6 +35,11 @@ export const Image = styled(Img)`
     max-height: 560px;
     max-width: 340px;
   }
+
+  @media ${device.maxSm} {
+    max-height: 460px;
+    max-width: 270px;
+  }
 `
 
 export const Close = styled.div`
@@ -46,4 +51,12 @@ export const Close = styled.div`
   color: #d2d2d2;
   cursor: pointer;
   font-weight: bold;
+
+  @media ${device.maxMd} {
+    right: 3rem;
+  }
+
+  @media ${device.maxSm} {
+    right: 1rem;
+  }
 `

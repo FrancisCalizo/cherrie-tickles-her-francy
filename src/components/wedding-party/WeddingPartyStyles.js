@@ -4,7 +4,6 @@ import { device } from "../breakpoints"
 export const WeddingPartyContainer = styled.div`
   text-align: center;
   padding-top 4rem;
-  padding-bottom: 7rem;
 
   & h2 {
     font-family: "Alex Brush", cursive;
@@ -14,7 +13,7 @@ export const WeddingPartyContainer = styled.div`
 
   & > div {
     font-size: 3rem;
-    margin: 0.5rem;
+    padding: 0.5rem;
   }
 
 
