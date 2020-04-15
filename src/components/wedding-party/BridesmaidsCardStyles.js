@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 
+import { device } from "../breakpoints"
+
 export const CardContainer = styled.div`
   border: 1px solid lightgray;
   border-radius: 4px;
@@ -10,6 +12,15 @@ export const CardContainer = styled.div`
   justify-content: flex-end;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
   background: white;
+
+  @media ${device.maxMd} {
+    width: 390px;
+    margin: 2rem 0;
+  }
+
+  @media ${device.maxSm} {
+    width: 330px;
+  }
 `
 
 export const Image = styled(Img)`
@@ -62,5 +73,23 @@ export const Info = styled.div`
   & p {
     font-size: 0.9rem;
     color: var(--header-gray);
+  }
+
+  @media ${device.maxMd} {
+    & h3 {
+      font-size: 1.15rem;
+    }
+
+    & div {
+      margin: 0.8rem auto 0.5rem;
+    }
+
+    & p {
+      font-size: 0.85rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  @media ${device.MaxSm} {
   }
 `

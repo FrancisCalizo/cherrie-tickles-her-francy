@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../breakpoints"
 
 export const WeddingPartyContainer = styled.div`
   text-align: center;
@@ -9,6 +10,22 @@ export const WeddingPartyContainer = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 3.5rem;
     margin: 0rem auto 1rem;
+  }
+
+  & > div {
+    font-size: 3rem;
+    margin: 0.5rem;
+  }
+
+
+  @media ${device.maxMd} {
+    & h2 {
+      font-size: 3rem;
+    }
+
+    & > div {
+      font-size: 1.9rem;
+    }
   }
 `
 

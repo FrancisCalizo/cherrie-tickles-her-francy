@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -22,15 +22,8 @@ const Bridesmaids = () => {
     }
   `)
 
-  const BridesmaidsContainer = styled.div`
-    & > h3 {
-      font-size: 3rem;
-      margin: 0.5rem;
-    }
-  `
-
   return (
-    <BridesmaidsContainer>
+    <div>
       <h3>Team Bride</h3>
       {data.bridesmaidsInfo.edges.map(
         ({ node: { order, name, title, image, bio } }) => (
@@ -43,7 +36,7 @@ const Bridesmaids = () => {
           />
         )
       )}
-    </BridesmaidsContainer>
+    </div>
   )
 }
 
