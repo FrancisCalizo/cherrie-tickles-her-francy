@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Cherrie Tickles Her Francy`,
     siteUrl: `https://localhost:8000`,
-    description: `Francis and Cherrie's Wedding 2021`,
+    description: `Wedding website for Francis Calizo and Cherrie Sarmiento on February 6, 2021.`,
     author: "Francis Calizo",
   },
   plugins: [
@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-json`,
     `gatsby-plugin-favicon`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

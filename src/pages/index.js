@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
+import Head from "../components/head"
 import Navbar from "../components/layout/Navbar"
 import Header from "../components/header/Header"
 import Story from "../components/our-story/Story"
@@ -30,6 +31,7 @@ const CSSVariables = styled.div`
 const index = () => {
   return (
     <div>
+      <Head />
       <CSSVariables>
         <Navbar />
         <GlobalStyle />

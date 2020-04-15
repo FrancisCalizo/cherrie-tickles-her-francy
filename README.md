@@ -72,11 +72,13 @@
 
 - Center for absolute position item - https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
 
-404 - https://www.gatsbyjs.org/docs/add-404-page/
+-404 - https://www.gatsbyjs.org/docs/add-404-page/
 
-Link between pages - https://www.gatsbyjs.org/docs/linking-between-pages/
+- Link between pages - https://www.gatsbyjs.org/docs/linking-between-pages/
 
 - Favicon Plugin - https://github.com/Creatiwity/gatsby-plugin-favicon
+
+- React Helmet - https://www.youtube.com/watch?v=8t0vNu2fCCM&t=1619s
 
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
