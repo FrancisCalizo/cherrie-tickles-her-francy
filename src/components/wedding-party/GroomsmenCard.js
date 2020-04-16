@@ -40,7 +40,7 @@ const GroomsmenCard = ({ name, image, title, bio }) => {
 
   return (
     <CardContainer
-      data-sal="slide-left"
+      data-sal="slide-up"
       data-sal-duration="700"
       data-sal-easing="ease-in-out"
     >

@@ -40,7 +40,7 @@ const BridesmaidsCard = ({ name, image, title, bio }) => {
 
   return (
     <CardContainer
-      data-sal="slide-right"
+      data-sal="slide-up"
       data-sal-duration="700"
       data-sal-easing="ease-in-out"
     >

@@ -35,7 +35,7 @@ const Story = () => {
       </StoryTop>
       <StoryBottom>
         <div
-          data-sal="slide-right"
+          data-sal="slide-up"
           data-sal-duration="1500"
           data-sal-delay="300"
           data-sal-easing="ease"
@@ -59,7 +59,7 @@ const Story = () => {
           <SlideShow />
         </SlideshowDiv>
         <div
-          data-sal="slide-left"
+          data-sal="slide-up"
           data-sal-duration="1500"
           data-sal-delay="300"
           data-sal-easing="ease"
