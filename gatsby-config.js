@@ -37,11 +37,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        google: {
-          families: ["Raleway:400,700", "Poppins", "Lato", "Alex Brush"],
-        },
+        fonts: [`raleway\:400,700`, `poppins`, `lato`, `alex brush`],
+        display: "swap",
       },
     },
   ],

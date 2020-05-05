@@ -6,7 +6,7 @@
 
 - Flexbox Nabar - https://freshman.tech/flexbox-navbar/
 
-- Google Fonts Plugin - https://www.gatsbyjs.org/packages/gatsby-plugin-web-font-loader/
+- Google Fonts Plugin - https://www.gatsbyjs.org/packages/gatsby-plugin-google-fonts/
 
 - Bottom Box Shadow - https://stackoverflow.com/questions/12798902/box-shadow-for-bottom-side-only
 
