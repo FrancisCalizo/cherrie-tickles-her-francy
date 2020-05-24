@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import SlideShow from "../our-story/Slideshow"
 
 import {
@@ -10,28 +11,25 @@ import {
 } from "./StoryStyles"
 
 const Story = () => {
+  const data = useStaticQuery(graphql`
+    query storyQuery {
+      storyInfo: allDataJson {
+        edges {
+          node {
+            storyP1
+            storyP2
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <StoryContainer id="story">
       <StoryTop data-sal="fade" data-sal-duration="1500" data-sal-easing="ease">
         <h2>Our Story</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam delectus
-          maiores vel quia in aliquid repudiandae perferendis temporibus! Enim
-          quasi aliquam ipsam quibusdam inventore harum ut magni sit! Officia
-          exercitationem ab cum quis quo? Sed ipsa qui asperiores reiciendis
-          impedit eaque incidunt animi, repellat, unde iure corrupti sapiente
-          aut exercitationem pariatur nisi non? Molestiae quo enim ex quae. Quae
-          eveniet qui facere optio iure libero praesentium? Natus odit veritatis
-          soluta blanditiis error, deserunt at consequatur numquam, quaerat
-          culpa repellat suscipit iste reprehenderit iure cumque atque molestias
-          nisi dolorem quia placeat corrupti vitae in autem fuga! Repellendus
-          ducimus sunt magni, itaque corporis aspernatur quos possimus esse vero
-          explicabo neque, ex et, minima omnis eaque corrupti vel quis nihil ut
-          autem harum enim perspiciatis? Distinctio commodi placeat cum odio
-          temporibus. Et temporibus ad voluptate, eos culpa sapiente harum. Sit,
-          hic dicta praesentium rerum, quaerat veniam commodi soluta aperiam
-          asperiores necessitatibus, aliquid voluptate?
-        </p>
+        <p>{data.storyInfo.edges[0].node.storyP1}</p>
+        <p>{data.storyInfo.edges[0].node.storyP2}</p>
       </StoryTop>
       <StoryBottom>
         <div
@@ -48,6 +46,7 @@ const Story = () => {
             vero facilis dolorum aliquid nulla. Lorem ipsum dolor sit, amet
             consectetur adipisicing elit. Aut natus sunt quod corrupti aliquam
             error possimus nulla ipsa, asperiores fugiat.
+            {/* {data.storyInfo.edges[0].node.francis} */}
           </p>
         </div>
         <SlideshowDiv
