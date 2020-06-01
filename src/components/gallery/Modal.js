@@ -36,6 +36,8 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
     return () => {
       document.removeEventListener("click", handleClickOutside, false)
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleClickOutside = event => {

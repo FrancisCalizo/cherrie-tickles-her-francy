@@ -66,6 +66,8 @@ const Slideshow = () => {
       case currentPhoto === data.slideshowFour.childImageSharp.fluid:
         setCurrentPhoto(data.slideshowOne.childImageSharp.fluid)
         break
+      default:
+        return
     }
     setTrans(true)
   }, 5000)

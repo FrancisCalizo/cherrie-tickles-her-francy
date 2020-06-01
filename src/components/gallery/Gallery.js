@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -65,7 +65,6 @@ const Gallery = () => {
 
     const pictureA = a.node.childImageSharp.fixed.originalName
     const pictureB = b.node.childImageSharp.fixed.originalName
-    let comparison = 0
 
     return order.indexOf(pictureA) - order.indexOf(pictureB)
   }
@@ -111,6 +110,9 @@ const Gallery = () => {
               data-sal-delay={100 * idx}
               data-sal-easing="ease-in-out"
               onClick={handleOpenModal}
+              onKeyDown={handleOpenModal}
+              role="button"
+              tabIndex={-1}
             >
               <Image
                 fixed={img.node.childImageSharp.fixed}

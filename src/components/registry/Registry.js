@@ -22,6 +22,7 @@ const Registry = () => {
           <a
             href="https://www.zola.com/registry/francisandcherrie"
             target="_blank"
+            rel="noreferrer"
           >
             registry through Zola
           </a>{" "}

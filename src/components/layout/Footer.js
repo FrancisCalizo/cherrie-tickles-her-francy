@@ -56,7 +56,12 @@ const Footer = () => {
         <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
       </svg>
       <FooterText>
-        <div onClick={() => scrollTo("#header")}>
+        <div
+          onClick={() => scrollTo("#header")}
+          onKeyDown={() => scrollTo("#header")}
+          role="button"
+          tabIndex={-1}
+        >
           <ArrowUp icon={faAngleDoubleUp} size="2x" color="white" />
         </div>
         <IconContainer>
@@ -74,7 +79,10 @@ const Footer = () => {
           />
         </IconContainer>
         <h3>
-          👨🏽‍💻 Designed & Built by:{" "}
+          <span role="img" aria-label="coder">
+            👨🏽‍💻
+          </span>{" "}
+          Designed & Built by:{" "}
           <a
             href="https://www.franciscalizo.com"
             target="_blank"
@@ -84,7 +92,10 @@ const Footer = () => {
           </a>
         </h3>
         <h3>
-          📷 Photography:{" "}
+          <span role="img" aria-label="camera">
+            📷
+          </span>{" "}
+          Photography:{" "}
           <a
             href="https://www.instagram.com/samkohai/"
             target="_blank"
@@ -94,7 +105,10 @@ const Footer = () => {
           </a>
         </h3>
         <h3>
-          💻 Made with{" "}
+          <span role="img" aria-label="computer">
+            💻
+          </span>{" "}
+          Made with{" "}
           <a
             href="https://www.gatsbyjs.org/"
             target="_blank"
