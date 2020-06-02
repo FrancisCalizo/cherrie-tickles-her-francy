@@ -2,6 +2,7 @@ import React from "react"
 import { useState } from "react"
 
 // Check Environment
+let rsvpCode
 if (process.env.NODE_ENV !== "production") {
   rsvpCode = process.env.GATSBY_RSVP_CODE
 } else {
