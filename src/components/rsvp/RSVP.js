@@ -4,6 +4,7 @@ import { useState } from "react"
 const RSVP = () => {
   const [name, setName] = useState("")
   const [attendance, setAttendance] = useState("")
+  const [code, setCode] = useState("")
 
   const encode = data => {
     return Object.keys(data)
@@ -19,16 +20,19 @@ const RSVP = () => {
       case "attendance":
         setAttendance(e.target.value)
         break
+      case "code":
+        setCode(e.target.value)
+        break
       default:
         return
     }
   }
 
   const handleSubmit = e => {
-    if (attendance === "") {
-      return alert(
-        "Please select an Attendance option when using the RSVP form."
-      )
+    e.preventDefault()
+
+    if (code !== process.env.GATSBY_MY_ENVIRONMENT) {
+      return alert("RSVP code is invalid.")
     }
 
     fetch("/", {
@@ -38,8 +42,6 @@ const RSVP = () => {
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
-
-    e.preventDefault()
   }
 
   return (
@@ -52,6 +54,17 @@ const RSVP = () => {
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
+        <label htmlFor="code">RSVP Code</label>
+        <input
+          type="text"
+          id="code"
+          name="code"
+          placeholder="A1B2"
+          value={code}
+          onChange={handleChange}
+          required
+          maxLength="4"
+        />
         <label htmlFor="name">Name</label>
         <input
           type="text"
