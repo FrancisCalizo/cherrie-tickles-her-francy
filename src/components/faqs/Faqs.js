@@ -7,7 +7,7 @@ import {
   Subtitle,
   styles,
   config,
-  ScrollContact,
+  ScrollRsvp,
 } from "./FaqsStyles"
 
 const Faqs = () => {
@@ -22,7 +22,7 @@ const Faqs = () => {
       <FaqContainer>
         <Faq data={data} styles={styles} config={config} />
       </FaqContainer>
-      <ScrollContact id="scroll-contact" />
+      <ScrollRsvp id="scroll-rsvp" />
     </div>
   )
 }

@@ -90,7 +90,7 @@ const Footer = () => {
           <span role="img" aria-label="camera">
             📷
           </span>{" "}
-          Photography:{" "}
+          Photography by:{" "}
           <a
             href="https://www.instagram.com/samkohai/"
             target="_blank"

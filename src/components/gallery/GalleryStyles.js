@@ -12,7 +12,7 @@ export const GalleryContainer = styled.div`
   padding: 1rem 0 1rem;
 
   & > div {
-    margin: 4rem auto;
+    margin: 6rem auto 4rem;
 
     & > h2 {
       font-size: 3.5rem;

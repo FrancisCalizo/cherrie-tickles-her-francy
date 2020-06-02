@@ -34,7 +34,7 @@ export const config = {
   animate: true,
 }
 
-export const ScrollContact = styled.div`
+export const ScrollRsvp = styled.div`
   // position: relative;
   bottom: 4rem;
 `

@@ -3,7 +3,7 @@ import { device } from "../breakpoints"
 
 export const WeddingPartyContainer = styled.div`
   text-align: center;
-  padding-top 4rem;
+  padding-top: 4rem;
 
   & h2 {
     font-family: "Alex Brush", cursive;
@@ -15,7 +15,6 @@ export const WeddingPartyContainer = styled.div`
     font-size: 3rem;
     padding: 0.5rem;
   }
-
 
   @media ${device.maxMd} {
     & h2 {

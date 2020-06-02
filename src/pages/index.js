@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
 const CSSVariables = styled.div`
   // Colors
   --heart: #ff7979;
+  --heart-hover: #ff8383;
   --header-gray: #636e72;
 
   // Widths
@@ -43,8 +44,8 @@ const index = () => {
         <Gallery />
         <Registry />
         <Faqs />
-        <Contact />
         <RSVP />
+        <Contact />
         <Footer />
       </CSSVariables>
     </div>
