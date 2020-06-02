@@ -28,7 +28,7 @@ const RSVP = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...name, ...attendance }),
+      body: encode({ "form-name": "contact", name, attendance }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -63,7 +63,9 @@ const RSVP = () => {
           onChange={handleChange}
           required
         >
-          <option defaultValue>Please select an option</option>
+          <option defaultValue value="">
+            Please select an option
+          </option>
           <option value={true}>Accept</option>
           <option value={false}>Decline</option>
         </select>
