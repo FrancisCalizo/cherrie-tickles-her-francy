@@ -95,8 +95,12 @@ const Navbar = () => {
                   <div>FAQs</div>
                 </NavLink>
                 <Heart>❣</Heart>
+                <NavLink>
+                  <div>RSVP</div>
+                </NavLink>
+                <Heart>❣</Heart>
                 <NavLink onClick={() => scrollTo("#scroll-contact")}>
-                  <div>Contact & RSVP</div>
+                  <div>Contact</div>
                 </NavLink>
               </NavLinks>
             </Container>
@@ -175,12 +179,20 @@ const Navbar = () => {
             </HamburgerLink>
             <HamburgerLink
               onClick={() => {
+                setIsHamburgerOpen(false)
+              }}
+              isNavColored={isNavColored}
+            >
+              RSVP
+            </HamburgerLink>
+            <HamburgerLink
+              onClick={() => {
                 scrollTo("#scroll-contact")
                 setIsHamburgerOpen(false)
               }}
               isNavColored={isNavColored}
             >
-              Contact & RSVP
+              Contact
             </HamburgerLink>
           </HamburgerLinks>
         )}

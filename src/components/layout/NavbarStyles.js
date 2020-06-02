@@ -20,8 +20,8 @@ export const Nav = styled.nav`
   color: ${props => (props.isNavColored ? "var(--header-gray)" : "white")};
   box-shadow: ${props =>
     props.isNavColored
-      ? "0 3px 1px -1px var(--heart);"
-      : "0 4px 7px -7px #dff9fb;"}
+      ? "0 3px 1px -1px var(--heart)"
+      : "0 4px 7px -7px #dff9fb"};
   transition: height 500ms ease-in, opacity 100ms ease-in,
     background-color 100ms ease-in-out 100ms, color 100ms ease-in 300ms,
     box-shadow 100ms ease-in 300ms;
@@ -30,8 +30,8 @@ export const Nav = styled.nav`
   top: 0;
   width: 100%;
   z-index: 15;
-  }
 `
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -65,7 +65,7 @@ export const Hamburger = styled.div`
   /*border: 1px solid ${props =>
     props.isNavColored ? "var(--header-gray)" : "white"};*/
   border-radius: 10px;
-  padding 0.40rem 0.7rem;
+  padding: 0.40rem 0.7rem;
   cursor: pointer;
 
   @media ${device.minLg}{
@@ -92,9 +92,9 @@ export const HamburgerLinks = styled.div`
 
   transition: opacity 0.2s ease-in-out, background-color 1.4s;
 
-  & div:nth-child(8) {
+  /* & div:nth-child(8) {
     border-bottom: none;
-  }
+  } */
 
   @media ${device.minLg} {
     display: none;
