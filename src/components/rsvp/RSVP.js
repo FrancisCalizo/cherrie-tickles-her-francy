@@ -4,7 +4,7 @@ import { useState } from "react"
 const RSVP = () => {
   const [rsvpState, setRsvpState] = useState({
     name: "",
-    // attendance: "",
+    attendance: "",
     email: "",
   })
 
@@ -22,11 +22,11 @@ const RSVP = () => {
   }
 
   const handleSubmit = e => {
-    // if (rsvpState.attendance === "") {
-    //   return alert(
-    //     "Please select an Attendance option when using the RSVP form."
-    //   )
-    // }
+    if (rsvpState.attendance === "") {
+      return alert(
+        "Please select an Attendance option when using the RSVP form."
+      )
+    }
 
     fetch("/", {
       method: "POST",
@@ -59,7 +59,17 @@ const RSVP = () => {
           onChange={handleChange}
           required
         />
-        {/* <label htmlFor="attendance">Attendance</label>
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          onChange={handleChange}
+          value={rsvpState.email}
+          placeholder="Enter your email"
+          required
+        />
+        <label htmlFor="attendance">Attendance</label>
         <select
           name="attendance"
           id="attendance"
@@ -72,17 +82,7 @@ const RSVP = () => {
           </option>
           <option value={true}>Accept</option>
           <option value={false}>Decline</option>
-        </select> */}
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={rsvpState.email}
-          placeholder="Enter your email"
-          required
-        />
+        </select>
         <button type="submit">Submit</button>
       </form>
     </div>
