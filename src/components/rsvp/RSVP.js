@@ -2,11 +2,8 @@ import React from "react"
 import { useState } from "react"
 
 const RSVP = () => {
-  const [rsvpState, setRsvpState] = useState({
-    name: "",
-    attendance: "",
-    email: "",
-  })
+  const [name, setName] = useState("")
+  const [attendance, setAttendance] = useState("")
 
   const encode = data => {
     return Object.keys(data)
@@ -15,14 +12,20 @@ const RSVP = () => {
   }
 
   const handleChange = e => {
-    setRsvpState({
-      ...rsvpState,
-      [e.target.id]: e.target.value,
-    })
+    switch (e.target.name) {
+      case "name":
+        setName(e.target.value)
+        break
+      case "attendance":
+        setAttendance(e.target.value)
+        break
+      default:
+        return
+    }
   }
 
   const handleSubmit = e => {
-    if (rsvpState.attendance === "") {
+    if (attendance === "") {
       return alert(
         "Please select an Attendance option when using the RSVP form."
       )
@@ -31,7 +34,7 @@ const RSVP = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...rsvpState }),
+      body: encode({ "form-name": "contact", name, attendance }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -55,25 +58,15 @@ const RSVP = () => {
           id="name"
           name="name"
           placeholder="First and last name"
-          value={rsvpState.name}
+          value={name}
           onChange={handleChange}
-          required
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={rsvpState.email}
-          placeholder="Enter your email"
           required
         />
         <label htmlFor="attendance">Attendance</label>
         <select
           name="attendance"
           id="attendance"
-          value={rsvpState.attendance}
+          value={attendance}
           onChange={handleChange}
           required
         >
