@@ -56,12 +56,7 @@ const Footer = () => {
         <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
       </svg>
       <FooterText>
-        <div
-          onClick={() => scrollTo("#header")}
-          onKeyDown={() => scrollTo("#header")}
-          role="button"
-          tabIndex={-1}
-        >
+        <div onClick={() => scrollTo("#header")} tabIndex={-1}>
           <ArrowUp icon={faAngleDoubleUp} size="2x" color="white" />
         </div>
         <IconContainer>

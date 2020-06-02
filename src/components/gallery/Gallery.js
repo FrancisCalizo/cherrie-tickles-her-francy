@@ -110,8 +110,6 @@ const Gallery = () => {
               data-sal-delay={100 * idx}
               data-sal-easing="ease-in-out"
               onClick={handleOpenModal}
-              onKeyDown={handleOpenModal}
-              role="button"
               tabIndex={-1}
             >
               <Image
