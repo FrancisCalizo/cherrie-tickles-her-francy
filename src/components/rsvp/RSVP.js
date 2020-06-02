@@ -53,6 +53,7 @@ const RSVP = () => {
           placeholder="First and last name"
           value={name}
           onChange={handleChange}
+          required
         />
         <label htmlFor="attendance">Attendance</label>
         <select
@@ -60,6 +61,7 @@ const RSVP = () => {
           id="attendance"
           value={attendance}
           onChange={handleChange}
+          required
         >
           <option defaultValue>Please select an option</option>
           <option value={true}>Accept</option>
