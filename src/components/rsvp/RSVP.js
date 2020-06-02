@@ -2,9 +2,11 @@ import React from "react"
 import { useState } from "react"
 
 const RSVP = () => {
-  const [name, setName] = useState("")
+  const [names, setNames] = useState("")
   const [attendance, setAttendance] = useState("")
   const [code, setCode] = useState("")
+  const [songs, setSongs] = useState("")
+  const [additional, setAdditional] = useState("")
 
   const encode = data => {
     return Object.keys(data)
@@ -14,14 +16,20 @@ const RSVP = () => {
 
   const handleChange = e => {
     switch (e.target.name) {
-      case "name":
-        setName(e.target.value)
+      case "code":
+        setCode(e.target.value)
+        break
+      case "names":
+        setNames(e.target.value)
         break
       case "attendance":
         setAttendance(e.target.value)
         break
-      case "code":
-        setCode(e.target.value)
+      case "songs":
+        setSongs(e.target.value)
+        break
+      case "additional":
+        setAdditional(e.target.value)
         break
       default:
         return
@@ -31,17 +39,23 @@ const RSVP = () => {
   const handleSubmit = e => {
     e.preventDefault()
 
-    if (code !== process.env.GATSBY_MY_ENVIRONMENT) {
+    if (code !== process.env.GATSBY_RSVP_CODE) {
       return alert("RSVP code is invalid.")
     }
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, attendance }),
+      body: encode({
+        "form-name": "contact",
+        names,
+        attendance,
+        songs,
+        additional,
+      }),
     })
       .then(() => alert("Success!"))
-      .catch(error => alert(error))
+      .catch(error => alert(`Something went wrong - ${error}`))
   }
 
   return (
@@ -53,7 +67,12 @@ const RSVP = () => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact"
+          aria-label="contact"
+        />
         <label htmlFor="code">RSVP Code</label>
         <input
           type="text"
@@ -64,16 +83,18 @@ const RSVP = () => {
           onChange={handleChange}
           required
           maxLength="4"
+          aria-label="code"
         />
-        <label htmlFor="name">Name</label>
-        <input
+        <label htmlFor="names">First & Last Names</label>
+        <textarea
           type="text"
-          id="name"
-          name="name"
-          placeholder="First and last name"
-          value={name}
+          id="names"
+          name="names"
+          placeholder="Donald Glover, Joanna Gaines, etc."
+          value={names}
           onChange={handleChange}
           required
+          aria-label="names"
         />
         <label htmlFor="attendance">Attendance</label>
         <select
@@ -89,6 +110,26 @@ const RSVP = () => {
           <option value={true}>Accept</option>
           <option value={false}>Decline</option>
         </select>
+        <label htmlFor="songs">Song Request(s)</label>
+        <input
+          type="text"
+          id="songs"
+          name="songs"
+          placeholder="Throwin' elbows - Excision"
+          value={songs}
+          onChange={handleChange}
+          aria-label="songs"
+        />
+        <label htmlFor="additional">Additional Information</label>
+        <textarea
+          type="text"
+          id="additional"
+          name="additional"
+          placeholder="Food allergies, upates to an exisitng RSVP, notifying if some guests on your invitation will not be attending, etc. Please be specific."
+          value={additional}
+          onChange={handleChange}
+          aria-label="additional"
+        />
         <button type="submit">Submit</button>
       </form>
     </div>
