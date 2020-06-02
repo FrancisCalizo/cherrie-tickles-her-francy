@@ -12,6 +12,7 @@ import Gallery from "../components/gallery/Gallery"
 import Faqs from "../components/faqs/Faqs"
 import Footer from "../components/layout/Footer"
 import Contact from "../components/contact/Contact"
+import RSVP from "../components/rsvp/RSVP"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -43,6 +44,7 @@ const index = () => {
         <Registry />
         <Faqs />
         <Contact />
+        <RSVP />
         <Footer />
       </CSSVariables>
     </div>
