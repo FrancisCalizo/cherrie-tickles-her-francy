@@ -2,8 +2,10 @@ import React from "react"
 import { useState } from "react"
 
 const RSVP = () => {
-  const [name, setName] = useState("")
-  const [attendance, setAttendance] = useState("Please select an option")
+  const [rsvpState, setRsvpState] = useState({
+    name: "",
+    attendance: "",
+  })
 
   const encode = data => {
     return Object.keys(data)
@@ -12,23 +14,23 @@ const RSVP = () => {
   }
 
   const handleChange = e => {
-    switch (e.target.id) {
-      case "name":
-        setName(e.target.value)
-        break
-      case "attendance":
-        setAttendance(e.target.value)
-        break
-      default:
-        return
-    }
+    setRsvpState({
+      ...rsvpState,
+      [e.target.id]: e.target.value,
+    })
   }
 
   const handleSubmit = e => {
+    if (rsvpState.attendance === "") {
+      return alert(
+        "Please select an Attendance option when using the RSVP form."
+      )
+    }
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, attendance }),
+      body: encode({ "form-name": "contact", ...rsvpState }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -51,7 +53,7 @@ const RSVP = () => {
           type="text"
           id="name"
           placeholder="First and last name"
-          value={name}
+          value={rsvpState.name}
           onChange={handleChange}
           required
         />
@@ -59,7 +61,7 @@ const RSVP = () => {
         <select
           name="attendance"
           id="attendance"
-          value={attendance}
+          value={rsvpState.attendance}
           onChange={handleChange}
           required
         >

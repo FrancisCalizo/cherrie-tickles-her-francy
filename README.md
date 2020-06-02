@@ -80,6 +80,8 @@
 
 - React Helmet - https://www.youtube.com/watch?v=8t0vNu2fCCM&t=1619s
 
+- React Forms using Netlify Forms - https://www.youtube.com/watch?v=2gDRR86ZycQ
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
