@@ -1,6 +1,13 @@
 import React from "react"
 import { useState } from "react"
 
+// Check Environment
+if (process.env.NODE_ENV !== "production") {
+  rsvpCode = process.env.GATSBY_RSVP_CODE
+} else {
+  rsvpCode = process.env.GATSBY_RSVP_CODE_PROD
+}
+
 const RSVP = () => {
   const [names, setNames] = useState("")
   const [attendance, setAttendance] = useState("")
@@ -39,7 +46,7 @@ const RSVP = () => {
   const handleSubmit = e => {
     e.preventDefault()
 
-    if (code !== process.env.GATSBY_RSVP_CODE) {
+    if (code !== rsvpCode) {
       return alert("RSVP code is invalid.")
     }
 
