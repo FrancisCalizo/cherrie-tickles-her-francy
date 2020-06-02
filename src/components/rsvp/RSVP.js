@@ -53,6 +53,7 @@ const RSVP = () => {
         <input
           type="text"
           id="name"
+          name="name"
           placeholder="First and last name"
           value={rsvpState.name}
           onChange={handleChange}
