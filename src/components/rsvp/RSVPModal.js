@@ -254,6 +254,7 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
+        code,
         names,
         attendance,
         songs,
@@ -312,7 +313,7 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             type="text"
             id="code"
             name="code"
-            placeholder="A1B2"
+            placeholder="XXXX"
             value={code}
             onChange={handleChange}
             required

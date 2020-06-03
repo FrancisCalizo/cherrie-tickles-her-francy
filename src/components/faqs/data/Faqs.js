@@ -48,11 +48,11 @@ export const data = {
     },
     {
       title: `How can I RSVP? And when is the last day to do so?`,
-      content: `More details to follow.`,
+      content: `The last day to RSVP is <span style="text-decoration: underline; font-weight: bold">January 22, 2021</span>. To RSVP, click the button in the RSVP section labeled "Click here to RSVP" below. You will need the code provided in your wedding invitation in order to submit your RSVP electronically. Please email or call us if you have any questions!`,
     },
     {
       title: `What if I can't make it anymore?`,
-      content: `More details to follow.`,
+      content: `We're sorry to hear that you will no longer be able to celebrate with us! If possible, please let us know before <span style="text-decoration: underline; font-weight: bold">January 22, 2021</span>. You can either notify us via the RSVP section on this website, emailing us at <a href="mailto:fccalizo@gmail.com" style="text-decoration: underline; color:#ff7979">FCCalizo@gmail.com</a>, or by giving us a call!`,
     },
     {
       title: `What if I have another question about the wedding that is not listed here?`,
