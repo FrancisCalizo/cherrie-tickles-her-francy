@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import ReactModal from "react-modal"
 import styled from "styled-components"
+import { device } from "../breakpoints"
 
 // Check Environment
 let rsvpCode
@@ -16,6 +17,10 @@ export const FormContainer = styled.div`
     font-size: 3rem;
     text-align: center;
     margin: 0 auto 1rem;
+
+    @media ${device.maxSm} {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -23,6 +28,10 @@ export const FormContainer = styled.div`
     text-align: center;
     color: #636e72;
     margin: 0 1rem;
+
+    @media ${device.maxSm} {
+      font-size: 0.8rem;
+    }
 
     a {
       color: #ff4d4d;
@@ -40,6 +49,10 @@ export const Heart = styled.span`
   font-size: 3rem;
   padding: 0 1.5rem;
   color: #ff7979;
+
+  @media ${device.maxSm} {
+    font-size: 2rem;
+  }
 `
 
 export const Underline = styled.div`
@@ -47,6 +60,11 @@ export const Underline = styled.div`
   transform: skewY(-5deg) translateY(-27px);
   width: 150px;
   margin: 0 auto;
+
+  @media ${device.maxSm} {
+    transform: skewY(-5deg) translateY(-22px);
+    width: 120px;
+  }
 `
 
 export const CloseButton = styled.div`
@@ -66,6 +84,10 @@ export const Label = styled.label`
   color: #ff4d4d;
   font-size: 1rem;
   margin-bottom: 5px;
+
+  @media ${device.maxSm} {
+    font-size: 0.95rem;
+  }
 `
 export const CodeInputContainer = styled.div`
   margin-bottom: 15px;
@@ -89,6 +111,10 @@ export const CodeInput = styled.input`
   border: 1.2px solid #c8ced0;
   border-radius: 3px;
 
+  @media ${device.maxSm} {
+    font-size: 0.9rem;
+  }
+
   ::placeholder {
     color: #a0a8ac;
   }
@@ -108,9 +134,14 @@ export const NamesTextarea = styled.textarea`
   border: 1.2px solid #c8ced0;
   margin-bottom: 15px;
   border-radius: 3px;
+  height: 60px;
 
   ::placeholder {
     color: #a0a8ac;
+  }
+
+  @media ${device.maxSm} {
+    font-size: 0.9rem;
   }
 `
 export const AdditionalTextarea = styled(NamesTextarea)`
@@ -127,6 +158,10 @@ export const Select = styled.select`
 
   ::placeholder {
     color: #a0a8ac;
+  }
+
+  @media ${device.maxSm} {
+    font-size: 0.9rem;
   }
 `
 
@@ -209,7 +244,9 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
     e.preventDefault()
 
     if (code !== rsvpCode) {
-      return alert("RSVP code is invalid.")
+      return alert(
+        "The RSVP code you provided is invalid. Please use the RSVP code on the invitation that was mailed to you."
+      )
     }
 
     fetch("/", {
@@ -223,7 +260,15 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
         additional,
       }),
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        alert("Your RSVP was submitted successully! See you February 6th!")
+        setCode("")
+        setNames("")
+        setAttendance("")
+        setSongs("")
+        setAdditional("")
+        handleCloseRsvpModal()
+      })
       .catch(error => alert(`Something went wrong - ${error}`))
   }
 
@@ -242,9 +287,9 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
           </h2>
           <Underline />
           <p>
-            Hi there! Please fill out the form below in as much detail as you
-            can give us. We appreciate you helping us make this process as
-            smooth as possible. If you have any issues, please email us at{" "}
+            Hi there! Please fill out the form below with as much detail as you
+            can. We appreciate you helping us make this process as smooth as
+            possible. If you have any issues, please email us at{" "}
             <a href="mailto:fccalizo@gmail.com">FCCalizo@gmail.com</a> or give
             us a call!{" "}
           </p>
@@ -276,11 +321,12 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
           />
           <CodeInputContainer>
             <span>
-              This code can be found on the wedding invitation sent in the mail
+              This code can be found on the wedding invitation you received in
+              the mail
               <span>*</span>
             </span>
           </CodeInputContainer>
-          <Label htmlFor="names">First & Last Names</Label>
+          <Label htmlFor="names">First & Last Names of Guests</Label>
           <NamesTextarea
             type="text"
             id="names"
@@ -338,6 +384,7 @@ export const rsvpModalStyles = {
     display: "flex",
     justifyContent: "center",
     backgroundColor: "rgba(0,0,0, 0.6)",
+    overflowY: "scroll",
   },
   content: {
     position: "static",
