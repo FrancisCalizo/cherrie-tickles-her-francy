@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import ReactModal from "react-modal"
+import { navigate } from "gatsby"
+
 import {
   CodeInput,
   NamesTextarea,
@@ -72,13 +74,44 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
     }
   }
 
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
   const handleSubmit = e => {
+    e.preventDefault()
+
     if (code !== rsvpCode) {
-      e.preventDefault()
       return alert(
         "The RSVP code you provided is invalid. Please use the RSVP code on the invitation that was mailed to you."
       )
     }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        code,
+        names,
+        attendance,
+        songs,
+        additional,
+      }),
+    })
+      .then(() => {
+        // alert("Your RSVP was submitted successully! See you February 6th!")
+        setCode("")
+        setNames("")
+        setAttendance("")
+        setSongs("")
+        setAdditional("")
+        handleCloseRsvpModal()
+        navigate("/rsvpSuccess/")
+      })
+      .catch(error => alert(`Something went wrong - ${error}`))
   }
 
   return (
@@ -109,7 +142,7 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/rsvpSuccess"
+          action="/"
         >
           <input
             type="hidden"
