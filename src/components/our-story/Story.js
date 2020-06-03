@@ -18,6 +18,7 @@ const Story = () => {
           node {
             storyP1
             storyP2
+            cherrieBio
           }
         }
       }
@@ -39,14 +40,15 @@ const Story = () => {
           data-sal-easing="ease"
         >
           <h3>Francis Calizo</h3>
+          {/* <p>{data.storyInfo.edges[0].node.cherrieBio}</p> */}
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum
-            dolor cupiditate esse enim magnam eius sequi consequuntur dolores ex
-            doloribus totam fugit itaque ad labore est, rem obcaecati, provident
-            vero facilis dolorum aliquid nulla. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Aut natus sunt quod corrupti aliquam
-            error possimus nulla ipsa, asperiores fugiat.
-            {/* {data.storyInfo.edges[0].node.francis} */}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam
+            ad laudantium in libero quisquam ut id autem ab, cumque porro, nulla
+            deserunt esse vero ea rem iste est corrupti, nobis natus officia
+            perspiciatis? Adipisci architecto laboriosam sunt voluptatem et eos
+            voluptatum voluptate odit dicta nam blanditiis cumque, placeat
+            nesciunt, maxime magni aut, debitis natus? Error hic maxime
+            similique magni. Explicabo laudantium alias modi dicta!
           </p>
         </div>
         <SlideshowDiv
@@ -64,14 +66,7 @@ const Story = () => {
           data-sal-easing="ease"
         >
           <h3>Cherrie Sarmiento</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum
-            dolor cupiditate esse enim magnam eius sequi consequuntur dolores ex
-            doloribus totam fugit itaque ad labore est, rem obcaecati, provident
-            vero facilis dolorum aliquid nulla. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Hic doloremque iusto sunt cupiditate
-            placeat officiis beatae, tempora maiores facere suscipit.
-          </p>
+          <p>{data.storyInfo.edges[0].node.cherrieBio}</p>
         </div>
       </StoryBottom>
       <ScrollWhenAndWhere id="scroll-when-and-where" />
