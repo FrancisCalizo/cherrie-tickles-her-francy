@@ -25,7 +25,7 @@ export const FormContainer = styled.div`
     margin: 0 1rem;
 
     a {
-      color: #ff7979;
+      color: #ff4d4d;
       text-decoration: none;
 
       &:hover {
@@ -36,6 +36,18 @@ export const FormContainer = styled.div`
     }
   }
 `
+export const Heart = styled.span`
+  font-size: 3rem;
+  padding: 0 1.5rem;
+  color: #ff7979;
+`
+
+export const Underline = styled.div`
+  border-top: 5px solid #ff7979;
+  transform: skewY(-5deg) translateY(-27px);
+  width: 150px;
+  margin: 0 auto;
+`
 
 export const CloseButton = styled.div`
   display: flex;
@@ -43,6 +55,101 @@ export const CloseButton = styled.div`
   font-size: 48px;
   cursor: pointer;
   color: #636e72;
+`
+
+export const Form = styled.form`
+  margin: 2rem 1rem;
+`
+
+export const Label = styled.label`
+  display: block;
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-bottom: 5px;
+`
+export const CodeInputContainer = styled.div`
+  margin-bottom: 15px;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    span {
+      color: #ff4d4d;
+      font-size: 1.2rem;
+    }
+  }
+`
+
+export const CodeInput = styled.input`
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  padding: 5px 7px;
+  width: 45px;
+  border: 1.2px solid #c8ced0;
+  border-radius: 3px;
+
+  ::placeholder {
+    color: #a0a8ac;
+  }
+`
+
+export const SongInput = styled(CodeInput)`
+  width: 95%;
+  margin-bottom: 15px;
+`
+
+export const NamesTextarea = styled.textarea`
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  padding: 5px 7px;
+  resize: none;
+  width: 95%;
+  border: 1.2px solid #c8ced0;
+  margin-bottom: 15px;
+  border-radius: 3px;
+
+  ::placeholder {
+    color: #a0a8ac;
+  }
+`
+export const AdditionalTextarea = styled(NamesTextarea)`
+  height: 100px;
+`
+
+export const Select = styled.select`
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  padding: 5px 7px;
+  border: 1.2px solid #c8ced0;
+  margin-bottom: 15px;
+  border-radius: 3px;
+
+  ::placeholder {
+    color: #a0a8ac;
+  }
+`
+
+export const SubmitButton = styled.button`
+  display: block;
+  background: #ff7979;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 1rem auto 0;
+  border: none;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.23);
+  border: 1px solid #c8ced0;
+  outline: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background: #ff8383;
+  }
 `
 
 const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
@@ -130,7 +237,10 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
       <FormContainer>
         <CloseButton onClick={handleCloseRsvpModal}>&times;</CloseButton>
         <div>
-          <h2>RSVP</h2>
+          <h2>
+            <Heart>❣</Heart>RSVP<Heart>❣</Heart>
+          </h2>
+          <Underline />
           <p>
             Hi there! Please fill out the form below in as much detail as you
             can give us. We appreciate you helping us make this process as
@@ -139,7 +249,7 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             us a call!{" "}
           </p>
         </div>
-        <form
+        <Form
           onSubmit={handleSubmit}
           name="contact"
           method="post"
@@ -152,8 +262,8 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             value="contact"
             aria-label="contact"
           />
-          <label htmlFor="code">RSVP Code</label>
-          <input
+          <Label htmlFor="code">RSVP Code</Label>
+          <CodeInput
             type="text"
             id="code"
             name="code"
@@ -164,19 +274,25 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             maxLength="4"
             aria-label="code"
           />
-          <label htmlFor="names">First & Last Names</label>
-          <textarea
+          <CodeInputContainer>
+            <span>
+              This code can be found on the wedding invitation sent in the mail
+              <span>*</span>
+            </span>
+          </CodeInputContainer>
+          <Label htmlFor="names">First & Last Names</Label>
+          <NamesTextarea
             type="text"
             id="names"
             name="names"
-            placeholder="Donald Glover, Joanna Gaines, etc."
+            placeholder="Donald Glover, Joanna Gaines, Dino Spimoni"
             value={names}
             onChange={handleChange}
             required
             aria-label="names"
           />
-          <label htmlFor="attendance">Attendance</label>
-          <select
+          <Label htmlFor="attendance">Attendance</Label>
+          <Select
             name="attendance"
             id="attendance"
             value={attendance}
@@ -186,21 +302,21 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             <option defaultValue value="">
               Please select an option
             </option>
-            <option value={true}>Accept</option>
-            <option value={false}>Decline</option>
-          </select>
-          <label htmlFor="songs">Song Request(s)</label>
-          <input
+            <option value={true}>Accepts with pleasure</option>
+            <option value={false}>Declines with regret</option>
+          </Select>
+          <Label htmlFor="songs">Song Request(s)</Label>
+          <SongInput
             type="text"
             id="songs"
             name="songs"
-            placeholder="Throwin' elbows - Excision"
+            placeholder="Darude - Sandstorm"
             value={songs}
             onChange={handleChange}
             aria-label="songs"
           />
-          <label htmlFor="additional">Additional Information</label>
-          <textarea
+          <Label htmlFor="additional">Additional Information</Label>
+          <AdditionalTextarea
             type="text"
             id="additional"
             name="additional"
@@ -209,8 +325,8 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
             onChange={handleChange}
             aria-label="additional"
           />
-          <button type="submit">Submit</button>
-        </form>
+          <SubmitButton type="submit">Submit</SubmitButton>
+        </Form>
       </FormContainer>
     </ReactModal>
   )

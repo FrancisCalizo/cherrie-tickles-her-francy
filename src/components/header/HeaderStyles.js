@@ -32,7 +32,7 @@ export const HeaderContent = styled.div`
     font-family: "Alex Brush", cursive;
     font-size: 6rem;
     margin: 0;
-    animation ${appear} 2s ease-in-out;
+    animation: ${appear} 2s ease-in-out;
   }
 
   h2 {
@@ -40,31 +40,31 @@ export const HeaderContent = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin: 0;
-    animation ${appear} 3s ease-in-out;
+    animation: ${appear} 3s ease-in-out;
   }
 
-  @media ${device.maxLg}{
-    h1{
+  @media ${device.maxLg} {
+    h1 {
       font-size: 9vw;
     }
 
-    h2{
+    h2 {
       font-size: 2vw;
     }
   }
 
-  @media ${device.maxMd}{
-    h1{
+  @media ${device.maxMd} {
+    h1 {
       font-size: 3.9rem;
     }
 
-    h2{
+    h2 {
       font-size: 0.9rem;
     }
   }
 
-  @media ${device.maxSm}{
-    h1{
+  @media ${device.maxSm} {
+    h1 {
       font-size: 13vw;
     }
   }
