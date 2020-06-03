@@ -84,6 +84,8 @@
 
 - .env files with Gatsby and netlify - https://www.freecodecamp.org/news/what-are-environment-variables-and-how-can-i-use-them-with-gatsby-and-netlify/
 
+- Button smooth wobble - https://codepen.io/DeclanMorris/details/MLVwZa
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
