@@ -11,12 +11,38 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 export const FormContainer = styled.div`
-  // width: 95vw;
-  // height: 95vh;
-  // margin: auto;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  h2 {
+    font-family: "Alex Brush", cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #636e72;
+    margin: 0 1rem;
+
+    a {
+      color: #ff7979;
+      text-decoration: none;
+
+      &:hover {
+        color: #ff8383;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+`
+
+export const CloseButton = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  font-size: 48px;
+  cursor: pointer;
+  color: #636e72;
 `
 
 const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
@@ -102,6 +128,17 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
       ref={wrapper}
     >
       <FormContainer>
+        <CloseButton onClick={handleCloseRsvpModal}>&times;</CloseButton>
+        <div>
+          <h2>RSVP</h2>
+          <p>
+            Hi there! Please fill out the form below in as much detail as you
+            can give us. We appreciate you helping us make this process as
+            smooth as possible. If you have any issues, please email us at{" "}
+            <a href="mailto:fccalizo@gmail.com">FCCalizo@gmail.com</a> or give
+            us a call!{" "}
+          </p>
+        </div>
         <form
           onSubmit={handleSubmit}
           name="contact"
@@ -182,16 +219,18 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
 export const rsvpModalStyles = {
   overlay: {
     zIndex: 20,
-    // backgroundColor: "transparent",
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "rgba(0,0,0, 0.6)",
   },
   content: {
-    // backgroundColor: "rgba(0,0,0,0.75)",
+    position: "static",
     backgroundColor: "#FFF",
-    height: "100%",
     width: "100%",
     maxWidth: "600px",
-    top: 0,
-    left: 0,
+    margin: "auto 1.5rem",
+    paddingTop: 0,
+    border: "2px solid black",
   },
 }
 

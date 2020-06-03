@@ -72,7 +72,7 @@ export const Info = styled.div`
   & p {
     font-size: 0.9rem;
     color: var(--header-gray);
-    margin-top 0.5rem;
+    margin-top: 0.5rem;
   }
 
   @media ${device.maxMd} {
