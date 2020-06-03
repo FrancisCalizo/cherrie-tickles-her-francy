@@ -120,11 +120,11 @@ const ScrollContact = styled.div``
 const RSVP = () => {
   const [showRsvpModal, setShowRsvpModal] = useState(false)
 
-  const handleOpenRsvpModal = e => {
+  const handleOpenRsvpModal = () => {
     setShowRsvpModal(true)
   }
 
-  const handleCloseRsvpModal = e => {
+  const handleCloseRsvpModal = () => {
     setShowRsvpModal(false)
   }
   return (
