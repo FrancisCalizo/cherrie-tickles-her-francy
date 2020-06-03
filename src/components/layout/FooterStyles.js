@@ -25,7 +25,7 @@ export const FooterText = styled.div`
     }
   }
 
-  & > div {
+  & > div:first-child {
     &:hover {
       cursor: pointer;
     }
