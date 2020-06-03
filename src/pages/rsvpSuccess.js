@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const rspvSuccess = () => {
+const rsvpSuccess = () => {
   return (
     <div>
       <h1>SUCCESS!</h1>
@@ -10,4 +10,4 @@ const rspvSuccess = () => {
   )
 }
 
-export default rspvSuccess
+export default rsvpSuccess

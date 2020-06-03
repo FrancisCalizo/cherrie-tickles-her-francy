@@ -80,7 +80,9 @@
 
 - React Helmet - https://www.youtube.com/watch?v=8t0vNu2fCCM&t=1619s
 
-- React Forms using Netlify Forms - https://www.youtube.com/watch?v=2gDRR86ZycQ
+- Gatsby Forms using Netlify Forms - https://codebushi.com/form-handling-gatsby-netlify/
+
+- React Forms using Netlify (not Gatsby.js) - https://www.youtube.com/watch?v=2gDRR86ZycQ
 
 - .env files with Gatsby and netlify - https://www.freecodecamp.org/news/what-are-environment-variables-and-how-can-i-use-them-with-gatsby-and-netlify/
 
