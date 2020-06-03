@@ -1,6 +1,7 @@
-import React from "react"
-import RSVPModal from "./RSVPModal"
+import React, { useState } from "react"
 import styled, { keyframes } from "styled-components"
+
+import RSVPModal from "./RSVPModal"
 
 const RSVPContainer = styled.div`
   text-align: center;
@@ -107,6 +108,7 @@ const RSVPButton = styled.button`
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5), 0 4px 12px 0 rgba(0, 0, 0, 0.23);
   border: 1px solid white;
   animation: ${shake} 0.7s infinite;
+  outline: none;
 
   &:hover {
     background: var(--heart-hover);
@@ -116,6 +118,15 @@ const RSVPButton = styled.button`
 const ScrollContact = styled.div``
 
 const RSVP = () => {
+  const [showRsvpModal, setShowRsvpModal] = useState(false)
+
+  const handleOpenRsvpModal = e => {
+    setShowRsvpModal(true)
+  }
+
+  const handleCloseRsvpModal = e => {
+    setShowRsvpModal(false)
+  }
   return (
     <RSVPContainer
       data-sal="fade"
@@ -123,8 +134,11 @@ const RSVP = () => {
       data-sal-easing="ease-in-out"
     >
       <h2>RSVP</h2>
-      <RSVPButton>Click Here to RSVP</RSVPButton>
-      {/* <RSVPModal /> */}
+      <RSVPButton onClick={handleOpenRsvpModal}>Click Here to RSVP</RSVPButton>
+      <RSVPModal
+        showRsvpModal={showRsvpModal}
+        handleCloseRsvpModal={handleCloseRsvpModal}
+      />
       <ScrollContact id="scroll-contact" />
     </RSVPContainer>
   )
