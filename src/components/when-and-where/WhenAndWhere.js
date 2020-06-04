@@ -17,7 +17,7 @@ const WhenAndWhere = () => {
     query whenAndWhereBackground {
       whenAndWhereImage: file(relativePath: { eq: "oma.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2048, quality: 100) {
+          fluid(maxWidth: 1070, quality: 90) {
             base64
             tracedSVG
             aspectRatio
