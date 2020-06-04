@@ -84,6 +84,8 @@
 
 - React Forms using Netlify (not Gatsby.js) - https://www.youtube.com/watch?v=2gDRR86ZycQ
 
+- Gatsby with Netlify Forms with Success Page navigation - https://community.netlify.com/t/support-guide-netlify-forms-with-custom-success-pages-for-gatsby-and-nuxt/11578
+
 - .env files with Gatsby and netlify - https://www.freecodecamp.org/news/what-are-environment-variables-and-how-can-i-use-them-with-gatsby-and-netlify/
 
 - Button smooth wobble - https://codepen.io/DeclanMorris/details/MLVwZa

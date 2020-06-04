@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import RSVPModal from "./RSVPModal"
-import { RSVPButton, RSVPContainer, ScrollContact, shake } from "./RSVPStyles"
+import { RSVPButton, RSVPContainer, ScrollContact } from "./RSVPStyles"
 
 const RSVP = () => {
   const [showRsvpModal, setShowRsvpModal] = useState(false)

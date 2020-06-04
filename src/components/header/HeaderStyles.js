@@ -15,6 +15,7 @@ export const BlackOverlay = styled.div`
   align-items: center;
   color: white;
 `
+
 export const appear = keyframes`
   from {
     opacity: 0;
@@ -24,6 +25,7 @@ export const appear = keyframes`
     opacity: 1;
   }
 `
+
 export const HeaderContent = styled.div`
   margin: 3rem auto 0;
   text-align: center;
@@ -98,6 +100,7 @@ export const ArrowContainer = styled.div`
 export const ArrowDown = styled(FontAwesomeIcon)`
   animation: ${bounce} 1.5s infinite;
 `
+
 export const ScrollStory = styled.div`
   position: absolute;
   bottom: 4rem;
