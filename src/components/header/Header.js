@@ -18,7 +18,7 @@ const Header = () => {
     query headerImageQuery {
       headerImage: file(relativePath: { eq: "beach-header.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1080, quality: 90) {
+          fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
