@@ -15,7 +15,7 @@ import {
 const WhenAndWhere = () => {
   const data = useStaticQuery(graphql`
     query whenAndWhereBackground {
-      whenAndWhereImage: file(relativePath: { eq: "oma.jpg" }) {
+      whenAndWhereImage: file(relativePath: { eq: "beach-header.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             base64
@@ -54,7 +54,8 @@ const WhenAndWhere = () => {
                 Saturday | February 6, 2021 <br />
                 Time TBD
                 <br />
-                130 N Magnolia Ave, Orlando, FL 32801
+                {/* 130 N Magnolia Ave, Orlando, FL 32801 */}
+                {data.whenAndWhereImage.childImageSharp.fluid.src}
               </p>
             </Box>
             <And
