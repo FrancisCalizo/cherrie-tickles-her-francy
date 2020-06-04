@@ -37,7 +37,7 @@ const WhenAndWhere = () => {
         alt="when-and-where"
         fluid={data.whenAndWhereImage.childImageSharp.fluid}
       >
-        {/* <ParticlesContainer params={particleParams} /> */}
+        <ParticlesContainer params={particleParams} />
         <BlackOverlay>
           <Container>
             <Box
