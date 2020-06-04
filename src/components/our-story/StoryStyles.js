@@ -23,7 +23,7 @@ export const StoryTop = styled.div`
     line-height: 1.5rem;
   }
 
-  @media ${device.maxMd}{
+  @media ${device.maxMd} {
     h2 {
       font-size: 3.7rem;
     }
@@ -33,7 +33,7 @@ export const StoryTop = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media ${device.minMd} and (${device.maxLg}) {
     & h2 {
       font-size: 3rem;
     }
@@ -81,7 +81,7 @@ export const StoryBottom = styled.div`
     }
 
     & h3 {
-      2.2rem;
+      font-size: 2.2rem;
     }
 
     & p {
@@ -89,9 +89,9 @@ export const StoryBottom = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media ${device.minMd} and (${device.maxLg}) {
     & h3 {
-      1.7rem;
+      font-size:1.7rem;
     }
 
     & p {
@@ -102,7 +102,7 @@ export const StoryBottom = styled.div`
 export const SlideshowDiv = styled.div`
   margin: 0 4rem;
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media ${device.minMd} and (${device.maxLg}) {
     display: flex;
     flex-direction: column;
     justify-content: center;

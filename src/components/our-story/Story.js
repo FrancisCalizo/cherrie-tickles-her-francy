@@ -19,6 +19,7 @@ const Story = () => {
             storyP1
             storyP2
             cherrieBio
+            francisBio
           }
         }
       }
@@ -40,16 +41,7 @@ const Story = () => {
           data-sal-easing="ease"
         >
           <h3>Francis Calizo</h3>
-          {/* <p>{data.storyInfo.edges[0].node.cherrieBio}</p> */}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam
-            ad laudantium in libero quisquam ut id autem ab, cumque porro, nulla
-            deserunt esse vero ea rem iste est corrupti, nobis natus officia
-            perspiciatis? Adipisci architecto laboriosam sunt voluptatem et eos
-            voluptatum voluptate odit dicta nam blanditiis cumque, placeat
-            nesciunt, maxime magni aut, debitis natus? Error hic maxime
-            similique magni. Explicabo laudantium alias modi dicta!
-          </p>
+          <p>{data.storyInfo.edges[0].node.francisBio}</p>
         </div>
         <SlideshowDiv
           data-sal="fade"
