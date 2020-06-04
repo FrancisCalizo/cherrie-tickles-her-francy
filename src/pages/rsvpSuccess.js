@@ -131,7 +131,7 @@ const RsvpSuccess = () => {
         <Content>
           <h1>Thank you!</h1>
           <p>
-            Your RSVP was submitted succesfully. We look to forward seeing you
+            Your RSVP was submitted successfully. We look to forward seeing you
             on February 6th!
           </p>
           <Link to="/">

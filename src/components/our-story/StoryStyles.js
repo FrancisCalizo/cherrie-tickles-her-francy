@@ -65,19 +65,21 @@ export const StoryBottom = styled.div`
     line-height: 1.5rem;
   }
 
-  @media ${device.maxMd}{
-    flex-wrap: wrap;
+  @media (max-width: 900px) {
+    flex-wrap:wrap;
 
     & div:nth-child(1) {
       text-align: center;
     }
 
-    & div:nth-child(2) {
-      margin: 2rem auto;
-    }
-
     & div:nth-child(3) {
       text-align: center;
+    }
+  }
+
+  @media ${device.maxMd}{
+    & div:nth-child(2) {
+      margin: 2rem auto;
     }
 
     & h3 {
