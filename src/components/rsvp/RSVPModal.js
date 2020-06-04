@@ -109,7 +109,7 @@ const RSVPModal = ({ showRsvpModal, handleCloseRsvpModal }) => {
         setSongs("")
         setAdditional("")
         handleCloseRsvpModal()
-        navigate("/RsvpSuccess/")
+        navigate("/rsvpSuccess/")
       })
       .catch(error => alert(`Something went wrong - ${error}`))
   }
