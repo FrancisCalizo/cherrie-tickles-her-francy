@@ -90,6 +90,8 @@
 
 - Button smooth wobble - https://codepen.io/DeclanMorris/details/MLVwZa
 
+- Background Fixed Mobile Issues - https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
