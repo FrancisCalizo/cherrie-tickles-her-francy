@@ -6,11 +6,10 @@ import { device } from "../breakpoints"
 
 export const WhenAndWhereImage = styled(BackgroundImage)`
   width: 100%;
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed; */
-  height: 100vh; // Delete Later
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center center; */
+  background-attachment: fixed;
 `
 
 export const Container = styled.div`
