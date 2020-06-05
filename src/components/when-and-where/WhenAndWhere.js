@@ -17,7 +17,7 @@ const WhenAndWhere = () => {
     query whenAndWhereBackground {
       whenAndWhereImage: file(relativePath: { eq: "oma.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1040, quality: 90) {
+          fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

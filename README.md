@@ -92,6 +92,8 @@
 
 - Background Fixed Mobile Issues - https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile
 
+- Fixed Issue to Background Fixed on mobile for React Background Image found here using ::before and ::after - https://www.gatsbyjs.org/packages/gatsby-background-image/
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">

@@ -9,10 +9,16 @@ export const WhenAndWhereImage = styled(BackgroundImage)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  &::before,
+  &::after {
+    background-attachment: fixed;
+  }
 
   @media ${device.maxLg} {
-    background-attachment: scroll;
+    &::before,
+    &::after {
+      background-attachment: scroll;
+    }
   }
 `
 
@@ -21,7 +27,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 8rem 2rem;
   text-align: center;
   max-width: var(--container);
   color: white;
@@ -93,7 +99,7 @@ export const ParticlesContainer = styled(Particles)`
 export const particleParams = {
   particles: {
     number: {
-      value: 260,
+      value: 280,
       density: {
         enable: false,
       },
