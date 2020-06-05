@@ -4,6 +4,15 @@ import Particles from "react-particles-js"
 
 import { device } from "../breakpoints"
 
+export const WhenAndWhereImage = styled(BackgroundImage)`
+  width: 100%;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; */
+  height: 100vh; // Delete Later
+`
+
 export const Container = styled.div`
   /* display: flex; */
   /* justify-content: center; */
@@ -22,14 +31,6 @@ export const Container = styled.div`
   /* @media ${device.maxMd} {
     flex-wrap: wrap;
   } */
-`
-
-export const WhenAndWhereImage = styled(BackgroundImage)`
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
 `
 
 export const BlackOverlay = styled.div`

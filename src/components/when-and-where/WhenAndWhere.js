@@ -18,13 +18,7 @@ const WhenAndWhere = () => {
       whenAndWhereImage: file(relativePath: { eq: "oma.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1040, quality: 90) {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            sizes
+            ...GatsbyImageSharpFluid
           }
         }
       }
