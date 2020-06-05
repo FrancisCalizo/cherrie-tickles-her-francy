@@ -14,13 +14,13 @@ export const WhenAndWhereImage = styled(BackgroundImage)`
 `
 
 export const Container = styled.div`
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 8rem 0;
   text-align: center;
-  /* max-width: var(--container); */
+  max-width: var(--container);
   color: white;
 
   & h3 {
@@ -28,9 +28,9 @@ export const Container = styled.div`
     font-size: 3rem;
   }
 
-  /* @media ${device.maxMd} {
+  @media ${device.maxMd} {
     flex-wrap: wrap;
-  } */
+  }
 `
 
 export const BlackOverlay = styled.div`
