@@ -5,13 +5,13 @@ import Particles from "react-particles-js"
 import { device } from "../breakpoints"
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0 auto;
   padding: 8rem 0;
   text-align: center;
-  max-width: var(--container);
+  /* max-width: var(--container); */
   color: white;
 
   & h3 {
@@ -19,9 +19,9 @@ export const Container = styled.div`
     font-size: 3rem;
   }
 
-  @media ${device.maxMd} {
+  /* @media ${device.maxMd} {
     flex-wrap: wrap;
-  }
+  } */
 `
 
 export const WhenAndWhereImage = styled(BackgroundImage)`
@@ -47,12 +47,12 @@ export const Box = styled.div`
     font-size: 1.2rem;
   }
 
-  @media ${device.minMd} and ${device.maxLg}{
+  @media ${device.minMd} and (${device.maxLg}) {
     width: 34vw;
     padding: 1.75rem 0;
   }
 
-  @media ${device.maxSm}{
+  @media ${device.maxSm} {
     width: 100%;
     margin: 0 1rem;
 
@@ -73,7 +73,7 @@ export const And = styled.div`
     width: 100%;
   }
 
-  @media ${device.minMd} and ${device.maxLg}{
+  @media ${device.minMd} and (${device.maxLg}) {
     width: 155px;
   }
 `

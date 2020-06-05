@@ -16,7 +16,7 @@ import {
 const Header = () => {
   const data = useStaticQuery(graphql`
     query headerImageQuery {
-      headerImage: file(relativePath: { eq: "beach-header.jpg" }) {
+      headerImage: file(relativePath: { eq: "oma.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid

@@ -37,10 +37,10 @@ const WhenAndWhere = () => {
         alt="when-and-where"
         fluid={data.whenAndWhereImage.childImageSharp.fluid}
       >
-        <ParticlesContainer params={particleParams} />
-        <BlackOverlay>
-          <Container>
-            <Box
+        {/* <ParticlesContainer params={particleParams} /> */}
+        {/* <BlackOverlay> */}
+        <Container>
+          {/* <Box
               data-sal="fade"
               data-sal-duration="600"
               data-sal-delay="100"
@@ -80,9 +80,9 @@ const WhenAndWhere = () => {
                 05:00 PM – 10:00 PM <br />
                 2416 N Mills Ave, Orlando, FL 32803
               </p>
-            </Box>
-          </Container>
-        </BlackOverlay>
+            </Box> */}
+        </Container>
+        {/* </BlackOverlay> */}
       </WhenAndWhereImage>
       <ScrollParty id="scroll-party" />
     </div>
