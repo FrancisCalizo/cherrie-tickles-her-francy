@@ -3,7 +3,7 @@ export const data = {
   rows: [
     {
       title: `What should I wear?`,
-      content: `We recommend dressing in anything from "Cocktail" to "Black Tie Optional" attire. More information on those descriptions can be found <a href="https://www.theknot.com/content/wedding-guest-attire-cheat-sheet" target="_blank" style="color:#ff7979;">here</a>.`,
+      content: `We recommend dressing in anything from "Cocktail" to "Formal" and "Black Tie Optional" attire. More information on those descriptions can be found <a href="https://www.theknot.com/content/wedding-guest-attire-cheat-sheet" target="_blank" style="color:#ff7979;">here</a>.`,
     },
     {
       title: `What time and where is the reception and ceremony?`,

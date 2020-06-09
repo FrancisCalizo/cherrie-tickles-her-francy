@@ -42,13 +42,13 @@ const WhenAndWhere = () => {
             >
               <h3>Ceremony</h3>
               <p>
-                <span>Cathedral Church of St. Luke</span>
+                <span>Venue TBD</span>
                 <br />
                 <br />
                 Saturday | February 6, 2021 <br />
                 Time TBD
                 <br />
-                130 N Magnolia Ave, Orlando, FL 32801
+                Address TBD
               </p>
             </Box>
             <And
