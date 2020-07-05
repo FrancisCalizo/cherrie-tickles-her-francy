@@ -107,7 +107,7 @@ const RsvpSuccess = () => {
     query successImageQuery {
       successImage: file(relativePath: { eq: "beach-header.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2048, quality: 100) {
+          fluid(maxWidth: 2048, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

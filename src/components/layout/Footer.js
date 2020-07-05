@@ -17,7 +17,7 @@ const Footer = () => {
     query ringImageQuery {
       ringImage: file(relativePath: { eq: "footer-icons/rings.png" }) {
         childImageSharp {
-          fixed(quality: 100, width: 70) {
+          fixed(quality: 70, width: 70) {
             ...GatsbyImageSharpFixed
             originalName
           }
@@ -25,7 +25,7 @@ const Footer = () => {
       }
       coupleImage: file(relativePath: { eq: "footer-icons/couple.png" }) {
         childImageSharp {
-          fixed(quality: 100, width: 70) {
+          fixed(quality: 70, width: 70) {
             ...GatsbyImageSharpFixed
             originalName
           }
@@ -33,7 +33,7 @@ const Footer = () => {
       }
       toastImage: file(relativePath: { eq: "footer-icons/toast.png" }) {
         childImageSharp {
-          fixed(quality: 100, width: 70) {
+          fixed(quality: 70, width: 70) {
             ...GatsbyImageSharpFixed
             originalName
           }

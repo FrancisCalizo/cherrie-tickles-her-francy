@@ -18,7 +18,7 @@ const Gallery = () => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 80, height: 380, width: 240) {
+              fixed(quality: 90, height: 380, width: 240) {
                 originalName
                 ...GatsbyImageSharpFixed
               }

@@ -12,7 +12,7 @@ const Slideshow = () => {
         relativePath: { eq: "slideshow/beach-shoulder-rest.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 70) {
+          fluid(maxWidth: 300, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -20,7 +20,7 @@ const Slideshow = () => {
 
       slideshowTwo: file(relativePath: { eq: "slideshow/beach-kiss.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 70) {
+          fluid(maxWidth: 300, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -30,7 +30,7 @@ const Slideshow = () => {
         relativePath: { eq: "slideshow/beach-kiss-cheek.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 70) {
+          fluid(maxWidth: 300, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -38,7 +38,7 @@ const Slideshow = () => {
 
       slideshowFour: file(relativePath: { eq: "slideshow/beach-held.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 70) {
+          fluid(maxWidth: 300, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
