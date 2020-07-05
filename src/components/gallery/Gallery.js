@@ -18,7 +18,7 @@ const Gallery = () => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 380, width: 240) {
+              fixed(quality: 80, height: 380, width: 240) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
@@ -29,7 +29,7 @@ const Gallery = () => {
 
       cameraImage: file(relativePath: { eq: "camera-brown.png" }) {
         childImageSharp {
-          fixed(width: 40, quality: 100) {
+          fixed(width: 40, quality: 50) {
             originalName
             ...GatsbyImageSharpFixed
           }

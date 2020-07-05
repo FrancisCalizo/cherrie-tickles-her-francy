@@ -11,7 +11,7 @@ const Modal = ({ showModal, handleCloseModal, modalImageName }) => {
         edges {
           node {
             childImageSharp {
-              fixed(quality: 100, height: 700, width: 460) {
+              fixed(quality: 80, height: 700, width: 460) {
                 originalName
                 ...GatsbyImageSharpFixed
               }
