@@ -52,9 +52,6 @@ module.exports = {
             variants: [`400`, `700`],
           },
           {
-            family: `Poppins`,
-          },
-          {
             family: `Lato`,
           },
           {
