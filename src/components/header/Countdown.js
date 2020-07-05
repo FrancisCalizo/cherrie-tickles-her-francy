@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import moment from "moment"
+import { intervalToDuration, differenceInDays } from "date-fns"
 import { Transition } from "react-transition-group"
 
 import useInterval from "../hooks/useInterval"
@@ -11,15 +11,25 @@ import {
 } from "./CountdownStyles"
 
 const Countdown = () => {
-  const [weddingDate] = useState(moment("2021-02-06", "YYYY-MM-DD"))
-  const [countdown, setCountdown] = useState(null)
+  const [weddingDate] = useState(new Date(2021, 1, 6, 0, 0, 0))
+  const [countdownDays, setCountdownDays] = useState(null)
+  const [countdownHours, setCountdownHours] = useState(null)
+  const [countdownMinutes, setCountdownMinutes] = useState(null)
+  const [countdownSeconds, setCountdownSeconds] = useState(null)
   const [loading, setLoading] = useState(true)
   const [trans, setTrans] = useState(false)
 
   useInterval(() => {
-    let now = moment()
-    let timeLeft = moment.duration(weddingDate.diff(now))
-    setCountdown(timeLeft)
+    let now = new Date()
+    let timeLeft = intervalToDuration({
+      start: now,
+      end: weddingDate,
+    })
+    let timeLeftDays = differenceInDays(weddingDate, now)
+    setCountdownDays(timeLeftDays)
+    setCountdownHours(timeLeft.hours)
+    setCountdownMinutes(timeLeft.minutes)
+    setCountdownSeconds(timeLeft.seconds)
     setLoading(false)
   }, 1000)
 
@@ -36,28 +46,28 @@ const Countdown = () => {
           <InlineBlock state={state}>
             <CountdownContainer>
               <CountownSection>
-                <div>{parseInt(countdown.asDays())}</div>
+                <div>{countdownDays}</div>
                 <div>Days</div>
               </CountownSection>
               <CountownSection>
                 <div>:</div>
               </CountownSection>
               <CountownSection>
-                <div>{countdown._data.hours}</div>
+                <div>{countdownHours}</div>
                 <div>Hours</div>
               </CountownSection>
               <CountownSection>
                 <div>:</div>
               </CountownSection>
               <CountownSection>
-                <div>{countdown._data.minutes}</div>
+                <div>{countdownMinutes}</div>
                 <div>Minutes</div>
               </CountownSection>
               <CountownSection>
                 <div>:</div>
               </CountownSection>
               <CountownSection>
-                <div>{countdown._data.seconds}</div>
+                <div>{countdownSeconds}</div>
                 <div>Seconds</div>
               </CountownSection>
             </CountdownContainer>

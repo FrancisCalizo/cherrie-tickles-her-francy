@@ -94,6 +94,8 @@
 
 - Fixed Issue to Background Fixed on mobile for React Background Image found here using ::before and ::after - https://www.gatsbyjs.org/packages/gatsby-background-image/
 
+- Get the Interval Duration using Date FNS (Separate for days since I didn't want to include months) - https://date-fns.org/v2.14.0/docs/intervalToDuration and https://date-fns.org/v2.14.0/docs/differenceInDays
+
   <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
   <p align="center">
     <a href="https://www.gatsbyjs.org">
