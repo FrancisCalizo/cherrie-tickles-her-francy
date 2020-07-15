@@ -42,13 +42,15 @@ const WhenAndWhere = () => {
             >
               <h3>Ceremony</h3>
               <p>
-                <span>Venue TBD</span>
+                <span>Annunciation Catholic Church</span>
+                <br />
+                1020 Montgomery Rd <br />
+                Altamonte Springs, FL 32714
                 <br />
                 <br />
                 Saturday | February 6, 2021 <br />
-                Time TBD
+                12:00 PM - 02:00 PM
                 <br />
-                Address TBD
               </p>
             </Box>
             <And
@@ -69,10 +71,12 @@ const WhenAndWhere = () => {
               <p>
                 <span>Orlando Museum of Art</span>
                 <br />
+                2416 N Mills Ave <br />
+                Orlando, FL 32803
+                <br />
                 <br />
                 Saturday | February 6, 2021 <br />
                 05:00 PM – 10:00 PM <br />
-                2416 N Mills Ave, Orlando, FL 32803
               </p>
             </Box>
           </Container>
