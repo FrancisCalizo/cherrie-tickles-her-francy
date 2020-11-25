@@ -44,20 +44,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Lato`,
-          },
-          {
-            family: `Alex Brush`,
-          },
-        ],
+        fonts: [`lato`, `alex brush`, `raleway\:400, 700`],
+        display: "swap",
       },
     },
   ],
