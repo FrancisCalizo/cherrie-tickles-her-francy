@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import SlideShow from "../our-story/Slideshow"
+import Video from "./Video"
 
 import {
   StoryContainer,
@@ -61,6 +62,7 @@ const Story = () => {
           <p>{data.storyInfo.edges[0].node.cherrieBio}</p>
         </div>
       </StoryBottom>
+      <Video />
       <ScrollWhenAndWhere id="scroll-when-and-where" />
     </StoryContainer>
   )
