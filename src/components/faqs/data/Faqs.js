@@ -66,7 +66,7 @@ export const data = {
     },
     {
       title: `What if I can't make it anymore?`,
-      content: `We're sorry to hear that you will no longer be able to celebrate with us! If possible, please let us know before <span style="text-decoration: underline; font-weight: bold">January 22, 2021</span>. You can either notify us via the RSVP section on this website, emailing us at <a href="mailto:fccalizo@gmail.com" style="text-decoration: underline; color:#ff7979">FCCalizo@gmail.com</a>, or by giving us a call!`,
+      content: `We're sorry to hear that you will no longer be able to celebrate with us! If possible, please let us know before <span style="text-decoration: underline; font-weight: bold">January 15, 2021</span>. You can either notify us via the RSVP section on this website, emailing us at <a href="mailto:fccalizo@gmail.com" style="text-decoration: underline; color:#ff7979">FCCalizo@gmail.com</a>, or by giving us a call!`,
     },
     {
       title: `What if I have another question about the wedding that is not listed here?`,
