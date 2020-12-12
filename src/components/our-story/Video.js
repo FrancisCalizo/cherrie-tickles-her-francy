@@ -21,7 +21,12 @@ const Video = () => {
   const URL = "https://www.youtube.com/watch?v=x1tvC-N5w0c"
 
   return (
-    <div style={{ maxWidth: 640, margin: "80px auto 0" }}>
+    <div
+      data-sal="fade"
+      data-sal-duration="1500"
+      data-sal-easing="ease"
+      style={{ maxWidth: 640, margin: "80px auto 0" }}
+    >
       <H2>Engagement Video</H2>
       <TitleContainer>
         <Img
