@@ -23,20 +23,37 @@ export const data = {
       title: `Will there be an open bar?`,
       content: `YES! The wedding would be called off if there wasn't.`,
     },
+    // {
+    //   title: `Do you have any recommended hotels in the area?`,
+    //   content: `We do not have any hotel blocks reserved, but two great hotels that are 20 minutes from the ceremony and 10 mins from the reception are
+    //   <a
+    //     href="https://www.marriott.com/hotels/travel/mcodo-marriott-orlando-downtown/"
+    //     target="_blank"
+    //     style="color:#ff7979;"
+    //   >Marriott Downtown Orlando</a>
+    //   and
+    //   <a
+    //     href="https://www.ihg.com/crowneplaza/hotels/us/en/orlando/mcooa/hoteldetail"
+    //     target="_blank"
+    //     style="color:#ff7979;"
+    //   >Crowne Plaza Orlando-Downtown</a>
+    //   `,
+    // },
     {
       title: `Do you have any recommended hotels in the area?`,
-      content: `We do not have any hotel blocks reserved, but two great hotels that are 20 minutes from the ceremony and 10 mins from the reception are
-      <a
-        href="https://www.marriott.com/hotels/travel/mcodo-marriott-orlando-downtown/"
-        target="_blank"
-        style="color:#ff7979;"
-      >Marriott Downtown Orlando</a>
-      and
-      <a
-        href="https://www.ihg.com/crowneplaza/hotels/us/en/orlando/mcooa/hoteldetail"
-        target="_blank"
-        style="color:#ff7979;"
-      >Crowne Plaza Orlando-Downtown</a>
+      content: `We currently have hotel block reserved for the dates of February 3rd to February 8th at the
+        <a
+          href="https://embassysuites.hilton.com/en/es/groups/personalized/M/MCODTES-SCW-20210203/index.jhtml?WT.mc_id=POG"
+          target="_blank"
+          style="color:#ff7979;"
+          >Embassy Suites By Hilton Downtown Orlando</a>
+        for a discounted rate. You can either click
+        <a
+          href="https://embassysuites.hilton.com/en/es/groups/personalized/M/MCODTES-SCW-20210203/index.jhtml?WT.mc_id=POG"
+          target="_blank"
+          style="color:#ff7979;"
+          >here</a>
+        to reserve or call the hotel at (407)-841-1000 and book a room during the specified dates. When calliing, please mention the "Sarmiento & Calizo Wedding" for the preferred rates.
       `,
     },
     {
