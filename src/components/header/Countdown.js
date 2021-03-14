@@ -26,10 +26,10 @@ const Countdown = () => {
       end: weddingDate,
     })
     let timeLeftDays = differenceInDays(weddingDate, now)
-    setCountdownDays(timeLeftDays)
-    setCountdownHours(timeLeft.hours)
-    setCountdownMinutes(timeLeft.minutes)
-    setCountdownSeconds(timeLeft.seconds)
+    setCountdownDays(() => (timeLeftDays > 0 ? timeLeftDays : 0))
+    setCountdownHours(() => (timeLeftDays > 0 ? timeLeft.hours : 0))
+    setCountdownMinutes(() => (timeLeftDays > 0 ? timeLeft.minutes : 0))
+    setCountdownSeconds(() => (timeLeftDays > 0 ? timeLeft.seconds : 0))
     setLoading(false)
   }, 1000)
 
